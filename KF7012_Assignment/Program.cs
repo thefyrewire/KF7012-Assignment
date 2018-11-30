@@ -17,7 +17,7 @@ namespace KF7012_Assignment
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             // Application.Run(new Form1());
-            Form1 f1 = new Form1();
+            Form_Login f1 = new Form_Login();
             FormPresenter FM = new FormPresenter(f1);
             Application.Run(f1);
         }

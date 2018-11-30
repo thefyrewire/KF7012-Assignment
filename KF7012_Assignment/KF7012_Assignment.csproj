@@ -50,10 +50,49 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_RegisterCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_RegisterCompany.Designer.cs">
+      <DependentUpon>Form_RegisterCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Job.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Job.Designer.cs">
+      <DependentUpon>Form_Job.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPresenter.cs" />
+    <Compile Include="Form_RegisterMachine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_RegisterMachine.Designer.cs">
+      <DependentUpon>Form_RegisterMachine.cs</DependentUpon>
+    </Compile>
     <Compile Include="IFormGUI.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_RegisterCompany.resx">
+      <DependentUpon>Form_RegisterCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Job.resx">
+      <DependentUpon>Form_Job.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_RegisterMachine.resx">
+      <DependentUpon>Form_RegisterMachine.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

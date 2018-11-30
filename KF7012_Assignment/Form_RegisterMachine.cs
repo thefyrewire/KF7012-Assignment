@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace KF7012_Assignment
 {
-    public partial class Form1 : Form
+    public partial class Form_RegisterMachine : Form
     {
-        public Form1()
+        public Form_RegisterMachine()
         {
             InitializeComponent();
         }

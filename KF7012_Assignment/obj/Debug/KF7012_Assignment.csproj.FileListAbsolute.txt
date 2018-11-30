@@ -1,1 +1,9 @@
 \\pstudfsnb\home3\w17042163\my documents\visual studio 2013\Projects\KF7012_Assignment\KF7012_Assignment\bin\Debug\KF7012_Assignment.exe.config
+\\pstudfsnb\home3\w17042163\My Documents\KF7012\kf7012-assignment\KF7012_Assignment\bin\Debug\KF7012_Assignment.exe.config
+\\pstudfsnb\home3\w17042163\My Documents\KF7012\kf7012-assignment\KF7012_Assignment\bin\Debug\KF7012_Assignment.exe
+\\pstudfsnb\home3\w17042163\My Documents\KF7012\kf7012-assignment\KF7012_Assignment\bin\Debug\KF7012_Assignment.pdb
+\\pstudfsnb\home3\w17042163\My Documents\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.csprojResolveAssemblyReference.cache
+\\pstudfsnb\home3\w17042163\My Documents\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Properties.Resources.resources
+\\pstudfsnb\home3\w17042163\My Documents\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.csproj.GenerateResource.Cache
+\\pstudfsnb\home3\w17042163\My Documents\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.exe
+\\pstudfsnb\home3\w17042163\My Documents\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.pdb

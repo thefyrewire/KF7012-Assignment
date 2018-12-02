@@ -1,6 +1,6 @@
 ﻿namespace KF7012_Assignment
 {
-    partial class Form_Job
+    partial class Form_Jobs
     {
         /// <summary>
         /// Required designer variable.
@@ -31,13 +31,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_RegisterMachine = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -72,8 +74,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -108,7 +108,7 @@
             this.tabPage1.Controls.Add(this.textBox7);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.btn_RegisterMachine);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
@@ -126,8 +126,24 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(825, 553);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Register a new Job";
+            this.tabPage1.Text = "Register";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(155, 17);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 20);
+            this.textBox8.TabIndex = 24;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(15, 20);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 13);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Company ID";
             // 
             // button7
             // 
@@ -169,9 +185,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(18, 214);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 13);
+            this.label9.Size = new System.Drawing.Size(57, 13);
             this.label9.TabIndex = 18;
-            this.label9.Text = "complexity";
+            this.label9.Text = "Complexity";
             // 
             // label8
             // 
@@ -182,14 +198,15 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "Location";
             // 
-            // button1
+            // btn_RegisterMachine
             // 
-            this.button1.Location = new System.Drawing.Point(343, 106);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 28);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Add a Machine";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_RegisterMachine.Location = new System.Drawing.Point(306, 116);
+            this.btn_RegisterMachine.Name = "btn_RegisterMachine";
+            this.btn_RegisterMachine.Size = new System.Drawing.Size(94, 28);
+            this.btn_RegisterMachine.TabIndex = 16;
+            this.btn_RegisterMachine.Text = "Add a Machine";
+            this.btn_RegisterMachine.UseVisualStyleBackColor = true;
+            this.btn_RegisterMachine.Click += new System.EventHandler(this.btn_RegisterMachine_Click);
             // 
             // label7
             // 
@@ -214,9 +231,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(21, 323);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
+            this.label5.Size = new System.Drawing.Size(60, 13);
             this.label5.TabIndex = 13;
-            this.label5.Text = "Discription";
+            this.label5.Text = "Description";
             // 
             // label4
             // 
@@ -316,7 +333,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(825, 553);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "View/Edit A Job";
+            this.tabPage3.Text = "View/Edit";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -350,9 +367,9 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(25, 252);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 13);
+            this.label12.Size = new System.Drawing.Size(57, 13);
             this.label12.TabIndex = 35;
-            this.label12.Text = "complexity";
+            this.label12.Text = "Complexity";
             // 
             // label13
             // 
@@ -386,9 +403,9 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(28, 361);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(56, 13);
+            this.label16.Size = new System.Drawing.Size(60, 13);
             this.label16.TabIndex = 31;
-            this.label16.Text = "Discription";
+            this.label16.Text = "Description";
             // 
             // label17
             // 
@@ -494,30 +511,14 @@
             this.label11.TabIndex = 7;
             this.label11.Text = "Job ID";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 20);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 13);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "Company ID";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(155, 17);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 24;
-            // 
-            // Form_Job
+            // Form_Jobs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1024, 733);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
-            this.Name = "Form_Job";
+            this.Name = "Form_Jobs";
             this.Text = "Form2";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -538,7 +539,7 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_RegisterMachine;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

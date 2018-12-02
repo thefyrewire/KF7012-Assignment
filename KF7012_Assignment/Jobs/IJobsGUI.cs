@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace KF7012_Assignment
 {
-    public interface IFormGUI
+    public interface IJobsGUI
     {
-        void register(FormPresenter FM);
-
-        void showRegisterCompanyForm();
-        void showJobsForm();
+        void register(JobsPresenter FM);
+        void showRegisterMachineForm();
     }
 }

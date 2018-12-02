@@ -10,15 +10,16 @@ using System.Windows.Forms;
 
 namespace KF7012_Assignment
 {
-    public partial class Form_RegisterCompany : Form, IFormGUI
+    public partial class Form_RegisterCompany : Form, IRegisterCompanyGUI
     {
-        private FormPresenter presenter;
+        private RegisterCompanyPresenter presenter;
+
         public Form_RegisterCompany()
         {
             this.InitializeComponent();
         }
 
-        public void register(FormPresenter FP)
+        public void register(RegisterCompanyPresenter FP)
         {
             presenter = FP;
         }

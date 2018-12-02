@@ -10,22 +10,17 @@ using System.Windows.Forms;
 
 namespace KF7012_Assignment
 {
-    public partial class Form_Job : Form
+    public partial class Form_RegisterMachine : Form, IRegisterMachineGUI
     {
-        public Form_Job()
-        {
-            InitializeComponent();
-        }
-
-        /*private FormPresenter presenter;
-        public Form_Job()
+        private RegisterMachinePresenter presenter;
+        public Form_RegisterMachine()
         {
             this.InitializeComponent();
         }
 
-        public void register(FormPresenter FP)
+        public void register(RegisterMachinePresenter FP)
         {
             presenter = FP;
-        }*/
+        }
     }
 }

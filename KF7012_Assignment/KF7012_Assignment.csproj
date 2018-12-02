@@ -50,47 +50,55 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_RegisterCompany.cs">
+    <Compile Include="Jobs\IJobsGUI.cs" />
+    <Compile Include="Jobs\JobsPresenter.cs" />
+    <Compile Include="RegisterCompany\Form_RegisterCompany.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_RegisterCompany.Designer.cs">
+    <Compile Include="RegisterCompany\Form_RegisterCompany.Designer.cs">
       <DependentUpon>Form_RegisterCompany.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Login.cs">
+    <Compile Include="RegisterCompany\IRegisterCompanyGUI.cs" />
+    <Compile Include="Login\Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Login.Designer.cs">
+    <Compile Include="Login\Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Job.cs">
+    <Compile Include="Jobs\Form_Jobs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Job.Designer.cs">
-      <DependentUpon>Form_Job.cs</DependentUpon>
+    <Compile Include="Jobs\Form_Jobs.Designer.cs">
+      <DependentUpon>Form_Jobs.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPresenter.cs" />
-    <Compile Include="Form_RegisterMachine.cs">
+    <Compile Include="RegisterMachine\Form_RegisterMachine.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_RegisterMachine.Designer.cs">
+    <Compile Include="RegisterMachine\Form_RegisterMachine.Designer.cs">
       <DependentUpon>Form_RegisterMachine.cs</DependentUpon>
     </Compile>
     <Compile Include="IFormGUI.cs" />
+    <Compile Include="Login\ILoginGUI.cs" />
+    <Compile Include="Login\LoginPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterCompany\RegisterCompanyPresenter.cs" />
+    <Compile Include="RegisterMachine\IRegisterMachineGUI.cs" />
+    <Compile Include="RegisterMachine\RegisterMachinePresenter.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_RegisterCompany.resx">
+    <EmbeddedResource Include="RegisterCompany\Form_RegisterCompany.resx">
       <DependentUpon>Form_RegisterCompany.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Job.resx">
-      <DependentUpon>Form_Job.cs</DependentUpon>
+    <EmbeddedResource Include="Jobs\Form_Jobs.resx">
+      <DependentUpon>Form_Jobs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Login.resx">
+    <EmbeddedResource Include="Login\Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_RegisterMachine.resx">
+    <EmbeddedResource Include="RegisterMachine\Form_RegisterMachine.resx">
       <DependentUpon>Form_RegisterMachine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -115,6 +123,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

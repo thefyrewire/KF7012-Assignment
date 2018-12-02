@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace KF7012_Assignment
 {
-    public class FormPresenter
+    public class RegisterMachinePresenter
     {
-        private IFormGUI screen;
+        private IRegisterMachineGUI screen;
 
-        public FormPresenter(IFormGUI screen)
+        public RegisterMachinePresenter(IRegisterMachineGUI screen)
         {
             this.screen = screen;
             screen.register(this);
@@ -25,16 +25,5 @@ namespace KF7012_Assignment
         /*public void updateView()
         {
         }*/
-
-        public void showRegisterCompanyForm()
-        {
-            screen.showRegisterCompanyForm();
-        }
-
-        public void showJobsForm()
-        {
-            screen.showJobsForm();
-        }
-
     }
 }

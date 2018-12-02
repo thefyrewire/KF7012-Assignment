@@ -28,28 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_RegisterCompany = new System.Windows.Forms.Button();
+            this.btn_Jobs = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_RegisterCompany
             // 
-            this.button1.Location = new System.Drawing.Point(127, 142);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Register Company";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_RegisterCompany.Location = new System.Drawing.Point(127, 142);
+            this.btn_RegisterCompany.Name = "btn_RegisterCompany";
+            this.btn_RegisterCompany.Size = new System.Drawing.Size(132, 23);
+            this.btn_RegisterCompany.TabIndex = 0;
+            this.btn_RegisterCompany.Text = "Register Company";
+            this.btn_RegisterCompany.UseVisualStyleBackColor = true;
+            this.btn_RegisterCompany.Click += new System.EventHandler(this.btn_RegisterCompany_Click);
             // 
-            // button2
+            // btn_Jobs
             // 
-            this.button2.Location = new System.Drawing.Point(501, 142);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Jobs";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Jobs.Location = new System.Drawing.Point(501, 142);
+            this.btn_Jobs.Name = "btn_Jobs";
+            this.btn_Jobs.Size = new System.Drawing.Size(75, 23);
+            this.btn_Jobs.TabIndex = 1;
+            this.btn_Jobs.Text = "Jobs";
+            this.btn_Jobs.UseVisualStyleBackColor = true;
+            this.btn_Jobs.Click += new System.EventHandler(this.btn_Jobs_Click);
             // 
             // label1
             // 
@@ -66,8 +68,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(798, 416);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Jobs);
+            this.Controls.Add(this.btn_RegisterCompany);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -77,8 +79,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_RegisterCompany;
+        private System.Windows.Forms.Button btn_Jobs;
         private System.Windows.Forms.Label label1;
     }
 }

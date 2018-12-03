@@ -46,5 +46,15 @@ namespace KF7012_Assignment
             f1.ShowDialog();
             this.Close();
         }
+
+        public void hideError()
+        {
+            lbl_LoginErrorMsg.Visible = false;
+        }
+        public void showError(String error)
+        {
+            lbl_LoginErrorMsg.Text = error;
+            lbl_LoginErrorMsg.Visible = true;
+        }
     }
 }

@@ -34,11 +34,12 @@
             this.lbl_Username = new System.Windows.Forms.Label();
             this.lbl_Password = new System.Windows.Forms.Label();
             this.txt_Password = new System.Windows.Forms.TextBox();
+            this.lbl_LoginErrorMsg = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_Login
             // 
-            this.btn_Login.Location = new System.Drawing.Point(12, 145);
+            this.btn_Login.Location = new System.Drawing.Point(22, 167);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(94, 28);
             this.btn_Login.TabIndex = 3;
@@ -88,11 +89,23 @@
             this.txt_Password.TabIndex = 1;
             this.txt_Password.UseSystemPasswordChar = true;
             // 
+            // lbl_LoginErrorMsg
+            // 
+            this.lbl_LoginErrorMsg.AutoSize = true;
+            this.lbl_LoginErrorMsg.BackColor = System.Drawing.SystemColors.Control;
+            this.lbl_LoginErrorMsg.ForeColor = System.Drawing.Color.Red;
+            this.lbl_LoginErrorMsg.Location = new System.Drawing.Point(19, 138);
+            this.lbl_LoginErrorMsg.Name = "lbl_LoginErrorMsg";
+            this.lbl_LoginErrorMsg.Size = new System.Drawing.Size(171, 13);
+            this.lbl_LoginErrorMsg.TabIndex = 26;
+            this.lbl_LoginErrorMsg.Text = "Username and password incorrect!";
+            // 
             // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(404, 249);
+            this.Controls.Add(this.lbl_LoginErrorMsg);
             this.Controls.Add(this.txt_Password);
             this.Controls.Add(this.lbl_Password);
             this.Controls.Add(this.lbl_Username);
@@ -114,5 +127,6 @@
         private System.Windows.Forms.Label lbl_Username;
         private System.Windows.Forms.Label lbl_Password;
         private System.Windows.Forms.TextBox txt_Password;
+        private System.Windows.Forms.Label lbl_LoginErrorMsg;
     }
 }

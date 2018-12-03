@@ -19,6 +19,7 @@ namespace KF7012_Assignment
 
         private void initialiseForm()
         {
+            screen.hideError();
             // updateView();
         }
 
@@ -34,9 +35,18 @@ namespace KF7012_Assignment
                 {
                     screen.showMainForm();
                 }
-                else Console.WriteLine("Wrong password, dummy!");
+                else
+                {
+                    Console.WriteLine("Wrong password, dummy!");
+                    screen.showError("Incorrect username or password.");
+                }
+
             }
-            else Console.WriteLine("Fill in a field, dummy!");
+            else
+            { 
+                Console.WriteLine("Fill in a field, dummy!");
+                screen.showError("Enter username and password.");
+            } 
         }
     }
 }

@@ -12,5 +12,7 @@ namespace KF7012_Assignment
         String getAttemptUsername();
         String getAttemptPassword();
         void showMainForm();
+        void hideError();
+        void showError(String error);
     }
 }

@@ -8,6 +8,7 @@ namespace KF7012_Assignment
 {
     public interface IRegisterCompanyGUI
     {
-        void register(RegisterCompanyPresenter FM); 
+        void register(RegisterCompanyPresenter FM);
+        void message(String msg);
     }
 }

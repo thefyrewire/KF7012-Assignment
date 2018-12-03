@@ -141,9 +141,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(15, 20);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 13);
+            this.label10.Size = new System.Drawing.Size(72, 13);
             this.label10.TabIndex = 23;
-            this.label10.Text = "Company ID";
+            this.label10.Text = "Company ID *";
             // 
             // button7
             // 
@@ -240,18 +240,18 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(21, 264);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 13);
+            this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 12;
-            this.label4.Text = "Fault";
+            this.label4.Text = "Fault *";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(15, 124);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Machine ID";
+            this.label3.Text = "Machine ID *";
             // 
             // textBox6
             // 

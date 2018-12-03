@@ -23,5 +23,20 @@ namespace KF7012_Assignment
         {
             presenter = FP;
         }
+
+        public void message(String msg)
+        {
+            MessageBox.Show(msg);
+        }
+
+        private void btn_RegisterCompany_Click(Object sender, EventArgs e)
+        {
+            // check company doesn't exist in database already (otherwise return its ID)
+            // generate unique company ID
+            // add company to database
+            // display company ID
+            presenter.message("Registered!");
+        }
+
     }
 }

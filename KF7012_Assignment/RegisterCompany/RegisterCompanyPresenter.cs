@@ -25,5 +25,10 @@ namespace KF7012_Assignment
         /*public void updateView()
         {
         }*/
+
+        public void message(String msg)
+        {
+            screen.message(msg);
+        }
     }
 }

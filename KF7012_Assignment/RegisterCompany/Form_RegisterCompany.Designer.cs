@@ -35,7 +35,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_RegisterCompany = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -95,21 +95,22 @@
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 6;
             // 
-            // button1
+            // btn_RegisterCompany
             // 
-            this.button1.Location = new System.Drawing.Point(91, 184);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Register";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_RegisterCompany.Location = new System.Drawing.Point(91, 184);
+            this.btn_RegisterCompany.Name = "btn_RegisterCompany";
+            this.btn_RegisterCompany.Size = new System.Drawing.Size(75, 23);
+            this.btn_RegisterCompany.TabIndex = 7;
+            this.btn_RegisterCompany.Text = "Register";
+            this.btn_RegisterCompany.UseVisualStyleBackColor = true;
+            this.btn_RegisterCompany.Click += new System.EventHandler(this.btn_RegisterCompany_Click);
             // 
             // Form_RegisterCompany
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(487, 304);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_RegisterCompany);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -133,7 +134,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_RegisterCompany;
     }
 }
 

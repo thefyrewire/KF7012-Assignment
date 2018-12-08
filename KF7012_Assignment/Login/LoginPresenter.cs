@@ -10,6 +10,8 @@ namespace KF7012_Assignment
     {
         private ILoginGUI screen;
 
+        ModelGateway model = new ModelGateway(); 
+
         public LoginPresenter(ILoginGUI screen)
         {
             this.screen = screen;
@@ -23,19 +25,11 @@ namespace KF7012_Assignment
             // updateView();
 
             // DB TEST
-            /*using (var context = new Model())
-            {
-                context.Database.Delete();
-
-                context.Users.Add(new User()
-                {
-                    userID = 00000,
-                    username = "admin",
-                    password = "admin"
-                });
-
-                context.SaveChanges();
-            }*/
+            model.deleteDatabase();
+            model.addUser(0000, "w170", "pass", "user");
+            model.addUser(0001, "w171", "pass", "user");
+            model.addUser(0002, "w172", "pass", "user");
+            model.addUser(0003, "w173", "pass", "user");
         }
 
         /*public void updateView()
@@ -45,15 +39,11 @@ namespace KF7012_Assignment
         public void btn_Login_Click()
         {
             // DB TEST
-            /*using (var context = new Model())
+            //List<User> users = model.getUsers();
+            foreach (User user in model.getUsers())
             {
-                var userList = context.Users.ToList<User>();
-                if (userList.Count<User>() > 0)
-                    foreach (User user in userList)
-                    {
-                        Console.WriteLine(user.username);
-                    }
-            }*/
+                Console.WriteLine(user.username);
+            }
 
             if (!String.IsNullOrEmpty(screen.getAttemptUsername()) && !String.IsNullOrEmpty(screen.getAttemptPassword()))
             {

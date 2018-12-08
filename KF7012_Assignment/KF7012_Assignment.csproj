@@ -67,6 +67,7 @@
     <Compile Include="Jobs\JobsPresenter.cs" />
     <Compile Include="Model\Machine.cs" />
     <Compile Include="Model\Model.cs" />
+    <Compile Include="Model\ModelGateway.cs" />
     <Compile Include="RegisterCompany\Form_RegisterCompany.cs">
       <SubType>Form</SubType>
     </Compile>

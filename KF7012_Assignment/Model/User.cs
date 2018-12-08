@@ -19,7 +19,7 @@ namespace KF7012_Assignment
         [Required, MaxLength(50)]
         public string password { get; set; }
 
-        [MaxLength(25)]
+        [Required, MaxLength(25)]
         public string profile { get; set; }
     }
 }

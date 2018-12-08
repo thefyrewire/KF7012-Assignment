@@ -10,16 +10,16 @@ namespace KF7012_Assignment
 {
     public class Company
     {
-        [Key]
+        [Key, Required]
         public int companyID { get; set; }
 
-        [MaxLength(255)]
+        [MaxLength(255), Required]
         public string name { get; set; }
 
-        [MaxLength(255)]
+        [MaxLength(255), Required]
         public string location { get; set; }
 
-        [MaxLength(25)]
-        public string machineID { get; set; }
+        /*[MaxLength(25)]
+        public string machineID { get; set; }*/
     }
 }

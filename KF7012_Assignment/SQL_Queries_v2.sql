@@ -13,7 +13,7 @@ CREATE TABLE Companies (
 	companyID           INTEGER NOT NULL,
     name                VARCHAR(255),
 	location            VARCHAR(255),
-	machineID           VARCHAR(25),
+	-- machineID           VARCHAR(25),         <----- ??
 
 	PRIMARY KEY (companyID)
 );

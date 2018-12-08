@@ -35,11 +35,11 @@ namespace KF7012_Assignment
         public void btn_Login_Click()
         {
             // DB TEST
-            //List<User> users = model.getUsers();
+            /* // List<User> users = model.getUsers();
             foreach (User user in model.getUsers())
             {
                 Console.WriteLine(user.username);
-            }
+            } */
 
             if (!String.IsNullOrEmpty(screen.getAttemptUsername()) && !String.IsNullOrEmpty(screen.getAttemptPassword()))
             {

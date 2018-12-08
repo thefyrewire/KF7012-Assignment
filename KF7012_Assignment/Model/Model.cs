@@ -33,6 +33,11 @@ namespace KF7012_Assignment
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<ScheduledJob> ScheduledJobs { get; set; }
         public virtual DbSet<ClosedJob> ClosedJobs { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 
     //public class MyEntity

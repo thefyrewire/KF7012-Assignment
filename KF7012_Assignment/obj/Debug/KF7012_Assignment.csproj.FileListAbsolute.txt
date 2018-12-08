@@ -23,3 +23,7 @@
 \\pstudfsnb\home3\w17042163\My Documents\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_Login.resources
 \\pstudfsnb\home3\w17042163\My Documents\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_RegisterMachine.resources
 \\pstudfsnb\home3\w17042163\My Documents\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_Jobs.resources
+\\pstudfsnb\home3\w17042163\My Documents\KF7012\kf7012-assignment\KF7012_Assignment\bin\Debug\EntityFramework.dll
+\\pstudfsnb\home3\w17042163\My Documents\KF7012\kf7012-assignment\KF7012_Assignment\bin\Debug\EntityFramework.SqlServer.dll
+\\pstudfsnb\home3\w17042163\My Documents\KF7012\kf7012-assignment\KF7012_Assignment\bin\Debug\EntityFramework.xml
+\\pstudfsnb\home3\w17042163\My Documents\KF7012\kf7012-assignment\KF7012_Assignment\bin\Debug\EntityFramework.SqlServer.xml

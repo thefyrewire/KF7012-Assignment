@@ -32,8 +32,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,14 +53,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\ClosedJob.cs" />
+    <Compile Include="Model\Company.cs" />
+    <Compile Include="Model\Engineer.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Job.cs" />
     <Compile Include="Jobs\IJobsGUI.cs" />
     <Compile Include="Jobs\JobsPresenter.cs" />
+    <Compile Include="Model\Machine.cs" />
+    <Compile Include="Model\Model.cs" />
     <Compile Include="RegisterCompany\Form_RegisterCompany.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +101,8 @@
     <Compile Include="RegisterCompany\RegisterCompanyPresenter.cs" />
     <Compile Include="RegisterMachine\IRegisterMachineGUI.cs" />
     <Compile Include="RegisterMachine\RegisterMachinePresenter.cs" />
+    <Compile Include="Model\ScheduledJob.cs" />
+    <Compile Include="Model\User.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +127,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

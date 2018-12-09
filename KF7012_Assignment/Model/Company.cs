@@ -5,12 +5,13 @@ using System.Linq;
 
 using System.Data.Entity.Core;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KF7012_Assignment
 {
     public class Company
     {
-        [Key, Required]
+        [Key, Required, DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int companyID { get; set; }
 
         [MaxLength(255), Required]

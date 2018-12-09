@@ -36,6 +36,17 @@ namespace KF7012_Assignment
             this.addJob(1, 1234, "Leaking pipe", new DateTime(2018, 1, 18), 2);
             this.addJob(2, 1234, "Broken screen", new DateTime(2018, 6, 20), 5);
             this.addJob(3, 1234, "Malfunctioning robot arm", new DateTime(2018, 10, 26), 1);
+            this.addJob(4, 4567, "Faulty chassis", new DateTime(2018, 3, 27), 1);
+            this.addJob(5, 4567, "Electrical fault", new DateTime(2018, 8, 14), 5);
+
+            // ADD MACHINES
+            this.addMachine("mch500", 1234, "CT001", 4);
+            this.addMachine("mch501", 1234, "CT002", 3);
+            this.addMachine("mch502", 4567, "BLUE_Homer", 5);
+            this.addMachine("mch503", 4567, "BLUE_Marge", 2);
+            this.addMachine("mch504", 4567, "BLUE_Bart", 1);
+
+
         }
 
 
@@ -133,7 +144,7 @@ namespace KF7012_Assignment
                 context.Jobs.Add(new Job()
                 {
                     jobID = jobID,
-                    Company = company,
+                    companyID = companyID,
                     /*machineID = machineID,*/
                     description = description,
                     dateReported = dateReported,
@@ -148,10 +159,71 @@ namespace KF7012_Assignment
         {
             using (Model context = new Model())
             {
-                Company company = this.getCompany(companyID);
-                List<Job> jobsForCompany = context.Jobs.Where(job => job.Company == company).ToList<Job>();
+                List<Job> jobsForCompany = context.Jobs.Where(job => job.companyID == companyID).ToList<Job>();
                 return jobsForCompany;
             }
         }
+
+
+        /* ----------------- */
+        /* --- ENGINEERS --- */
+        /* ----------------- */
+
+        public void addEngineer(string engineerID, string name, string profile, string skills)
+        {
+            using (Model context = new Model())
+            {
+                context.Engineers.Add(new Engineer()
+                {
+                    engineerID = engineerID,
+                    name = name,
+                    profile = profile,
+                    skills = skills
+                });
+            }
+        }
+
+
+        /* ---------------- */
+        /* --- MACHINES --- */
+        /* ---------------- */
+
+        public void addMachine(string machineID, int companyID, string assetTag, int sizeComplexity)
+        {
+            using (Model context = new Model())
+            {
+                Company company = this.getCompany(companyID);
+                context.Machines.Add(new Machine()
+                {
+                    machineID = machineID,
+                    companyID = companyID,
+                    assetTag = assetTag,
+                    sizeComplexity = sizeComplexity
+                });
+
+                context.SaveChanges();
+            }
+        }
+
+        public List<Machine> getMachinesForCompany(int companyID)
+        {
+            using (Model context = new Model())
+            {
+                List<Machine> machinesForCompany = context.Machines.Where(machine => machine.companyID == companyID).ToList<Machine>();
+                return machinesForCompany;
+            }
+        }
+
+
+        /* ---------------------- */
+        /* --- SCHEDULED JOBS --- */
+        /* ---------------------- */
+
+
+        /* ---------------------- */
+        /* --- CLOSED JOBS --- */
+        /* ---------------------- */
+
+
     }
 }

@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 
@@ -13,12 +13,13 @@ namespace KF7012_Assignment
         [Key, Required, MaxLength(25)]
         public string machineID { get; set; }
 
+        [Required]
+        public int companyID { get; set; }
+
         [Required, MaxLength(25)]
         public string assetTag { get; set; }
 
         [Required]
         public int sizeComplexity { get; set; }
-
-        public virtual Company Company { get; set; }
     }
 }

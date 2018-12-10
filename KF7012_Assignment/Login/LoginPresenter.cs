@@ -48,15 +48,15 @@ namespace KF7012_Assignment
                 Console.WriteLine(machine.machineID + "/" + machine.assetTag + " @ " + model.getCompany(machine.companyID).name);
             }*/
 
-            List<Job> jobs = model.getJobsForCompany(4567);
+            List<Job> jobs = model.getJobsForCompany(1234);
             foreach (Job job in jobs)
             {
-                Company company = model.getCompany(job.companyID);
+                Company company = model.getCompanyByID(job.companyID);
                 Machine machine = model.getMachine(job.machineID);
                 Console.WriteLine("Job: " + job.description + " at " + company.name + " for " + machine.assetTag + " which has a complexity of " + machine.sizeComplexity);
             }
 
-            if (!String.IsNullOrEmpty(screen.getAttemptUsername()) && !String.IsNullOrEmpty(screen.getAttemptPassword()))
+            if (!string.IsNullOrEmpty(screen.getAttemptUsername()) && !string.IsNullOrEmpty(screen.getAttemptPassword()))
             {
                 bool verified = model.verifyUser(screen.getAttemptUsername(), screen.getAttemptPassword());
                 

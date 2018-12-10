@@ -28,12 +28,12 @@ namespace KF7012_Assignment
             presenter.btn_Login_Click();
         }
 
-        public String getAttemptUsername()
+        public string getAttemptUsername()
         {
             return txt_Username.Text;
         }
 
-        public String getAttemptPassword()
+        public string getAttemptPassword()
         {
             return txt_Password.Text;
         }
@@ -49,12 +49,12 @@ namespace KF7012_Assignment
 
         public void hideError()
         {
-            lbl_LoginErrorMsg.Visible = false;
+            lbl_ErrorMsg.Visible = false;
         }
-        public void showError(String error)
+        public void showError(string error)
         {
-            lbl_LoginErrorMsg.Text = error;
-            lbl_LoginErrorMsg.Visible = true;
+            lbl_ErrorMsg.Text = error;
+            lbl_ErrorMsg.Visible = true;
         }
     }
 }

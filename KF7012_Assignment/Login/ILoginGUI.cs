@@ -9,10 +9,10 @@ namespace KF7012_Assignment
     public interface ILoginGUI
     {
         void register(LoginPresenter FM);
-        String getAttemptUsername();
-        String getAttemptPassword();
+        string getAttemptUsername();
+        string getAttemptPassword();
         void showMainForm();
         void hideError();
-        void showError(String error);
+        void showError(string error);
     }
 }

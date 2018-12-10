@@ -29,22 +29,22 @@ namespace KF7012_Assignment
             this.addUser(1704, "w1704", "pass", "user");
 
             // ADD COMPANIES
-            this.addCompany(1234, "ComTech Solutions", "Newcastle");
-            this.addCompany(4567, "Blue Arm Robotics", "London");
+            this.addCompany(1000, "ComTech Solutions", "Newcastle");
+            this.addCompany(1001, "Blue Arm Robotics", "London");
 
             // ADD MACHINES
-            this.addMachine("mch500", 1234, "CT001", 4);
-            this.addMachine("mch501", 1234, "CT002", 3);
-            this.addMachine("mch502", 4567, "BLUE_Homer", 5);
-            this.addMachine("mch503", 4567, "BLUE_Marge", 2);
-            this.addMachine("mch504", 4567, "BLUE_Bart", 1);
+            this.addMachine("mch500", 1000, "CT001", 4);
+            this.addMachine("mch501", 1000, "CT002", 3);
+            this.addMachine("mch502", 1001, "BLUE_Homer", 5);
+            this.addMachine("mch503", 1001, "BLUE_Marge", 2);
+            this.addMachine("mch504", 1001, "BLUE_Bart", 1);
 
             // ADD JOBS
-            this.addJob(1, 1234, "mch500", "Leaking pipe", new DateTime(2018, 1, 18), 2);
-            this.addJob(2, 1234, "mch501", "Broken screen", new DateTime(2018, 6, 20), 5);
-            this.addJob(3, 1234, "mch501", "Malfunctioning robot arm", new DateTime(2018, 10, 26), 1);
-            this.addJob(4, 4567, "mch503", "Faulty chassis", new DateTime(2018, 3, 27), 1);
-            this.addJob(5, 4567, "mch504", "Electrical fault", new DateTime(2018, 8, 14), 5);
+            this.addJob(1, 1000, "mch500", "Leaking pipe", new DateTime(2018, 1, 18), 2);
+            this.addJob(2, 1000, "mch501", "Broken screen", new DateTime(2018, 6, 20), 5);
+            this.addJob(3, 1000, "mch501", "Malfunctioning robot arm", new DateTime(2018, 10, 26), 1);
+            this.addJob(4, 1001, "mch503", "Faulty chassis", new DateTime(2018, 3, 27), 1);
+            this.addJob(5, 1001, "mch504", "Electrical fault", new DateTime(2018, 8, 14), 5);
         }
 
 
@@ -118,12 +118,30 @@ namespace KF7012_Assignment
             }
         }
 
-        public Company getCompany(int companyID)
+        public Company getCompanyByID(int companyID)
         {
             using (Model context = new Model())
             {
                 Company companyToGet = context.Companies.Where(company => company.companyID == companyID).FirstOrDefault<Company>();
                 return companyToGet;
+            }
+        }
+
+        public Company getCompanyByName(string name)
+        {
+            using (Model context = new Model())
+            {
+                Company companyToGet = context.Companies.Where(company => company.name == name).FirstOrDefault<Company>();
+                return companyToGet;
+            }
+        }
+
+        public int generateCompanyID()
+        {
+            using (Model context = new Model())
+            {
+                int max = context.Companies.Max(company => company.companyID);
+                return max + 1;
             }
         }
 
@@ -223,9 +241,9 @@ namespace KF7012_Assignment
         /* ---------------------- */
 
 
-        /* ---------------------- */
+        /* ------------------- */
         /* --- CLOSED JOBS --- */
-        /* ---------------------- */
+        /* ------------------- */
 
 
     }

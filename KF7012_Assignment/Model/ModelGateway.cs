@@ -32,13 +32,6 @@ namespace KF7012_Assignment
             this.addCompany(1234, "ComTech Solutions", "Newcastle");
             this.addCompany(4567, "Blue Arm Robotics", "London");
 
-            // ADD JOBS
-            this.addJob(1, 1234, "Leaking pipe", new DateTime(2018, 1, 18), 2);
-            this.addJob(2, 1234, "Broken screen", new DateTime(2018, 6, 20), 5);
-            this.addJob(3, 1234, "Malfunctioning robot arm", new DateTime(2018, 10, 26), 1);
-            this.addJob(4, 4567, "Faulty chassis", new DateTime(2018, 3, 27), 1);
-            this.addJob(5, 4567, "Electrical fault", new DateTime(2018, 8, 14), 5);
-
             // ADD MACHINES
             this.addMachine("mch500", 1234, "CT001", 4);
             this.addMachine("mch501", 1234, "CT002", 3);
@@ -46,7 +39,12 @@ namespace KF7012_Assignment
             this.addMachine("mch503", 4567, "BLUE_Marge", 2);
             this.addMachine("mch504", 4567, "BLUE_Bart", 1);
 
-
+            // ADD JOBS
+            this.addJob(1, 1234, "mch500", "Leaking pipe", new DateTime(2018, 1, 18), 2);
+            this.addJob(2, 1234, "mch501", "Broken screen", new DateTime(2018, 6, 20), 5);
+            this.addJob(3, 1234, "mch501", "Malfunctioning robot arm", new DateTime(2018, 10, 26), 1);
+            this.addJob(4, 4567, "mch503", "Faulty chassis", new DateTime(2018, 3, 27), 1);
+            this.addJob(5, 4567, "mch504", "Electrical fault", new DateTime(2018, 8, 14), 5);
         }
 
 
@@ -83,8 +81,7 @@ namespace KF7012_Assignment
         {
             using (Model context = new Model())
             {
-                List<User> users = this.getUsers();
-                User userToVerify = users.Where(user => user.username == username && user.password == password).FirstOrDefault<User>();
+                User userToVerify = context.Users.Where(user => user.username == username && user.password == password).FirstOrDefault<User>();
                 if (userToVerify != null)
                     return true;
 
@@ -125,8 +122,7 @@ namespace KF7012_Assignment
         {
             using (Model context = new Model())
             {
-                List<Company> companies = this.getCompanies();
-                Company companyToGet = companies.Where(company => company.companyID == companyID).FirstOrDefault<Company>();
+                Company companyToGet = context.Companies.Where(company => company.companyID == companyID).FirstOrDefault<Company>();
                 return companyToGet;
             }
         }
@@ -136,16 +132,15 @@ namespace KF7012_Assignment
         /* --- JOBS --- */
         /* ------------ */
 
-        public void addJob(int jobID, int companyID, /*Machine machineID,*/ string description, DateTime dateReported, int priority)
+        public void addJob(int jobID, int companyID, string machineID, string description, DateTime dateReported, int priority)
         {
             using (Model context = new Model())
             {
-                Company company = this.getCompany(companyID);
                 context.Jobs.Add(new Job()
                 {
                     jobID = jobID,
                     companyID = companyID,
-                    /*machineID = machineID,*/
+                    machineID = machineID,
                     description = description,
                     dateReported = dateReported,
                     priority = priority
@@ -192,7 +187,6 @@ namespace KF7012_Assignment
         {
             using (Model context = new Model())
             {
-                Company company = this.getCompany(companyID);
                 context.Machines.Add(new Machine()
                 {
                     machineID = machineID,
@@ -202,6 +196,15 @@ namespace KF7012_Assignment
                 });
 
                 context.SaveChanges();
+            }
+        }
+
+        public Machine getMachine(string machineID)
+        {
+            using (Model context = new Model())
+            {
+                Machine machineToGet = context.Machines.Where(machine => machine.machineID == machineID).FirstOrDefault<Machine>();
+                return machineToGet;
             }
         }
 

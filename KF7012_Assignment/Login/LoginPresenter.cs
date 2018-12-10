@@ -41,17 +41,20 @@ namespace KF7012_Assignment
                 Console.WriteLine(user.username);
             } */
 
-            List<Machine> machines = model.getMachinesForCompany(4567);
+            /*List<Machine> machines = model.getMachinesForCompany(4567);
             foreach (Machine machine in machines)
             {
-                Console.WriteLine(machine.machineID + "/" + machine.assetTag + " @ ");
-            }
+                Company company = model.getCompany(machine.companyID);
+                Console.WriteLine(machine.machineID + "/" + machine.assetTag + " @ " + model.getCompany(machine.companyID).name);
+            }*/
 
-            /*List<Job> jobs = model.getJobsForCompany(4567);
+            List<Job> jobs = model.getJobsForCompany(4567);
             foreach (Job job in jobs)
             {
-                Console.WriteLine(job.description);
-            }*/
+                Company company = model.getCompany(job.companyID);
+                Machine machine = model.getMachine(job.machineID);
+                Console.WriteLine("Job: " + job.description + " at " + company.name + " for " + machine.assetTag + " which has a complexity of " + machine.sizeComplexity);
+            }
 
             if (!String.IsNullOrEmpty(screen.getAttemptUsername()) && !String.IsNullOrEmpty(screen.getAttemptPassword()))
             {

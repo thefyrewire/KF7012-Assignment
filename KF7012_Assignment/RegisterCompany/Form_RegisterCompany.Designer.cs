@@ -81,14 +81,14 @@
             this.txt_CompanyName.Location = new System.Drawing.Point(156, 35);
             this.txt_CompanyName.Name = "txt_CompanyName";
             this.txt_CompanyName.Size = new System.Drawing.Size(100, 20);
-            this.txt_CompanyName.TabIndex = 4;
+            this.txt_CompanyName.TabIndex = 0;
             // 
             // txt_Location
             // 
             this.txt_Location.Location = new System.Drawing.Point(156, 76);
             this.txt_Location.Name = "txt_Location";
             this.txt_Location.Size = new System.Drawing.Size(100, 20);
-            this.txt_Location.TabIndex = 5;
+            this.txt_Location.TabIndex = 1;
             // 
             // textBox3
             // 
@@ -96,7 +96,7 @@
             this.textBox3.Location = new System.Drawing.Point(156, 117);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
+            this.textBox3.TabIndex = 2;
             // 
             // btn_RegisterCompany
             // 
@@ -121,6 +121,7 @@
             // 
             // Form_RegisterCompany
             // 
+            this.AcceptButton = this.btn_RegisterCompany;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 259);

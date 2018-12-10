@@ -67,5 +67,13 @@ namespace KF7012_Assignment
             lbl_ErrorMsg.Visible = true;
         }
 
+        public void showRegisterMachineForm(int companyID)
+        {
+            this.Hide();
+            Form_RegisterMachine f1 = new Form_RegisterMachine();
+            RegisterMachinePresenter FM = new RegisterMachinePresenter(f1);
+            FM.setCompanyID(companyID);
+            f1.ShowDialog();
+        }
     }
 }

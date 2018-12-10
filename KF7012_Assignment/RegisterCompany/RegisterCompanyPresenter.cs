@@ -48,11 +48,13 @@ namespace KF7012_Assignment
                     int newCompanyID = model.generateCompanyID();
                     model.addCompany(newCompanyID, screen.getCompanyName(), screen.getLocation());
                     screen.message("New company registered: " + screen.getCompanyName() + "\n\nID: " + newCompanyID.ToString());
+
+                    screen.showRegisterMachineForm(newCompanyID);
                 }
             }
             else screen.showError("All fields must be filled.");
-            
-
         }
+
+
     }
 }

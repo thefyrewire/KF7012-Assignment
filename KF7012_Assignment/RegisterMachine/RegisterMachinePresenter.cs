@@ -25,5 +25,15 @@ namespace KF7012_Assignment
         /*public void updateView()
         {
         }*/
+
+        public void setCompanyID(int companyID)
+        {
+            screen.setCompanyID(companyID);
+        }
+
+        public void trb_SizeComplexity_ValueChanged()
+        {
+            screen.setSizeComplexityLabel(screen.getSizeComplexityValue());
+        }
     }
 }

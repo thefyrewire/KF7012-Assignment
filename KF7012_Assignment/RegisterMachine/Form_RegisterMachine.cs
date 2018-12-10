@@ -22,5 +22,25 @@ namespace KF7012_Assignment
         {
             presenter = FP;
         }
+
+        public void setCompanyID(int companyID)
+        {
+            txt_CompanyID.Text = companyID.ToString();
+        }
+
+        private void trb_SizeComplexity_ValueChanged(Object sender, EventArgs e)
+        {
+            presenter.trb_SizeComplexity_ValueChanged();
+        }
+
+        public int getSizeComplexityValue()
+        {
+            return trb_SizeComplexity.Value;
+        }
+
+        public void setSizeComplexityLabel(int value)
+        {
+            lbl_SizeComplexityValue.Text = value.ToString();
+        }
     }
 }

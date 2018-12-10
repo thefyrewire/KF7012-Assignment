@@ -15,5 +15,6 @@ namespace KF7012_Assignment
         string getLocation();
         void hideError();
         void showError(string error);
+        void showRegisterMachineForm(int companyID);
     }
 }

@@ -88,6 +88,7 @@
       <DependentUpon>Form_Jobs.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPresenter.cs" />
+    <Compile Include="Login\PasswordHelper.cs" />
     <Compile Include="RegisterMachine\Form_RegisterMachine.cs">
       <SubType>Form</SubType>
     </Compile>

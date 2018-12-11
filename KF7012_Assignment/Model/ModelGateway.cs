@@ -22,11 +22,11 @@ namespace KF7012_Assignment
             this.deleteDatabase();
 
             // ADD USERS
-            this.addUser(0000, "admin", "admin", "admin");
-            this.addUser(1701, "w1701", "pass", "user");
-            this.addUser(1702, "w1702", "pass", "user");
-            this.addUser(1703, "w1703", "pass", "user");
-            this.addUser(1704, "w1704", "pass", "user");
+            this.addUser(0000, "admin", "hGTdTaRRFO8KkxXlaDMhO+G2Q0ZG++z58SnIeC27otrEPqNr", "admin"); // admin
+            this.addUser(1701, "w1701", "w9vAcmhb2aKIIvChFld1g+pqeSxXTbFvJfZT8Z32fRXHumRK", "user"); // password123
+            this.addUser(1702, "w1702", "YY7QFxa3L6YBeAOlym7LrjFfXdkqzSnZ71udnj8k3UpPvLMo", "user"); // th1s1sMYpa5sw0rD
+            this.addUser(1703, "w1703", "u5Z1ko9IFcMaHmDUzR6eCYdf0IjOfuTROmnj3FsPhbxx0bR2", "user"); // secure111
+            this.addUser(1704, "w1704", "/T5yjATcnLwLimMbODNhhpnbiaaIJE5o+1TFznXqvCCoqEFm", "user"); // ppaasswwoorrdd
 
             // ADD COMPANIES
             this.addCompany(1000, "ComTech Solutions", "Newcastle");
@@ -81,8 +81,9 @@ namespace KF7012_Assignment
         {
             using (Model context = new Model())
             {
-                User userToVerify = context.Users.Where(user => user.username == username && user.password == password).FirstOrDefault<User>();
-                if (userToVerify != null)
+                PasswordHelper passwordHelper = new PasswordHelper();
+                User userToVerify = context.Users.Where(user => user.username == username).FirstOrDefault<User>();
+                if (userToVerify != null && passwordHelper.verifyPassword(password, userToVerify.password))
                     return true;
 
                 return false;

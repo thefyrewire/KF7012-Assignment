@@ -10,7 +10,7 @@ namespace KF7012_Assignment
     {
         private ILoginGUI screen;
 
-        ModelGateway model = new ModelGateway(); 
+        ModelRepository repository = new ModelRepository();
 
         public LoginPresenter(ILoginGUI screen)
         {
@@ -25,7 +25,7 @@ namespace KF7012_Assignment
             // updateView();
 
             // DB TEST
-            model.resetDatabase();
+            repository.resetDatabase();
         }
 
         /*public void updateView()
@@ -48,17 +48,17 @@ namespace KF7012_Assignment
                 Console.WriteLine(machine.machineID + "/" + machine.assetTag + " @ " + model.getCompany(machine.companyID).name);
             }*/
 
-            List<Job> jobs = model.getJobsForCompany(1234);
+            List<Job> jobs = repository.getJobsForCompany(1234);
             foreach (Job job in jobs)
             {
-                Company company = model.getCompanyByID(job.companyID);
-                Machine machine = model.getMachine(job.machineID);
+                Company company = repository.getCompanyByID(job.companyID);
+                Machine machine = repository.getMachine(job.machineID);
                 Console.WriteLine("Job: " + job.description + " at " + company.name + " for " + machine.assetTag + " which has a complexity of " + machine.sizeComplexity);
             }
 
             if (!string.IsNullOrEmpty(screen.getAttemptUsername()) && !string.IsNullOrEmpty(screen.getAttemptPassword()))
             {
-                bool verified = model.verifyUser(screen.getAttemptUsername(), screen.getAttemptPassword());
+                bool verified = repository.verifyUser(screen.getAttemptUsername(), screen.getAttemptPassword());
                 
                 if (verified) screen.showMainForm();
                 else screen.showError("Incorrect username or password.");

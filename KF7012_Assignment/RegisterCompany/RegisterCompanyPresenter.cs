@@ -10,7 +10,7 @@ namespace KF7012_Assignment
     {
         private IRegisterCompanyGUI screen;
 
-        ModelGateway model = new ModelGateway(); 
+        ModelRepository repository = new ModelRepository(); 
 
         public RegisterCompanyPresenter(IRegisterCompanyGUI screen)
         {
@@ -40,13 +40,13 @@ namespace KF7012_Assignment
 
             if (screen.validateFields())
             {
-                Company company = model.getCompanyByName(screen.getCompanyName());
+                Company company = repository.getCompanyByName(screen.getCompanyName());
                 if (company != null)
                     screen.message(company.name + " already exists.\n\nID: " + company.companyID);
                 else
                 {
-                    int newCompanyID = model.generateCompanyID();
-                    model.addCompany(newCompanyID, screen.getCompanyName(), screen.getLocation());
+                    int newCompanyID = repository.generateCompanyID();
+                    repository.addCompany(newCompanyID, screen.getCompanyName(), screen.getLocation());
                     screen.message("New company registered: " + screen.getCompanyName() + "\n\nID: " + newCompanyID.ToString());
 
                     screen.showJobsForm(newCompanyID);

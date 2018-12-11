@@ -10,7 +10,7 @@ namespace KF7012_Assignment
     {
         private IJobsGUI screen;
 
-        ModelGateway model = new ModelGateway();
+        ModelRepository repository = new ModelRepository();
 
         public JobsPresenter(IJobsGUI screen)
         {
@@ -49,7 +49,7 @@ namespace KF7012_Assignment
         {
             int companyID;
             int.TryParse(screen.companyID, out companyID);
-            Company company = model.getCompanyByID(companyID);
+            Company company = repository.getCompanyByID(companyID);
             if (company != null)
             {
                 screen.setCompanyName(company.name);
@@ -64,7 +64,7 @@ namespace KF7012_Assignment
 
             int companyID;
             int.TryParse(screen.companyID, out companyID);
-            List<Machine> machines = model.getMachinesForCompany(companyID);
+            List<Machine> machines = repository.getMachinesForCompany(companyID);
             if (machines.Count > 0)
             {
                 foreach (Machine machine in machines)
@@ -78,7 +78,7 @@ namespace KF7012_Assignment
         public void cmb_MachineID_SelectedIndexChanged()
         {
             string[] parsed = screen.getMachineID().Split( new char[] {' ', '-', ' '} );
-            Machine machine = model.getMachine(parsed[0]);
+            Machine machine = repository.getMachine(parsed[0]);
             if (machine != null)
                 screen.setSizeComplexity(machine.sizeComplexity);
         }

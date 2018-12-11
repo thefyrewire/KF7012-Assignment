@@ -15,6 +15,9 @@ namespace KF7012_Assignment
         void setLocation(string location);
         void clearCompanyNameLocation();
         void showRegisterMachineForm();
-        void autofillNameLocation();
+        void addMachine(string machineID, string assetTag);
+        void setMachineIndex(int index);
+        string getMachineID();
+        void setSizeComplexity(int sizeComplexity);
     }
 }

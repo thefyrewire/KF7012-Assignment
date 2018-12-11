@@ -34,6 +34,11 @@ namespace KF7012_Assignment
             presenter.btn_RegisterMachine_Click();
         }
 
+        private void cmb_MachineID_SelectedIndexChanged(Object sender, EventArgs e)
+        {
+            presenter.cmb_MachineID_SelectedIndexChanged();
+        }
+
         private void txt_CompanyID_Leave(Object sender, EventArgs e)
         {
             presenter.txt_CompanyID_Leave();
@@ -61,9 +66,24 @@ namespace KF7012_Assignment
             txt_Location.Clear();
         }
 
-        public void autofillNameLocation()
+        public void addMachine(string machineID, string assetTag)
         {
-            presenter.autofillNameLocation();
+            cmb_MachineID.Items.Add(machineID + " (" + assetTag + ")");
+        }
+
+        public void setMachineIndex(int index)
+        {
+            cmb_MachineID.SelectedIndex = index;
+        }
+
+        public string getMachineID()
+        {
+            return cmb_MachineID.Text;
+        }
+
+        public void setSizeComplexity(int sizeComplexity)
+        {
+            txt_SizeComplexity.Text = sizeComplexity.ToString();
         }
 
         public void showRegisterMachineForm()

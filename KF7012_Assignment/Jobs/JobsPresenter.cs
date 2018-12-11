@@ -33,9 +33,15 @@ namespace KF7012_Assignment
             screen.showRegisterMachineForm();
         }
 
+        public void setCompanyID(int companyID)
+        {
+            screen.companyID = companyID.ToString();
+        }
+
         public void txt_CompanyID_Leave()
         {
             autofillNameLocation();
+            populateMachines();
         }
 
         public void autofillNameLocation()
@@ -51,9 +57,27 @@ namespace KF7012_Assignment
             else screen.clearCompanyNameLocation();
         }
 
-        public void setCompanyID(int companyID)
+        public void populateMachines()
         {
-            screen.companyID = companyID.ToString();
+            int companyID;
+            int.TryParse(screen.companyID, out companyID);
+            List<Machine> machines = model.getMachinesForCompany(companyID);
+            if (machines.Count > 0)
+            {
+                foreach (Machine machine in machines)
+                {
+                    screen.addMachine(machine.machineID, machine.assetTag);
+                }
+                screen.setMachineIndex(0);
+            }
+        }
+
+        public void cmb_MachineID_SelectedIndexChanged()
+        {
+            string[] parsed = screen.getMachineID().Split( new Char[] {' ', '-', ' '} );
+            Machine machine = model.getMachine(parsed[0]);
+            if (machine != null)
+                screen.setSizeComplexity(machine.sizeComplexity);
         }
     }
 }

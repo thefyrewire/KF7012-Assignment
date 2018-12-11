@@ -46,7 +46,6 @@
             this.lbl_MachineID = new System.Windows.Forms.Label();
             this.txt_Fault = new System.Windows.Forms.TextBox();
             this.txt_SizeComplexity = new System.Windows.Forms.TextBox();
-            this.txt_MachineID = new System.Windows.Forms.TextBox();
             this.txt_Location = new System.Windows.Forms.TextBox();
             this.txt_CompanyName = new System.Windows.Forms.TextBox();
             this.lbl_CompanyName = new System.Windows.Forms.Label();
@@ -115,7 +114,6 @@
             this.tabPage1.Controls.Add(this.lbl_MachineID);
             this.tabPage1.Controls.Add(this.txt_Fault);
             this.tabPage1.Controls.Add(this.txt_SizeComplexity);
-            this.tabPage1.Controls.Add(this.txt_MachineID);
             this.tabPage1.Controls.Add(this.txt_Location);
             this.tabPage1.Controls.Add(this.txt_CompanyName);
             this.tabPage1.Controls.Add(this.lbl_CompanyName);
@@ -131,7 +129,7 @@
             // 
             this.txt_CompanyID.Location = new System.Drawing.Point(155, 17);
             this.txt_CompanyID.Name = "txt_CompanyID";
-            this.txt_CompanyID.Size = new System.Drawing.Size(100, 20);
+            this.txt_CompanyID.Size = new System.Drawing.Size(144, 20);
             this.txt_CompanyID.TabIndex = 0;
             this.txt_CompanyID.Leave += new System.EventHandler(this.txt_CompanyID_Leave);
             // 
@@ -190,7 +188,7 @@
             // 
             // btn_RegisterMachine
             // 
-            this.btn_RegisterMachine.Location = new System.Drawing.Point(286, 116);
+            this.btn_RegisterMachine.Location = new System.Drawing.Point(322, 116);
             this.btn_RegisterMachine.Name = "btn_RegisterMachine";
             this.btn_RegisterMachine.Size = new System.Drawing.Size(94, 28);
             this.btn_RegisterMachine.TabIndex = 4;
@@ -255,28 +253,21 @@
             // 
             this.txt_SizeComplexity.Location = new System.Drawing.Point(155, 168);
             this.txt_SizeComplexity.Name = "txt_SizeComplexity";
-            this.txt_SizeComplexity.Size = new System.Drawing.Size(100, 20);
+            this.txt_SizeComplexity.Size = new System.Drawing.Size(144, 20);
             this.txt_SizeComplexity.TabIndex = 5;
-            // 
-            // txt_MachineID
-            // 
-            this.txt_MachineID.Location = new System.Drawing.Point(155, 121);
-            this.txt_MachineID.Name = "txt_MachineID";
-            this.txt_MachineID.Size = new System.Drawing.Size(100, 20);
-            this.txt_MachineID.TabIndex = 3;
             // 
             // txt_Location
             // 
             this.txt_Location.Location = new System.Drawing.Point(155, 79);
             this.txt_Location.Name = "txt_Location";
-            this.txt_Location.Size = new System.Drawing.Size(100, 20);
+            this.txt_Location.Size = new System.Drawing.Size(144, 20);
             this.txt_Location.TabIndex = 2;
             // 
             // txt_CompanyName
             // 
             this.txt_CompanyName.Location = new System.Drawing.Point(155, 47);
             this.txt_CompanyName.Name = "txt_CompanyName";
-            this.txt_CompanyName.Size = new System.Drawing.Size(100, 20);
+            this.txt_CompanyName.Size = new System.Drawing.Size(144, 20);
             this.txt_CompanyName.TabIndex = 1;
             // 
             // lbl_CompanyName
@@ -497,10 +488,11 @@
             // cmb_MachineID
             // 
             this.cmb_MachineID.FormattingEnabled = true;
-            this.cmb_MachineID.Location = new System.Drawing.Point(386, 120);
+            this.cmb_MachineID.Location = new System.Drawing.Point(155, 121);
             this.cmb_MachineID.Name = "cmb_MachineID";
-            this.cmb_MachineID.Size = new System.Drawing.Size(142, 21);
+            this.cmb_MachineID.Size = new System.Drawing.Size(144, 21);
             this.cmb_MachineID.TabIndex = 24;
+            this.cmb_MachineID.SelectedIndexChanged += new System.EventHandler(this.cmb_MachineID_SelectedIndexChanged);
             // 
             // Form_Jobs
             // 
@@ -537,7 +529,6 @@
         private System.Windows.Forms.Label lbl_MachineID;
         private System.Windows.Forms.TextBox txt_Fault;
         private System.Windows.Forms.TextBox txt_SizeComplexity;
-        private System.Windows.Forms.TextBox txt_MachineID;
         private System.Windows.Forms.TextBox txt_Location;
         private System.Windows.Forms.TextBox txt_CompanyName;
         private System.Windows.Forms.Label lbl_CompanyName;

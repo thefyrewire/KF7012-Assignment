@@ -34,9 +34,36 @@ namespace KF7012_Assignment
             presenter.btn_RegisterMachine_Click();
         }
 
-        public void setCompanyID(int companyID)
+        private void txt_CompanyID_Leave(Object sender, EventArgs e)
         {
-            txt_CompanyID.Text = companyID.ToString();
+            presenter.txt_CompanyID_Leave();
+        }
+
+        public string companyID
+        {
+            set { txt_CompanyID.Text = value; }
+            get { return txt_CompanyID.Text; }
+        }
+
+        public void setCompanyName(string companyName)
+        {
+            txt_CompanyName.Text = companyName;
+        }
+
+        public void setLocation(string location)
+        {
+            txt_Location.Text = location;
+        }
+
+        public void clearCompanyNameLocation()
+        {
+            txt_CompanyName.Clear();
+            txt_Location.Clear();
+        }
+
+        public void autofillNameLocation()
+        {
+            presenter.autofillNameLocation();
         }
 
         public void showRegisterMachineForm()

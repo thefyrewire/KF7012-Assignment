@@ -10,7 +10,11 @@ namespace KF7012_Assignment
     {
         void register(JobsPresenter FM);
         void setReadOnlyFields();
-        void setCompanyID(int companyID);
+        string companyID { get; set; }
+        void setCompanyName(string companyName);
+        void setLocation(string location);
+        void clearCompanyNameLocation();
         void showRegisterMachineForm();
+        void autofillNameLocation();
     }
 }

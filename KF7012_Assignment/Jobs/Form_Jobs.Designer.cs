@@ -72,6 +72,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.cmb_MachineID = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -98,6 +99,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cmb_MachineID);
             this.tabPage1.Controls.Add(this.txt_CompanyID);
             this.tabPage1.Controls.Add(this.lbl_CompanyID);
             this.tabPage1.Controls.Add(this.button7);
@@ -131,6 +133,7 @@
             this.txt_CompanyID.Name = "txt_CompanyID";
             this.txt_CompanyID.Size = new System.Drawing.Size(100, 20);
             this.txt_CompanyID.TabIndex = 0;
+            this.txt_CompanyID.Leave += new System.EventHandler(this.txt_CompanyID_Leave);
             // 
             // lbl_CompanyID
             // 
@@ -491,6 +494,14 @@
             this.label11.TabIndex = 7;
             this.label11.Text = "Job ID";
             // 
+            // cmb_MachineID
+            // 
+            this.cmb_MachineID.FormattingEnabled = true;
+            this.cmb_MachineID.Location = new System.Drawing.Point(386, 120);
+            this.cmb_MachineID.Name = "cmb_MachineID";
+            this.cmb_MachineID.Size = new System.Drawing.Size(142, 21);
+            this.cmb_MachineID.TabIndex = 24;
+            // 
             // Form_Jobs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -556,6 +567,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox txt_CompanyID;
         private System.Windows.Forms.Label lbl_CompanyID;
+        private System.Windows.Forms.ComboBox cmb_MachineID;
 
     }
 }

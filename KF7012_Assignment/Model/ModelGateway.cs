@@ -19,32 +19,32 @@ namespace KF7012_Assignment
 
         public void resetDatabase()
         {
-            this.deleteDatabase();
+            deleteDatabase();
 
             // ADD USERS
-            this.addUser(0000, "admin", "hGTdTaRRFO8KkxXlaDMhO+G2Q0ZG++z58SnIeC27otrEPqNr", "admin"); // admin
-            this.addUser(1701, "w1701", "w9vAcmhb2aKIIvChFld1g+pqeSxXTbFvJfZT8Z32fRXHumRK", "user"); // password123
-            this.addUser(1702, "w1702", "YY7QFxa3L6YBeAOlym7LrjFfXdkqzSnZ71udnj8k3UpPvLMo", "user"); // th1s1sMYpa5sw0rD
-            this.addUser(1703, "w1703", "u5Z1ko9IFcMaHmDUzR6eCYdf0IjOfuTROmnj3FsPhbxx0bR2", "user"); // secure111
-            this.addUser(1704, "w1704", "/T5yjATcnLwLimMbODNhhpnbiaaIJE5o+1TFznXqvCCoqEFm", "user"); // ppaasswwoorrdd
+            addUser(0000, "admin", "hGTdTaRRFO8KkxXlaDMhO+G2Q0ZG++z58SnIeC27otrEPqNr", "admin"); // admin
+            addUser(1701, "w1701", "w9vAcmhb2aKIIvChFld1g+pqeSxXTbFvJfZT8Z32fRXHumRK", "user"); // password123
+            addUser(1702, "w1702", "YY7QFxa3L6YBeAOlym7LrjFfXdkqzSnZ71udnj8k3UpPvLMo", "user"); // th1s1sMYpa5sw0rD
+            addUser(1703, "w1703", "u5Z1ko9IFcMaHmDUzR6eCYdf0IjOfuTROmnj3FsPhbxx0bR2", "user"); // secure111
+            addUser(1704, "w1704", "/T5yjATcnLwLimMbODNhhpnbiaaIJE5o+1TFznXqvCCoqEFm", "user"); // ppaasswwoorrdd
 
             // ADD COMPANIES
-            this.addCompany(1000, "ComTech Solutions", "Newcastle");
-            this.addCompany(1001, "Blue Arm Robotics", "London");
+            addCompany(1000, "ComTech Solutions", "Newcastle");
+            addCompany(1001, "Blue Arm Robotics", "London");
 
             // ADD MACHINES
-            this.addMachine("mch500", 1000, "CT001", 4);
-            this.addMachine("mch501", 1000, "CT002", 3);
-            this.addMachine("mch502", 1001, "BLUE_Homer", 5);
-            this.addMachine("mch503", 1001, "BLUE_Marge", 2);
-            this.addMachine("mch504", 1001, "BLUE_Bart", 1);
+            addMachine("mch500", 1000, "CT001", 4);
+            addMachine("mch501", 1000, "CT002", 3);
+            addMachine("mch502", 1001, "BLUE_Homer", 5);
+            addMachine("mch503", 1001, "BLUE_Marge", 2);
+            addMachine("mch504", 1001, "BLUE_Bart", 1);
 
             // ADD JOBS
-            this.addJob(1, 1000, "mch500", "Leaking pipe", new DateTime(2018, 1, 18), 2);
-            this.addJob(2, 1000, "mch501", "Broken screen", new DateTime(2018, 6, 20), 5);
-            this.addJob(3, 1000, "mch501", "Malfunctioning robot arm", new DateTime(2018, 10, 26), 1);
-            this.addJob(4, 1001, "mch503", "Faulty chassis", new DateTime(2018, 3, 27), 1);
-            this.addJob(5, 1001, "mch504", "Electrical fault", new DateTime(2018, 8, 14), 5);
+            addJob(1, 1000, "mch500", "Leaking pipe", new DateTime(2018, 1, 18), 2);
+            addJob(2, 1000, "mch501", "Broken screen", new DateTime(2018, 6, 20), 5);
+            addJob(3, 1000, "mch501", "Malfunctioning robot arm", new DateTime(2018, 10, 26), 1);
+            addJob(4, 1001, "mch503", "Faulty chassis", new DateTime(2018, 3, 27), 1);
+            addJob(5, 1001, "mch504", "Electrical fault", new DateTime(2018, 8, 14), 5);
         }
 
 

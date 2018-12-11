@@ -10,6 +10,8 @@ namespace KF7012_Assignment
     {
         private IJobsGUI screen;
 
+        ModelGateway model = new ModelGateway();
+
         public JobsPresenter(IJobsGUI screen)
         {
             this.screen = screen;
@@ -31,9 +33,27 @@ namespace KF7012_Assignment
             screen.showRegisterMachineForm();
         }
 
+        public void txt_CompanyID_Leave()
+        {
+            autofillNameLocation();
+        }
+
+        public void autofillNameLocation()
+        {
+            int companyID;
+            int.TryParse(screen.companyID, out companyID);
+            Company company = model.getCompanyByID(companyID);
+            if (company != null)
+            {
+                screen.setCompanyName(company.name);
+                screen.setLocation(company.location);
+            }
+            else screen.clearCompanyNameLocation();
+        }
+
         public void setCompanyID(int companyID)
         {
-            screen.setCompanyID(companyID);
+            screen.companyID = companyID.ToString();
         }
     }
 }

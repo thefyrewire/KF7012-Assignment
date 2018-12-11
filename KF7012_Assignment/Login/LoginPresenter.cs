@@ -9,8 +9,7 @@ namespace KF7012_Assignment
     public class LoginPresenter
     {
         private ILoginGUI screen;
-
-        ModelRepository repository = new ModelRepository();
+        private IModelRepository repository;
 
         public LoginPresenter(ILoginGUI screen)
         {

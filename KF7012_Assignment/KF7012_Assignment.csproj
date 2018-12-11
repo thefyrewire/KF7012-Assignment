@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\IModelRepository.cs" />
     <Compile Include="Model\ClosedJob.cs" />
     <Compile Include="Model\Company.cs" />
     <Compile Include="Model\Engineer.cs" />

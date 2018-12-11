@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KF7012_Assignment
 {
-    public class ModelRepository
+    public class ModelRepository : IModelRepository
     {
         /* -------------- */
         /* --- GLOBAL --- */

@@ -44,6 +44,11 @@ namespace KF7012_Assignment
             presenter.txt_CompanyID_Leave();
         }
 
+        private void btn_RegisterJob_Click(Object sender, EventArgs e)
+        {
+            presenter.btn_RegisterJob_Click();
+        }
+
         public string companyID
         {
             set { txt_CompanyID.Text = value; }
@@ -66,6 +71,12 @@ namespace KF7012_Assignment
             txt_Location.Clear();
         }
 
+        public void clearMachineIDs()
+        {
+            cmb_MachineID.ResetText();
+            cmb_MachineID.Items.Clear();
+        }
+
         public void addMachine(string machineID, string assetTag)
         {
             cmb_MachineID.Items.Add(machineID + " (" + assetTag + ")");
@@ -84,6 +95,11 @@ namespace KF7012_Assignment
         public void setSizeComplexity(int sizeComplexity)
         {
             txt_SizeComplexity.Text = sizeComplexity.ToString();
+        }
+
+        public void clearSizeComplexity()
+        {
+            txt_SizeComplexity.Clear();
         }
 
         public void showRegisterMachineForm()

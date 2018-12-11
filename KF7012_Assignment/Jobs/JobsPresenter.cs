@@ -41,6 +41,7 @@ namespace KF7012_Assignment
         public void txt_CompanyID_Leave()
         {
             autofillNameLocation();
+            screen.clearSizeComplexity();
             populateMachines();
         }
 
@@ -59,6 +60,8 @@ namespace KF7012_Assignment
 
         public void populateMachines()
         {
+            screen.clearMachineIDs();
+
             int companyID;
             int.TryParse(screen.companyID, out companyID);
             List<Machine> machines = model.getMachinesForCompany(companyID);
@@ -74,10 +77,15 @@ namespace KF7012_Assignment
 
         public void cmb_MachineID_SelectedIndexChanged()
         {
-            string[] parsed = screen.getMachineID().Split( new Char[] {' ', '-', ' '} );
+            string[] parsed = screen.getMachineID().Split( new char[] {' ', '-', ' '} );
             Machine machine = model.getMachine(parsed[0]);
             if (machine != null)
                 screen.setSizeComplexity(machine.sizeComplexity);
+        }
+
+        public void btn_RegisterJob_Click()
+        {
+            
         }
     }
 }

@@ -27,3 +27,20 @@
 \\pstudfsnb\home3\w17042163\My Documents\KF7012\kf7012-assignment\KF7012_Assignment\bin\Debug\EntityFramework.SqlServer.dll
 \\pstudfsnb\home3\w17042163\My Documents\KF7012\kf7012-assignment\KF7012_Assignment\bin\Debug\EntityFramework.xml
 \\pstudfsnb\home3\w17042163\My Documents\KF7012\kf7012-assignment\KF7012_Assignment\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Administrator\Desktop\KF7012-Assignment\KF7012_Assignment\bin\Debug\KF7012_Assignment.exe.config
+C:\Users\Administrator\Desktop\KF7012-Assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.exe
+C:\Users\Administrator\Desktop\KF7012-Assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.pdb
+C:\Users\Administrator\Desktop\KF7012-Assignment\KF7012_Assignment\bin\Debug\KF7012_Assignment.exe
+C:\Users\Administrator\Desktop\KF7012-Assignment\KF7012_Assignment\bin\Debug\KF7012_Assignment.pdb
+C:\Users\Administrator\Desktop\KF7012-Assignment\KF7012_Assignment\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\Desktop\KF7012-Assignment\KF7012_Assignment\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Desktop\KF7012-Assignment\KF7012_Assignment\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\Desktop\KF7012-Assignment\KF7012_Assignment\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Administrator\Desktop\KF7012-Assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\KF7012-Assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form1.resources
+C:\Users\Administrator\Desktop\KF7012-Assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_RegisterCompany.resources
+C:\Users\Administrator\Desktop\KF7012-Assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_Jobs.resources
+C:\Users\Administrator\Desktop\KF7012-Assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_Login.resources
+C:\Users\Administrator\Desktop\KF7012-Assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_RegisterMachine.resources
+C:\Users\Administrator\Desktop\KF7012-Assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Properties.Resources.resources
+C:\Users\Administrator\Desktop\KF7012-Assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.csproj.GenerateResource.Cache

@@ -18,6 +18,8 @@ namespace KF7012_Assignment
         void addMachine(string machineID, string assetTag);
         void setMachineIndex(int index);
         string getMachineID();
+        void clearMachineIDs();
         void setSizeComplexity(int sizeComplexity);
+        void clearSizeComplexity();
     }
 }

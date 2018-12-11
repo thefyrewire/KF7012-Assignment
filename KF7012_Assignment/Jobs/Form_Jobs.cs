@@ -23,8 +23,20 @@ namespace KF7012_Assignment
             presenter = FP;
         }
 
+        public void setReadOnlyFields()
+        {
+            txt_CompanyName.ReadOnly = true;
+            txt_Location.ReadOnly = true;
+            txt_SizeComplexity.ReadOnly = true;
+        }
+
         private void btn_RegisterMachine_Click(Object sender, EventArgs e) {
             presenter.btn_RegisterMachine_Click();
+        }
+
+        public void setCompanyID(int companyID)
+        {
+            txt_CompanyID.Text = companyID.ToString();
         }
 
         public void showRegisterMachineForm()

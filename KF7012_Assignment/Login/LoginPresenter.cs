@@ -58,8 +58,6 @@ namespace KF7012_Assignment
 
             if (!string.IsNullOrEmpty(screen.getAttemptUsername()) && !string.IsNullOrEmpty(screen.getAttemptPassword()))
             {
-                // PasswordHelper passwordHelper = new PasswordHelper();
-                // string hashed = passwordHelper.hashPassword(screen.getAttemptPassword());
                 bool verified = model.verifyUser(screen.getAttemptUsername(), screen.getAttemptPassword());
                 
                 if (verified) screen.showMainForm();

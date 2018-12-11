@@ -31,27 +31,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.txt_CompanyID = new System.Windows.Forms.TextBox();
+            this.lbl_CompanyID = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_RegisterJob = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.txt_Description = new System.Windows.Forms.TextBox();
+            this.lbl_Location = new System.Windows.Forms.Label();
             this.btn_RegisterMachine = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_SizeComplexity = new System.Windows.Forms.Label();
+            this.lbl_Attachments = new System.Windows.Forms.Label();
+            this.lbl_Description = new System.Windows.Forms.Label();
+            this.lbl_Fault = new System.Windows.Forms.Label();
+            this.lbl_MachineID = new System.Windows.Forms.Label();
+            this.txt_Fault = new System.Windows.Forms.TextBox();
+            this.txt_SizeComplexity = new System.Windows.Forms.TextBox();
+            this.txt_MachineID = new System.Windows.Forms.TextBox();
+            this.txt_Location = new System.Windows.Forms.TextBox();
+            this.txt_CompanyName = new System.Windows.Forms.TextBox();
+            this.lbl_CompanyName = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button4 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -100,27 +98,25 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.textBox8);
-            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.txt_CompanyID);
+            this.tabPage1.Controls.Add(this.lbl_CompanyID);
             this.tabPage1.Controls.Add(this.button7);
-            this.tabPage1.Controls.Add(this.button3);
+            this.tabPage1.Controls.Add(this.btn_RegisterJob);
             this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.textBox7);
-            this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.txt_Description);
+            this.tabPage1.Controls.Add(this.lbl_Location);
             this.tabPage1.Controls.Add(this.btn_RegisterMachine);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.textBox6);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.lbl_SizeComplexity);
+            this.tabPage1.Controls.Add(this.lbl_Attachments);
+            this.tabPage1.Controls.Add(this.lbl_Description);
+            this.tabPage1.Controls.Add(this.lbl_Fault);
+            this.tabPage1.Controls.Add(this.lbl_MachineID);
+            this.tabPage1.Controls.Add(this.txt_Fault);
+            this.tabPage1.Controls.Add(this.txt_SizeComplexity);
+            this.tabPage1.Controls.Add(this.txt_MachineID);
+            this.tabPage1.Controls.Add(this.txt_Location);
+            this.tabPage1.Controls.Add(this.txt_CompanyName);
+            this.tabPage1.Controls.Add(this.lbl_CompanyName);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -129,181 +125,165 @@
             this.tabPage1.Text = "Register";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // textBox8
+            // txt_CompanyID
             // 
-            this.textBox8.Location = new System.Drawing.Point(155, 17);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 24;
+            this.txt_CompanyID.Location = new System.Drawing.Point(155, 17);
+            this.txt_CompanyID.Name = "txt_CompanyID";
+            this.txt_CompanyID.Size = new System.Drawing.Size(100, 20);
+            this.txt_CompanyID.TabIndex = 0;
             // 
-            // label10
+            // lbl_CompanyID
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 20);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 13);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "Company ID *";
+            this.lbl_CompanyID.AutoSize = true;
+            this.lbl_CompanyID.Location = new System.Drawing.Point(15, 20);
+            this.lbl_CompanyID.Name = "lbl_CompanyID";
+            this.lbl_CompanyID.Size = new System.Drawing.Size(72, 13);
+            this.lbl_CompanyID.TabIndex = 23;
+            this.lbl_CompanyID.Text = "Company ID *";
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(286, 406);
+            this.button7.Location = new System.Drawing.Point(286, 363);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(94, 28);
-            this.button7.TabIndex = 22;
+            this.button7.TabIndex = 9;
             this.button7.Text = "Attach a file";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_RegisterJob
             // 
-            this.button3.Location = new System.Drawing.Point(18, 474);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 28);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Register";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_RegisterJob.Location = new System.Drawing.Point(18, 461);
+            this.btn_RegisterJob.Name = "btn_RegisterJob";
+            this.btn_RegisterJob.Size = new System.Drawing.Size(94, 28);
+            this.btn_RegisterJob.TabIndex = 10;
+            this.btn_RegisterJob.Text = "Register";
+            this.btn_RegisterJob.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(161, 406);
+            this.button2.Location = new System.Drawing.Point(155, 363);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 28);
-            this.button2.TabIndex = 20;
+            this.button2.TabIndex = 8;
             this.button2.Text = "Download";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // txt_Description
             // 
-            this.textBox7.Location = new System.Drawing.Point(155, 323);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(225, 56);
-            this.textBox7.TabIndex = 19;
+            this.txt_Description.Location = new System.Drawing.Point(155, 289);
+            this.txt_Description.Multiline = true;
+            this.txt_Description.Name = "txt_Description";
+            this.txt_Description.Size = new System.Drawing.Size(225, 56);
+            this.txt_Description.TabIndex = 7;
             // 
-            // label9
+            // lbl_Location
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(18, 214);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 13);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Complexity";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 86);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 13);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Location";
+            this.lbl_Location.AutoSize = true;
+            this.lbl_Location.Location = new System.Drawing.Point(15, 82);
+            this.lbl_Location.Name = "lbl_Location";
+            this.lbl_Location.Size = new System.Drawing.Size(48, 13);
+            this.lbl_Location.TabIndex = 17;
+            this.lbl_Location.Text = "Location";
             // 
             // btn_RegisterMachine
             // 
-            this.btn_RegisterMachine.Location = new System.Drawing.Point(306, 116);
+            this.btn_RegisterMachine.Location = new System.Drawing.Point(286, 116);
             this.btn_RegisterMachine.Name = "btn_RegisterMachine";
             this.btn_RegisterMachine.Size = new System.Drawing.Size(94, 28);
-            this.btn_RegisterMachine.TabIndex = 16;
+            this.btn_RegisterMachine.TabIndex = 4;
             this.btn_RegisterMachine.Text = "Add a Machine";
             this.btn_RegisterMachine.UseVisualStyleBackColor = true;
             this.btn_RegisterMachine.Click += new System.EventHandler(this.btn_RegisterMachine_Click);
             // 
-            // label7
+            // lbl_SizeComplexity
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(21, 175);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(27, 13);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Size";
+            this.lbl_SizeComplexity.AutoSize = true;
+            this.lbl_SizeComplexity.Location = new System.Drawing.Point(15, 171);
+            this.lbl_SizeComplexity.Name = "lbl_SizeComplexity";
+            this.lbl_SizeComplexity.Size = new System.Drawing.Size(101, 13);
+            this.lbl_SizeComplexity.TabIndex = 15;
+            this.lbl_SizeComplexity.Text = "Size and Complexity";
             // 
-            // label6
+            // lbl_Attachments
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 414);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Attachments";
+            this.lbl_Attachments.AutoSize = true;
+            this.lbl_Attachments.Location = new System.Drawing.Point(15, 371);
+            this.lbl_Attachments.Name = "lbl_Attachments";
+            this.lbl_Attachments.Size = new System.Drawing.Size(66, 13);
+            this.lbl_Attachments.TabIndex = 14;
+            this.lbl_Attachments.Text = "Attachments";
             // 
-            // label5
+            // lbl_Description
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 323);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Description";
+            this.lbl_Description.AutoSize = true;
+            this.lbl_Description.Location = new System.Drawing.Point(15, 292);
+            this.lbl_Description.Name = "lbl_Description";
+            this.lbl_Description.Size = new System.Drawing.Size(60, 13);
+            this.lbl_Description.TabIndex = 13;
+            this.lbl_Description.Text = "Description";
             // 
-            // label4
+            // lbl_Fault
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 264);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Fault *";
+            this.lbl_Fault.AutoSize = true;
+            this.lbl_Fault.Location = new System.Drawing.Point(15, 213);
+            this.lbl_Fault.Name = "lbl_Fault";
+            this.lbl_Fault.Size = new System.Drawing.Size(37, 13);
+            this.lbl_Fault.TabIndex = 12;
+            this.lbl_Fault.Text = "Fault *";
             // 
-            // label3
+            // lbl_MachineID
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 124);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Machine ID *";
+            this.lbl_MachineID.AutoSize = true;
+            this.lbl_MachineID.Location = new System.Drawing.Point(15, 124);
+            this.lbl_MachineID.Name = "lbl_MachineID";
+            this.lbl_MachineID.Size = new System.Drawing.Size(69, 13);
+            this.lbl_MachineID.TabIndex = 11;
+            this.lbl_MachineID.Text = "Machine ID *";
             // 
-            // textBox6
+            // txt_Fault
             // 
-            this.textBox6.Location = new System.Drawing.Point(155, 257);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(225, 56);
-            this.textBox6.TabIndex = 10;
+            this.txt_Fault.Location = new System.Drawing.Point(155, 210);
+            this.txt_Fault.Multiline = true;
+            this.txt_Fault.Name = "txt_Fault";
+            this.txt_Fault.Size = new System.Drawing.Size(225, 56);
+            this.txt_Fault.TabIndex = 6;
             // 
-            // textBox5
+            // txt_SizeComplexity
             // 
-            this.textBox5.Location = new System.Drawing.Point(155, 214);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 9;
+            this.txt_SizeComplexity.Location = new System.Drawing.Point(155, 168);
+            this.txt_SizeComplexity.Name = "txt_SizeComplexity";
+            this.txt_SizeComplexity.Size = new System.Drawing.Size(100, 20);
+            this.txt_SizeComplexity.TabIndex = 5;
             // 
-            // textBox4
+            // txt_MachineID
             // 
-            this.textBox4.Location = new System.Drawing.Point(155, 168);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 8;
+            this.txt_MachineID.Location = new System.Drawing.Point(155, 121);
+            this.txt_MachineID.Name = "txt_MachineID";
+            this.txt_MachineID.Size = new System.Drawing.Size(100, 20);
+            this.txt_MachineID.TabIndex = 3;
             // 
-            // textBox3
+            // txt_Location
             // 
-            this.textBox3.Location = new System.Drawing.Point(155, 121);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 7;
+            this.txt_Location.Location = new System.Drawing.Point(155, 79);
+            this.txt_Location.Name = "txt_Location";
+            this.txt_Location.Size = new System.Drawing.Size(100, 20);
+            this.txt_Location.TabIndex = 2;
             // 
-            // textBox2
+            // txt_CompanyName
             // 
-            this.textBox2.Location = new System.Drawing.Point(155, 79);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 6;
+            this.txt_CompanyName.Location = new System.Drawing.Point(155, 47);
+            this.txt_CompanyName.Name = "txt_CompanyName";
+            this.txt_CompanyName.Size = new System.Drawing.Size(100, 20);
+            this.txt_CompanyName.TabIndex = 1;
             // 
-            // textBox1
+            // lbl_CompanyName
             // 
-            this.textBox1.Location = new System.Drawing.Point(155, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Name of Company";
+            this.lbl_CompanyName.AutoSize = true;
+            this.lbl_CompanyName.Location = new System.Drawing.Point(15, 50);
+            this.lbl_CompanyName.Name = "lbl_CompanyName";
+            this.lbl_CompanyName.Size = new System.Drawing.Size(94, 13);
+            this.lbl_CompanyName.TabIndex = 0;
+            this.lbl_CompanyName.Text = "Name of Company";
             // 
             // tabPage3
             // 
@@ -536,24 +516,22 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txt_Description;
+        private System.Windows.Forms.Label lbl_Location;
         private System.Windows.Forms.Button btn_RegisterMachine;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_SizeComplexity;
+        private System.Windows.Forms.Label lbl_Attachments;
+        private System.Windows.Forms.Label lbl_Description;
+        private System.Windows.Forms.Label lbl_Fault;
+        private System.Windows.Forms.Label lbl_MachineID;
+        private System.Windows.Forms.TextBox txt_Fault;
+        private System.Windows.Forms.TextBox txt_SizeComplexity;
+        private System.Windows.Forms.TextBox txt_MachineID;
+        private System.Windows.Forms.TextBox txt_Location;
+        private System.Windows.Forms.TextBox txt_CompanyName;
+        private System.Windows.Forms.Label lbl_CompanyName;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_RegisterJob;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox textBox10;
@@ -576,8 +554,8 @@
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txt_CompanyID;
+        private System.Windows.Forms.Label lbl_CompanyID;
 
     }
 }

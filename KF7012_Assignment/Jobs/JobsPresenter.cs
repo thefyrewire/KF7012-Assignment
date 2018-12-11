@@ -19,6 +19,7 @@ namespace KF7012_Assignment
 
         private void initialiseForm()
         {
+            screen.setReadOnlyFields();
             // updateView();
         }
 
@@ -28,6 +29,11 @@ namespace KF7012_Assignment
 
         public void btn_RegisterMachine_Click() {
             screen.showRegisterMachineForm();
+        }
+
+        public void setCompanyID(int companyID)
+        {
+            screen.setCompanyID(companyID);
         }
     }
 }

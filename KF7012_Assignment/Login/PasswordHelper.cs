@@ -28,7 +28,7 @@ namespace KF7012_Assignment
 
         public bool verifyPassword(string password, string hashed)
         {
-            if (String.IsNullOrEmpty(hashed.Trim()) || hashed.Length % 4 != 0)
+            if (string.IsNullOrEmpty(hashed.Trim()) || hashed.Length % 4 != 0)
                 return false;
 
             byte[] hashBytes = Convert.FromBase64String(hashed);

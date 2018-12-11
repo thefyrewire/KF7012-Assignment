@@ -9,6 +9,8 @@ namespace KF7012_Assignment
     public interface IJobsGUI
     {
         void register(JobsPresenter FM);
+        void setReadOnlyFields();
+        void setCompanyID(int companyID);
         void showRegisterMachineForm();
     }
 }

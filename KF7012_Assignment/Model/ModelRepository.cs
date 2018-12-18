@@ -12,6 +12,14 @@ namespace KF7012_Assignment
         /* --- GLOBAL --- */
         /* -------------- */
 
+        /*private IModelRepository repo;
+
+        public ModelRepository(IModelRepository repo)
+        {
+            this.repo = repo;
+            repo.register(this);
+        }*/
+
         public void deleteDatabase()
         {
             using (Model context = new Model()) { context.Database.Delete(); }

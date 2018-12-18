@@ -9,7 +9,8 @@ namespace KF7012_Assignment
     public class JobsPresenter
     {
         private IJobsGUI screen;
-        private IModelRepository repository;
+        // private IModelRepository repository;
+        ModelRepository repository = new ModelRepository();
 
         public JobsPresenter(IJobsGUI screen)
         {

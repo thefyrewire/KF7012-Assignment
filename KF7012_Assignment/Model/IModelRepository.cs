@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KF7012_Assignment
 {
-    interface IModelRepository
+    public interface IModelRepository
     {
         void deleteDatabase();
         void resetDatabase();

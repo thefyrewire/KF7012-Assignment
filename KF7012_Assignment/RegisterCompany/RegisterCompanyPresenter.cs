@@ -9,7 +9,8 @@ namespace KF7012_Assignment
     public class RegisterCompanyPresenter
     {
         private IRegisterCompanyGUI screen;
-        private IModelRepository repository;
+        // private IModelRepository repository;
+        ModelRepository repository = new ModelRepository();
 
         public RegisterCompanyPresenter(IRegisterCompanyGUI screen)
         {

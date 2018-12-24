@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Register = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_AssetTag = new System.Windows.Forms.Label();
             this.lbl_SizeComplexity = new System.Windows.Forms.Label();
@@ -40,14 +40,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.trb_SizeComplexity)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_Register
             // 
-            this.button1.Location = new System.Drawing.Point(48, 260);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Register";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Register.Location = new System.Drawing.Point(48, 260);
+            this.btn_Register.Name = "btn_Register";
+            this.btn_Register.Size = new System.Drawing.Size(75, 23);
+            this.btn_Register.TabIndex = 2;
+            this.btn_Register.Text = "Register";
+            this.btn_Register.UseVisualStyleBackColor = true;
+            this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
             // 
             // label1
             // 
@@ -80,7 +81,7 @@
             this.txt_AssetTag.Location = new System.Drawing.Point(120, 110);
             this.txt_AssetTag.Name = "txt_AssetTag";
             this.txt_AssetTag.Size = new System.Drawing.Size(229, 20);
-            this.txt_AssetTag.TabIndex = 6;
+            this.txt_AssetTag.TabIndex = 0;
             // 
             // lbl_CompanyID
             // 
@@ -97,7 +98,7 @@
             this.txt_CompanyID.Name = "txt_CompanyID";
             this.txt_CompanyID.ReadOnly = true;
             this.txt_CompanyID.Size = new System.Drawing.Size(229, 20);
-            this.txt_CompanyID.TabIndex = 10;
+            this.txt_CompanyID.TabIndex = 3;
             // 
             // trb_SizeComplexity
             // 
@@ -107,7 +108,7 @@
             this.trb_SizeComplexity.Minimum = 1;
             this.trb_SizeComplexity.Name = "trb_SizeComplexity";
             this.trb_SizeComplexity.Size = new System.Drawing.Size(201, 45);
-            this.trb_SizeComplexity.TabIndex = 11;
+            this.trb_SizeComplexity.TabIndex = 1;
             this.trb_SizeComplexity.Value = 1;
             this.trb_SizeComplexity.ValueChanged += new System.EventHandler(this.trb_SizeComplexity_ValueChanged);
             // 
@@ -123,6 +124,7 @@
             // 
             // Form_RegisterMachine
             // 
+            this.AcceptButton = this.btn_Register;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 418);
@@ -134,7 +136,7 @@
             this.Controls.Add(this.lbl_SizeComplexity);
             this.Controls.Add(this.lbl_AssetTag);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Register);
             this.Name = "Form_RegisterMachine";
             this.Text = "Form_RegisterMachine";
             ((System.ComponentModel.ISupportInitialize)(this.trb_SizeComplexity)).EndInit();
@@ -145,7 +147,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Register;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_AssetTag;
         private System.Windows.Forms.Label lbl_SizeComplexity;

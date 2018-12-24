@@ -31,11 +31,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lbl_AssetTag = new System.Windows.Forms.Label();
+            this.txt_AssetTag = new System.Windows.Forms.TextBox();
+            this.cmb_MachineID = new System.Windows.Forms.ComboBox();
             this.txt_CompanyID = new System.Windows.Forms.TextBox();
             this.lbl_CompanyID = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btn_AttachFile = new System.Windows.Forms.Button();
             this.btn_RegisterJob = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.txt_Description = new System.Windows.Forms.TextBox();
             this.lbl_Location = new System.Windows.Forms.Label();
             this.btn_RegisterMachine = new System.Windows.Forms.Button();
@@ -71,7 +73,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.cmb_MachineID = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -98,12 +99,13 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lbl_AssetTag);
+            this.tabPage1.Controls.Add(this.txt_AssetTag);
             this.tabPage1.Controls.Add(this.cmb_MachineID);
             this.tabPage1.Controls.Add(this.txt_CompanyID);
             this.tabPage1.Controls.Add(this.lbl_CompanyID);
-            this.tabPage1.Controls.Add(this.button7);
+            this.tabPage1.Controls.Add(this.btn_AttachFile);
             this.tabPage1.Controls.Add(this.btn_RegisterJob);
-            this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.txt_Description);
             this.tabPage1.Controls.Add(this.lbl_Location);
             this.tabPage1.Controls.Add(this.btn_RegisterMachine);
@@ -125,6 +127,32 @@
             this.tabPage1.Text = "Register";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // lbl_AssetTag
+            // 
+            this.lbl_AssetTag.AutoSize = true;
+            this.lbl_AssetTag.Location = new System.Drawing.Point(15, 151);
+            this.lbl_AssetTag.Name = "lbl_AssetTag";
+            this.lbl_AssetTag.Size = new System.Drawing.Size(55, 13);
+            this.lbl_AssetTag.TabIndex = 25;
+            this.lbl_AssetTag.Text = "Asset Tag";
+            // 
+            // txt_AssetTag
+            // 
+            this.txt_AssetTag.Location = new System.Drawing.Point(155, 148);
+            this.txt_AssetTag.Name = "txt_AssetTag";
+            this.txt_AssetTag.Size = new System.Drawing.Size(144, 20);
+            this.txt_AssetTag.TabIndex = 5;
+            // 
+            // cmb_MachineID
+            // 
+            this.cmb_MachineID.FormattingEnabled = true;
+            this.cmb_MachineID.Location = new System.Drawing.Point(155, 121);
+            this.cmb_MachineID.Name = "cmb_MachineID";
+            this.cmb_MachineID.Size = new System.Drawing.Size(144, 21);
+            this.cmb_MachineID.TabIndex = 3;
+            this.cmb_MachineID.SelectedIndexChanged += new System.EventHandler(this.cmb_MachineID_Leave);
+            this.cmb_MachineID.Leave += new System.EventHandler(this.cmb_MachineID_Leave);
+            // 
             // txt_CompanyID
             // 
             this.txt_CompanyID.Location = new System.Drawing.Point(155, 17);
@@ -142,14 +170,14 @@
             this.lbl_CompanyID.TabIndex = 23;
             this.lbl_CompanyID.Text = "Company ID *";
             // 
-            // button7
+            // btn_AttachFile
             // 
-            this.button7.Location = new System.Drawing.Point(286, 363);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(94, 28);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "Attach a file";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn_AttachFile.Location = new System.Drawing.Point(155, 363);
+            this.btn_AttachFile.Name = "btn_AttachFile";
+            this.btn_AttachFile.Size = new System.Drawing.Size(94, 28);
+            this.btn_AttachFile.TabIndex = 9;
+            this.btn_AttachFile.Text = "Attach a file";
+            this.btn_AttachFile.UseVisualStyleBackColor = true;
             // 
             // btn_RegisterJob
             // 
@@ -160,27 +188,18 @@
             this.btn_RegisterJob.Text = "Register";
             this.btn_RegisterJob.UseVisualStyleBackColor = true;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(155, 363);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 28);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Download";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // txt_Description
             // 
-            this.txt_Description.Location = new System.Drawing.Point(155, 289);
+            this.txt_Description.Location = new System.Drawing.Point(155, 286);
             this.txt_Description.Multiline = true;
             this.txt_Description.Name = "txt_Description";
             this.txt_Description.Size = new System.Drawing.Size(225, 56);
-            this.txt_Description.TabIndex = 7;
+            this.txt_Description.TabIndex = 8;
             // 
             // lbl_Location
             // 
             this.lbl_Location.AutoSize = true;
-            this.lbl_Location.Location = new System.Drawing.Point(15, 82);
+            this.lbl_Location.Location = new System.Drawing.Point(15, 72);
             this.lbl_Location.Name = "lbl_Location";
             this.lbl_Location.Size = new System.Drawing.Size(48, 13);
             this.lbl_Location.TabIndex = 17;
@@ -199,7 +218,7 @@
             // lbl_SizeComplexity
             // 
             this.lbl_SizeComplexity.AutoSize = true;
-            this.lbl_SizeComplexity.Location = new System.Drawing.Point(15, 171);
+            this.lbl_SizeComplexity.Location = new System.Drawing.Point(15, 177);
             this.lbl_SizeComplexity.Name = "lbl_SizeComplexity";
             this.lbl_SizeComplexity.Size = new System.Drawing.Size(101, 13);
             this.lbl_SizeComplexity.TabIndex = 15;
@@ -217,7 +236,7 @@
             // lbl_Description
             // 
             this.lbl_Description.AutoSize = true;
-            this.lbl_Description.Location = new System.Drawing.Point(15, 292);
+            this.lbl_Description.Location = new System.Drawing.Point(15, 286);
             this.lbl_Description.Name = "lbl_Description";
             this.lbl_Description.Size = new System.Drawing.Size(60, 13);
             this.lbl_Description.TabIndex = 13;
@@ -226,7 +245,7 @@
             // lbl_Fault
             // 
             this.lbl_Fault.AutoSize = true;
-            this.lbl_Fault.Location = new System.Drawing.Point(15, 213);
+            this.lbl_Fault.Location = new System.Drawing.Point(15, 224);
             this.lbl_Fault.Name = "lbl_Fault";
             this.lbl_Fault.Size = new System.Drawing.Size(37, 13);
             this.lbl_Fault.TabIndex = 12;
@@ -243,29 +262,29 @@
             // 
             // txt_Fault
             // 
-            this.txt_Fault.Location = new System.Drawing.Point(155, 210);
+            this.txt_Fault.Location = new System.Drawing.Point(155, 224);
             this.txt_Fault.Multiline = true;
             this.txt_Fault.Name = "txt_Fault";
             this.txt_Fault.Size = new System.Drawing.Size(225, 56);
-            this.txt_Fault.TabIndex = 6;
+            this.txt_Fault.TabIndex = 7;
             // 
             // txt_SizeComplexity
             // 
-            this.txt_SizeComplexity.Location = new System.Drawing.Point(155, 168);
+            this.txt_SizeComplexity.Location = new System.Drawing.Point(155, 174);
             this.txt_SizeComplexity.Name = "txt_SizeComplexity";
             this.txt_SizeComplexity.Size = new System.Drawing.Size(144, 20);
-            this.txt_SizeComplexity.TabIndex = 5;
+            this.txt_SizeComplexity.TabIndex = 6;
             // 
             // txt_Location
             // 
-            this.txt_Location.Location = new System.Drawing.Point(155, 79);
+            this.txt_Location.Location = new System.Drawing.Point(155, 69);
             this.txt_Location.Name = "txt_Location";
             this.txt_Location.Size = new System.Drawing.Size(144, 20);
             this.txt_Location.TabIndex = 2;
             // 
             // txt_CompanyName
             // 
-            this.txt_CompanyName.Location = new System.Drawing.Point(155, 47);
+            this.txt_CompanyName.Location = new System.Drawing.Point(155, 43);
             this.txt_CompanyName.Name = "txt_CompanyName";
             this.txt_CompanyName.Size = new System.Drawing.Size(144, 20);
             this.txt_CompanyName.TabIndex = 1;
@@ -273,7 +292,7 @@
             // lbl_CompanyName
             // 
             this.lbl_CompanyName.AutoSize = true;
-            this.lbl_CompanyName.Location = new System.Drawing.Point(15, 50);
+            this.lbl_CompanyName.Location = new System.Drawing.Point(15, 46);
             this.lbl_CompanyName.Name = "lbl_CompanyName";
             this.lbl_CompanyName.Size = new System.Drawing.Size(94, 13);
             this.lbl_CompanyName.TabIndex = 0;
@@ -485,17 +504,9 @@
             this.label11.TabIndex = 7;
             this.label11.Text = "Job ID";
             // 
-            // cmb_MachineID
-            // 
-            this.cmb_MachineID.FormattingEnabled = true;
-            this.cmb_MachineID.Location = new System.Drawing.Point(155, 121);
-            this.cmb_MachineID.Name = "cmb_MachineID";
-            this.cmb_MachineID.Size = new System.Drawing.Size(144, 21);
-            this.cmb_MachineID.TabIndex = 24;
-            this.cmb_MachineID.SelectedIndexChanged += new System.EventHandler(this.cmb_MachineID_SelectedIndexChanged);
-            // 
             // Form_Jobs
             // 
+            this.AcceptButton = this.btn_RegisterMachine;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1024, 733);
@@ -518,7 +529,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txt_Description;
         private System.Windows.Forms.Label lbl_Location;
         private System.Windows.Forms.Button btn_RegisterMachine;
@@ -555,10 +565,12 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btn_AttachFile;
         private System.Windows.Forms.TextBox txt_CompanyID;
         private System.Windows.Forms.Label lbl_CompanyID;
         private System.Windows.Forms.ComboBox cmb_MachineID;
+        private System.Windows.Forms.Label lbl_AssetTag;
+        private System.Windows.Forms.TextBox txt_AssetTag;
 
     }
 }

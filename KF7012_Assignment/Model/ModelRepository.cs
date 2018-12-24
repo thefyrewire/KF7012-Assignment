@@ -244,6 +244,17 @@ namespace KF7012_Assignment
             }
         }
 
+        public string generateMachineID()
+        {
+            using (Model context = new Model())
+            {
+                string[] parsed = context.Machines.Max(machine => machine.machineID).Split(new char[] { 'm', 'c', 'h' });
+                int id;
+                int.TryParse(parsed[3], out id);
+                return "mch" + (id + 1).ToString();
+            }
+        }
+
 
         /* ---------------------- */
         /* --- SCHEDULED JOBS --- */

@@ -73,8 +73,7 @@ namespace KF7012_Assignment
             Form_Jobs f1 = new Form_Jobs();
             JobsPresenter FM = new JobsPresenter(f1);
             FM.setCompanyID(companyID);
-            FM.autofillNameLocation();
-            FM.populateMachines();
+            FM.updateView();
             f1.ShowDialog();
         }
     }

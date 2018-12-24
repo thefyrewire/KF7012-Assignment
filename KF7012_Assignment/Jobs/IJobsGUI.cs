@@ -14,11 +14,13 @@ namespace KF7012_Assignment
         void setCompanyName(string companyName);
         void setLocation(string location);
         void clearCompanyNameLocation();
-        void showRegisterMachineForm();
-        void addMachine(string machineID, string assetTag);
+        void registerMachineEnabled(bool allowed);
+        void showRegisterMachineForm(int companyID);
+        void addMachine(string machineID);
         void setMachineIndex(int index);
         string getMachineID();
         void clearMachineIDs();
+        string assetTag { get; set; }
         void setSizeComplexity(int sizeComplexity);
         void clearSizeComplexity();
     }

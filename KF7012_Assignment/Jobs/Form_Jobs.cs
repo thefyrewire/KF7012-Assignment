@@ -27,6 +27,7 @@ namespace KF7012_Assignment
         {
             txt_CompanyName.ReadOnly = true;
             txt_Location.ReadOnly = true;
+            txt_AssetTag.ReadOnly = true;
             txt_SizeComplexity.ReadOnly = true;
         }
 
@@ -34,9 +35,14 @@ namespace KF7012_Assignment
             presenter.btn_RegisterMachine_Click();
         }
 
-        private void cmb_MachineID_SelectedIndexChanged(Object sender, EventArgs e)
+        /*private void cmb_MachineID_SelectedIndexChanged(Object sender, EventArgs e)
         {
             presenter.cmb_MachineID_SelectedIndexChanged();
+        }*/
+
+        private void cmb_MachineID_Leave(Object sender, EventArgs e)
+        {
+            presenter.cmb_MachineID_Leave();
         }
 
         private void txt_CompanyID_Leave(Object sender, EventArgs e)
@@ -71,15 +77,20 @@ namespace KF7012_Assignment
             txt_Location.Clear();
         }
 
+        public void registerMachineEnabled(bool allowed)
+        {
+            btn_RegisterMachine.Enabled = allowed;
+        }
+
         public void clearMachineIDs()
         {
             cmb_MachineID.ResetText();
             cmb_MachineID.Items.Clear();
         }
 
-        public void addMachine(string machineID, string assetTag)
+        public void addMachine(string machineID)
         {
-            cmb_MachineID.Items.Add(machineID + " (" + assetTag + ")");
+            cmb_MachineID.Items.Add(machineID);
         }
 
         public void setMachineIndex(int index)
@@ -92,6 +103,12 @@ namespace KF7012_Assignment
             return cmb_MachineID.Text;
         }
 
+        public string assetTag
+        {
+            set { txt_AssetTag.Text = value; }
+            get { return txt_AssetTag.Text; }
+        }
+
         public void setSizeComplexity(int sizeComplexity)
         {
             txt_SizeComplexity.Text = sizeComplexity.ToString();
@@ -102,11 +119,13 @@ namespace KF7012_Assignment
             txt_SizeComplexity.Clear();
         }
 
-        public void showRegisterMachineForm()
+        public void showRegisterMachineForm(int companyID)
         {
             Form_RegisterMachine f1 = new Form_RegisterMachine();
             RegisterMachinePresenter FM = new RegisterMachinePresenter(f1);
+            FM.setCompanyID(companyID);
             f1.ShowDialog();
+            presenter.updateView();
         }
     }
 }

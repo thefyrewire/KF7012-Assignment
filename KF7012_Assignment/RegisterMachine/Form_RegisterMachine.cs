@@ -23,9 +23,27 @@ namespace KF7012_Assignment
             presenter = FP;
         }
 
-        public void setCompanyID(int companyID)
+        public int companyID
         {
-            txt_CompanyID.Text = companyID.ToString();
+            set { txt_CompanyID.Text = value.ToString(); }
+            get
+            {
+                int ID;
+                int.TryParse(txt_CompanyID.Text, out ID);
+                return ID;
+            }
+        }
+
+        public string assetTag
+        {
+            set { txt_AssetTag.Text = value; }
+            get { return txt_AssetTag.Text; }
+        }
+
+        public int sizeComplexity
+        {
+            set { trb_SizeComplexity.Value = value; }
+            get { return trb_SizeComplexity.Value;  }
         }
 
         private void trb_SizeComplexity_ValueChanged(Object sender, EventArgs e)
@@ -33,14 +51,19 @@ namespace KF7012_Assignment
             presenter.trb_SizeComplexity_ValueChanged();
         }
 
-        public int getSizeComplexityValue()
-        {
-            return trb_SizeComplexity.Value;
-        }
-
         public void setSizeComplexityLabel(int value)
         {
             lbl_SizeComplexityValue.Text = value.ToString();
+        }
+
+        private void btn_Register_Click(Object sender, EventArgs e)
+        {
+            presenter.btn_Register_Click();
+        }
+
+        public void closeForm()
+        {
+            this.Close();
         }
     }
 }

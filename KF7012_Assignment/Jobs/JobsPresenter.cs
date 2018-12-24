@@ -21,16 +21,22 @@ namespace KF7012_Assignment
 
         private void initialiseForm()
         {
-            screen.setReadOnlyFields();
-            // updateView();
+            screen.setReadOnlyFields();            
+            updateView();
         }
 
-        /*public void updateView()
+        public void updateView()
         {
-        }*/
+            autofillNameLocation();
+            screen.clearSizeComplexity();
+            populateMachines();
+            checkEnableAddMachine();
+        }
 
         public void btn_RegisterMachine_Click() {
-            screen.showRegisterMachineForm();
+            int companyID;
+            bool parsed = int.TryParse(screen.companyID, out companyID);
+            screen.showRegisterMachineForm(companyID);
         }
 
         public void setCompanyID(int companyID)
@@ -40,12 +46,10 @@ namespace KF7012_Assignment
 
         public void txt_CompanyID_Leave()
         {
-            autofillNameLocation();
-            screen.clearSizeComplexity();
-            populateMachines();
+            updateView();
         }
 
-        public void autofillNameLocation()
+        private void autofillNameLocation()
         {
             int companyID;
             int.TryParse(screen.companyID, out companyID);
@@ -58,7 +62,7 @@ namespace KF7012_Assignment
             else screen.clearCompanyNameLocation();
         }
 
-        public void populateMachines()
+        private void populateMachines()
         {
             screen.clearMachineIDs();
 
@@ -69,17 +73,28 @@ namespace KF7012_Assignment
             {
                 foreach (Machine machine in machines)
                 {
-                    screen.addMachine(machine.machineID, machine.assetTag);
+                    screen.addMachine(machine.machineID);
                 }
                 screen.setMachineIndex(0);
             }
         }
 
-        public void cmb_MachineID_SelectedIndexChanged()
+        private void checkEnableAddMachine()
         {
-            string[] parsed = screen.getMachineID().Split( new char[] {' ', '-', ' '} );
-            Machine machine = repository.getMachine(parsed[0]);
+            int companyID;
+            int.TryParse(screen.companyID, out companyID);
+            Company company = repository.getCompanyByID(companyID);
+            if (company != null)
+                screen.registerMachineEnabled(true);
+            else
+                screen.registerMachineEnabled(false);
+        }
+
+        public void cmb_MachineID_Leave()
+        {
+            Machine machine = repository.getMachine(screen.getMachineID());
             if (machine != null)
+                screen.assetTag = machine.assetTag;
                 screen.setSizeComplexity(machine.sizeComplexity);
         }
 

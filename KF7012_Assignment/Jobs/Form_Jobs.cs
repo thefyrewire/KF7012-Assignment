@@ -55,31 +55,43 @@ namespace KF7012_Assignment
             presenter.btn_RegisterJob_Click();
         }
 
-        public string companyID
+        public int companyID
         {
-            set { txt_CompanyID.Text = value; }
-            get { return txt_CompanyID.Text; }
+            set { txt_CompanyID.Text = value.ToString(); }
+            get
+            {
+                int ID;
+                int.TryParse(txt_CompanyID.Text, out ID);
+                return ID;
+            }
         }
 
-        public void setCompanyName(string companyName)
+        public string companyName
         {
-            txt_CompanyName.Text = companyName;
+            set { txt_CompanyName.Text = value; }
+            get { return txt_CompanyName.Text; }
         }
 
-        public void setLocation(string location)
+        public string location
         {
-            txt_Location.Text = location;
+            set { txt_Location.Text = value; }
+            get { return txt_Location.Text; }
         }
 
-        public void clearCompanyNameLocation()
+        public void clearCompanyDetails()
         {
             txt_CompanyName.Clear();
             txt_Location.Clear();
         }
 
-        public void registerMachineEnabled(bool allowed)
+        public void btn_RegisterMachineEnabled(bool allowed)
         {
             btn_RegisterMachine.Enabled = allowed;
+        }
+
+        public void cmb_MachineIDEnabled(bool allowed)
+        {
+            cmb_MachineID.Enabled = allowed;
         }
 
         public void clearMachineIDs()
@@ -88,7 +100,7 @@ namespace KF7012_Assignment
             cmb_MachineID.Items.Clear();
         }
 
-        public void addMachine(string machineID)
+        public void addMachineIDs(string machineID)
         {
             cmb_MachineID.Items.Add(machineID);
         }
@@ -103,19 +115,37 @@ namespace KF7012_Assignment
             return cmb_MachineID.Text;
         }
 
+        public string machineID
+        {
+            set { cmb_MachineID.Text = value; }
+            get { return cmb_MachineID.Text; }
+        }
+
         public string assetTag
         {
             set { txt_AssetTag.Text = value; }
             get { return txt_AssetTag.Text; }
         }
 
-        public void setSizeComplexity(int sizeComplexity)
+        public int sizeComplexity
         {
-            txt_SizeComplexity.Text = sizeComplexity.ToString();
+            set { txt_SizeComplexity.Text = value.ToString(); }
+            get
+            {
+                int sizeComplexity;
+                int.TryParse(txt_SizeComplexity.Text, out sizeComplexity);
+                return sizeComplexity;
+            }
         }
 
-        public void clearSizeComplexity()
+        /*public void setSizeComplexity(int sizeComplexity)
         {
+            txt_SizeComplexity.Text = sizeComplexity.ToString();
+        }*/
+
+        public void clearMachineDetails()
+        {
+            txt_AssetTag.Clear();
             txt_SizeComplexity.Clear();
         }
 

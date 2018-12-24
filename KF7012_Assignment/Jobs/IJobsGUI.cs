@@ -9,19 +9,20 @@ namespace KF7012_Assignment
     public interface IJobsGUI
     {
         void register(JobsPresenter FM);
-        void setReadOnlyFields();
-        string companyID { get; set; }
-        void setCompanyName(string companyName);
-        void setLocation(string location);
-        void clearCompanyNameLocation();
-        void registerMachineEnabled(bool allowed);
-        void showRegisterMachineForm(int companyID);
-        void addMachine(string machineID);
-        void setMachineIndex(int index);
-        string getMachineID();
-        void clearMachineIDs();
+        int companyID { get; set; }
+        string companyName { get; set; }
+        string location { get; set; }
+        string machineID { get; set; }
         string assetTag { get; set; }
-        void setSizeComplexity(int sizeComplexity);
-        void clearSizeComplexity();
+        int sizeComplexity { get; set; }
+        void setReadOnlyFields();
+        void clearCompanyDetails();
+        void clearMachineIDs();
+        void clearMachineDetails();
+        void btn_RegisterMachineEnabled(bool allowed);
+        void cmb_MachineIDEnabled(bool allowed);
+        void addMachineIDs(string machineID);
+        void setMachineIndex(int index);
+        void showRegisterMachineForm(int companyID);
     }
 }

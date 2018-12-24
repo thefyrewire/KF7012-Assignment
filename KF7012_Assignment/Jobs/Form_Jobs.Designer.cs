@@ -141,15 +141,16 @@
             this.txt_AssetTag.Location = new System.Drawing.Point(155, 148);
             this.txt_AssetTag.Name = "txt_AssetTag";
             this.txt_AssetTag.Size = new System.Drawing.Size(144, 20);
-            this.txt_AssetTag.TabIndex = 5;
+            this.txt_AssetTag.TabIndex = 9;
             // 
             // cmb_MachineID
             // 
+            this.cmb_MachineID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_MachineID.FormattingEnabled = true;
             this.cmb_MachineID.Location = new System.Drawing.Point(155, 121);
             this.cmb_MachineID.Name = "cmb_MachineID";
             this.cmb_MachineID.Size = new System.Drawing.Size(144, 21);
-            this.cmb_MachineID.TabIndex = 3;
+            this.cmb_MachineID.TabIndex = 1;
             this.cmb_MachineID.SelectedIndexChanged += new System.EventHandler(this.cmb_MachineID_Leave);
             this.cmb_MachineID.Leave += new System.EventHandler(this.cmb_MachineID_Leave);
             // 
@@ -175,7 +176,7 @@
             this.btn_AttachFile.Location = new System.Drawing.Point(155, 363);
             this.btn_AttachFile.Name = "btn_AttachFile";
             this.btn_AttachFile.Size = new System.Drawing.Size(94, 28);
-            this.btn_AttachFile.TabIndex = 9;
+            this.btn_AttachFile.TabIndex = 5;
             this.btn_AttachFile.Text = "Attach a file";
             this.btn_AttachFile.UseVisualStyleBackColor = true;
             // 
@@ -184,7 +185,7 @@
             this.btn_RegisterJob.Location = new System.Drawing.Point(18, 461);
             this.btn_RegisterJob.Name = "btn_RegisterJob";
             this.btn_RegisterJob.Size = new System.Drawing.Size(94, 28);
-            this.btn_RegisterJob.TabIndex = 10;
+            this.btn_RegisterJob.TabIndex = 6;
             this.btn_RegisterJob.Text = "Register";
             this.btn_RegisterJob.UseVisualStyleBackColor = true;
             // 
@@ -194,7 +195,7 @@
             this.txt_Description.Multiline = true;
             this.txt_Description.Name = "txt_Description";
             this.txt_Description.Size = new System.Drawing.Size(225, 56);
-            this.txt_Description.TabIndex = 8;
+            this.txt_Description.TabIndex = 4;
             // 
             // lbl_Location
             // 
@@ -210,7 +211,7 @@
             this.btn_RegisterMachine.Location = new System.Drawing.Point(322, 116);
             this.btn_RegisterMachine.Name = "btn_RegisterMachine";
             this.btn_RegisterMachine.Size = new System.Drawing.Size(94, 28);
-            this.btn_RegisterMachine.TabIndex = 4;
+            this.btn_RegisterMachine.TabIndex = 2;
             this.btn_RegisterMachine.Text = "Add a Machine";
             this.btn_RegisterMachine.UseVisualStyleBackColor = true;
             this.btn_RegisterMachine.Click += new System.EventHandler(this.btn_RegisterMachine_Click);
@@ -266,28 +267,28 @@
             this.txt_Fault.Multiline = true;
             this.txt_Fault.Name = "txt_Fault";
             this.txt_Fault.Size = new System.Drawing.Size(225, 56);
-            this.txt_Fault.TabIndex = 7;
+            this.txt_Fault.TabIndex = 3;
             // 
             // txt_SizeComplexity
             // 
             this.txt_SizeComplexity.Location = new System.Drawing.Point(155, 174);
             this.txt_SizeComplexity.Name = "txt_SizeComplexity";
             this.txt_SizeComplexity.Size = new System.Drawing.Size(144, 20);
-            this.txt_SizeComplexity.TabIndex = 6;
+            this.txt_SizeComplexity.TabIndex = 10;
             // 
             // txt_Location
             // 
             this.txt_Location.Location = new System.Drawing.Point(155, 69);
             this.txt_Location.Name = "txt_Location";
             this.txt_Location.Size = new System.Drawing.Size(144, 20);
-            this.txt_Location.TabIndex = 2;
+            this.txt_Location.TabIndex = 8;
             // 
             // txt_CompanyName
             // 
             this.txt_CompanyName.Location = new System.Drawing.Point(155, 43);
             this.txt_CompanyName.Name = "txt_CompanyName";
             this.txt_CompanyName.Size = new System.Drawing.Size(144, 20);
-            this.txt_CompanyName.TabIndex = 1;
+            this.txt_CompanyName.TabIndex = 7;
             // 
             // lbl_CompanyName
             // 

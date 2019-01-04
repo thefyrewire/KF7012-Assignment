@@ -21,7 +21,8 @@ namespace KF7012_Assignment
 
         private void initialiseForm()
         {
-            screen.setReadOnlyFields();            
+            screen.setReadOnlyFields();
+            screen.showFaultError(false);
             updateView();
         }
 
@@ -31,6 +32,7 @@ namespace KF7012_Assignment
             screen.clearMachineDetails();
             populateMachines();
             checkEnableAddMachine();
+            checkEnableRegisterJob();
         }
 
         public void btn_RegisterMachine_Click() {
@@ -84,21 +86,54 @@ namespace KF7012_Assignment
                 screen.btn_RegisterMachineEnabled(false);
         }
 
+        private void checkEnableRegisterJob()
+        {
+            if (!string.IsNullOrEmpty(screen.machineID))
+            {
+                screen.btn_RegisterJobEnabled(true);
+                screen.jobDetailsEnabled(true);
+            }
+            else
+            {
+                screen.btn_RegisterJobEnabled(false);
+                screen.jobDetailsEnabled(false);
+            }
+                
+        }
+
         public void cmb_MachineID_Leave()
         {
             if (!string.IsNullOrEmpty(screen.machineID))
             {
                 Machine machine = repository.getMachine(screen.machineID);
                 if (machine != null)
+                {
                     screen.assetTag = machine.assetTag;
                     screen.sizeComplexity = machine.sizeComplexity;
+                    screen.btn_RegisterJobEnabled(true);
+                } else
+                    screen.btn_RegisterJobEnabled(false);
             }
-            
+        }
+
+        public void trb_Urgency_ValueChanged()
+        {
+            screen.setUrgencyLabel(screen.urgency);
         }
 
         public void btn_RegisterJob_Click()
         {
-            
+            validateJob();
+        }
+
+        private void validateJob()
+        {
+            if (string.IsNullOrEmpty(screen.fault.Trim()))
+                screen.showFaultError(true);
+            else
+                screen.showFaultError(false);
+
+
         }
     }
 }

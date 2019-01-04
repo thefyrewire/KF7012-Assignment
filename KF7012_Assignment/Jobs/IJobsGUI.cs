@@ -15,14 +15,21 @@ namespace KF7012_Assignment
         string machineID { get; set; }
         string assetTag { get; set; }
         int sizeComplexity { get; set; }
+        string fault { get; set; }
+        string description { get; set; }
+        int urgency { get; set; }
+        void showFaultError(bool boolean);
         void setReadOnlyFields();
         void clearCompanyDetails();
         void clearMachineIDs();
         void clearMachineDetails();
         void btn_RegisterMachineEnabled(bool allowed);
+        void btn_RegisterJobEnabled(bool allowed);
         void cmb_MachineIDEnabled(bool allowed);
+        void jobDetailsEnabled(bool allowed);
         void addMachineIDs(string machineID);
         void setMachineIndex(int index);
+        void setUrgencyLabel(int value);
         void showRegisterMachineForm(int companyID);
     }
 }

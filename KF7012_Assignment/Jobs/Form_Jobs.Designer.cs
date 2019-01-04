@@ -73,9 +73,14 @@
             this.button5 = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.lbl_Urgency = new System.Windows.Forms.Label();
+            this.lbl_UrgencyValue = new System.Windows.Forms.Label();
+            this.trb_Urgency = new System.Windows.Forms.TrackBar();
+            this.lbl_FaultError = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trb_Urgency)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -99,6 +104,10 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lbl_FaultError);
+            this.tabPage1.Controls.Add(this.lbl_UrgencyValue);
+            this.tabPage1.Controls.Add(this.trb_Urgency);
+            this.tabPage1.Controls.Add(this.lbl_Urgency);
             this.tabPage1.Controls.Add(this.lbl_AssetTag);
             this.tabPage1.Controls.Add(this.txt_AssetTag);
             this.tabPage1.Controls.Add(this.cmb_MachineID);
@@ -173,6 +182,7 @@
             // 
             // btn_AttachFile
             // 
+            this.btn_AttachFile.Enabled = false;
             this.btn_AttachFile.Location = new System.Drawing.Point(155, 363);
             this.btn_AttachFile.Name = "btn_AttachFile";
             this.btn_AttachFile.Size = new System.Drawing.Size(94, 28);
@@ -182,12 +192,13 @@
             // 
             // btn_RegisterJob
             // 
-            this.btn_RegisterJob.Location = new System.Drawing.Point(18, 461);
+            this.btn_RegisterJob.Location = new System.Drawing.Point(18, 490);
             this.btn_RegisterJob.Name = "btn_RegisterJob";
             this.btn_RegisterJob.Size = new System.Drawing.Size(94, 28);
             this.btn_RegisterJob.TabIndex = 6;
             this.btn_RegisterJob.Text = "Register";
             this.btn_RegisterJob.UseVisualStyleBackColor = true;
+            this.btn_RegisterJob.Click += new System.EventHandler(this.btn_RegisterJob_Click);
             // 
             // txt_Description
             // 
@@ -228,6 +239,7 @@
             // lbl_Attachments
             // 
             this.lbl_Attachments.AutoSize = true;
+            this.lbl_Attachments.Enabled = false;
             this.lbl_Attachments.Location = new System.Drawing.Point(15, 371);
             this.lbl_Attachments.Name = "lbl_Attachments";
             this.lbl_Attachments.Size = new System.Drawing.Size(66, 13);
@@ -505,6 +517,48 @@
             this.label11.TabIndex = 7;
             this.label11.Text = "Job ID";
             // 
+            // lbl_Urgency
+            // 
+            this.lbl_Urgency.AutoSize = true;
+            this.lbl_Urgency.Location = new System.Drawing.Point(15, 420);
+            this.lbl_Urgency.Name = "lbl_Urgency";
+            this.lbl_Urgency.Size = new System.Drawing.Size(54, 13);
+            this.lbl_Urgency.TabIndex = 26;
+            this.lbl_Urgency.Text = "Urgency *";
+            // 
+            // lbl_UrgencyValue
+            // 
+            this.lbl_UrgencyValue.AutoSize = true;
+            this.lbl_UrgencyValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_UrgencyValue.Location = new System.Drawing.Point(155, 425);
+            this.lbl_UrgencyValue.Name = "lbl_UrgencyValue";
+            this.lbl_UrgencyValue.Size = new System.Drawing.Size(16, 16);
+            this.lbl_UrgencyValue.TabIndex = 28;
+            this.lbl_UrgencyValue.Text = "1";
+            // 
+            // trb_Urgency
+            // 
+            this.trb_Urgency.BackColor = System.Drawing.Color.White;
+            this.trb_Urgency.LargeChange = 1;
+            this.trb_Urgency.Location = new System.Drawing.Point(179, 420);
+            this.trb_Urgency.Maximum = 5;
+            this.trb_Urgency.Minimum = 1;
+            this.trb_Urgency.Name = "trb_Urgency";
+            this.trb_Urgency.Size = new System.Drawing.Size(201, 45);
+            this.trb_Urgency.TabIndex = 27;
+            this.trb_Urgency.Value = 1;
+            this.trb_Urgency.ValueChanged += new System.EventHandler(this.trb_Urgency_ValueChanged);
+            // 
+            // lbl_FaultError
+            // 
+            this.lbl_FaultError.AutoSize = true;
+            this.lbl_FaultError.ForeColor = System.Drawing.Color.Red;
+            this.lbl_FaultError.Location = new System.Drawing.Point(386, 227);
+            this.lbl_FaultError.Name = "lbl_FaultError";
+            this.lbl_FaultError.Size = new System.Drawing.Size(103, 13);
+            this.lbl_FaultError.TabIndex = 29;
+            this.lbl_FaultError.Text = "This field is required.";
+            // 
             // Form_Jobs
             // 
             this.AcceptButton = this.btn_RegisterMachine;
@@ -520,6 +574,7 @@
             this.tabPage1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trb_Urgency)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -572,6 +627,10 @@
         private System.Windows.Forms.ComboBox cmb_MachineID;
         private System.Windows.Forms.Label lbl_AssetTag;
         private System.Windows.Forms.TextBox txt_AssetTag;
+        private System.Windows.Forms.Label lbl_Urgency;
+        private System.Windows.Forms.Label lbl_UrgencyValue;
+        private System.Windows.Forms.TrackBar trb_Urgency;
+        private System.Windows.Forms.Label lbl_FaultError;
 
     }
 }

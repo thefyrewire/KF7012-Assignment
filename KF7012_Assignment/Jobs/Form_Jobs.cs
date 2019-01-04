@@ -84,14 +84,33 @@ namespace KF7012_Assignment
             txt_Location.Clear();
         }
 
+        public void showFaultError(bool boolean)
+        {
+            lbl_FaultError.Visible = boolean;
+        }
+
         public void btn_RegisterMachineEnabled(bool allowed)
         {
             btn_RegisterMachine.Enabled = allowed;
         }
 
+        public void btn_RegisterJobEnabled(bool allowed)
+        {
+            btn_RegisterJob.Enabled = allowed;
+        }
+
         public void cmb_MachineIDEnabled(bool allowed)
         {
             cmb_MachineID.Enabled = allowed;
+        }
+
+        public void jobDetailsEnabled(bool allowed)
+        {
+            txt_Fault.Enabled = allowed;
+            txt_Description.Enabled = allowed;
+            btn_AttachFile.Enabled = allowed;
+            trb_Urgency.Enabled = allowed;
+            lbl_UrgencyValue.Enabled = allowed;
         }
 
         public void clearMachineIDs()
@@ -138,6 +157,24 @@ namespace KF7012_Assignment
             }
         }
 
+        public string fault
+        {
+            set { txt_Fault.Text = value; }
+            get { return txt_Fault.Text; }
+        }
+
+        public int urgency
+        {
+            set { trb_Urgency.Value = value; }
+            get { return trb_Urgency.Value; }
+        }
+
+        public string description
+        {
+            set { txt_Description.Text = value; }
+            get { return txt_Description.Text; }
+        }
+
         /*public void setSizeComplexity(int sizeComplexity)
         {
             txt_SizeComplexity.Text = sizeComplexity.ToString();
@@ -147,6 +184,16 @@ namespace KF7012_Assignment
         {
             txt_AssetTag.Clear();
             txt_SizeComplexity.Clear();
+        }
+
+        private void trb_Urgency_ValueChanged(Object sender, EventArgs e)
+        {
+            presenter.trb_Urgency_ValueChanged();
+        }
+
+        public void setUrgencyLabel(int value)
+        {
+            lbl_UrgencyValue.Text = value.ToString();
         }
 
         public void showRegisterMachineForm(int companyID)

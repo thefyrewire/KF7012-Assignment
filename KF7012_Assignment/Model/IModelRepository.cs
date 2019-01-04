@@ -24,7 +24,7 @@ namespace KF7012_Assignment
         int generateCompanyID();
 
 
-        void addJob(int jobID, int companyID, string machineID, string description, DateTime dateReported, int priority);
+        void addJob(int jobID, int companyID, string machineID, string description, DateTime dateReported, int priority, DateTime lastStartDate, string state);
         List<Job> getJobsForCompany(int companyID);
         void addEngineer(string engineerID, string name, string profile, string skills);
         void addMachine(string machineID, int companyID, string assetTag, int sizeComplexity);

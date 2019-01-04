@@ -20,13 +20,19 @@ namespace KF7012_Assignment
         [Required, MaxLength(25)]
         public string machineID { get; set; }
 
-        [MaxLength]
-        public string description { get; set; }
+        [Required, MaxLength]
+        public string fault { get; set; }
 
         [Required]
         public DateTime dateReported { get; set; }
 
         [Required]
-        public int priority { get; set; }
+        public int urgency { get; set; }
+
+        [Required]
+        public DateTime lastStartDate { get; set; }
+
+        [Required, MaxLength(15)]
+        public string state { get; set; }
     }
 }

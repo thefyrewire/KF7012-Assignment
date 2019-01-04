@@ -131,9 +131,41 @@ namespace KF7012_Assignment
             if (string.IsNullOrEmpty(screen.fault.Trim()))
                 screen.showFaultError(true);
             else
+            {
                 screen.showFaultError(false);
+                DateTime dateReported = DateTime.Now;
+                DateTime lastStartDate = getLastStartDate(dateReported, screen.urgency);
+                repository.addJob(repository.generateJobID(), screen.companyID, screen.machineID, screen.fault, dateReported, screen.urgency, lastStartDate, "ESTIMATE NEEDED");
+            }
+                
 
+        }
 
+        private DateTime getLastStartDate(DateTime dateReported, int urgency)
+        {
+            DateTime lastStartDate = dateReported;
+            switch (urgency)
+            {
+                case 0:
+                    lastStartDate = dateReported.AddDays(90);
+                    break;
+                case 1:
+                    lastStartDate = dateReported.AddDays(40);
+                    break;
+                case 2:
+                    lastStartDate = dateReported.AddDays(14);
+                    break;
+                case 3:
+                    lastStartDate = dateReported.AddDays(7);
+                    break;
+                case 4:
+                    lastStartDate = dateReported.AddDays(3);
+                    break;
+                case 5:
+                    lastStartDate = dateReported.AddDays(1);
+                    break;
+            }
+            return lastStartDate;
         }
     }
 }

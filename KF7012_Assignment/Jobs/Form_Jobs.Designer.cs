@@ -534,7 +534,7 @@
             this.lbl_UrgencyValue.Name = "lbl_UrgencyValue";
             this.lbl_UrgencyValue.Size = new System.Drawing.Size(16, 16);
             this.lbl_UrgencyValue.TabIndex = 28;
-            this.lbl_UrgencyValue.Text = "1";
+            this.lbl_UrgencyValue.Text = "0";
             // 
             // trb_Urgency
             // 
@@ -542,11 +542,9 @@
             this.trb_Urgency.LargeChange = 1;
             this.trb_Urgency.Location = new System.Drawing.Point(179, 420);
             this.trb_Urgency.Maximum = 5;
-            this.trb_Urgency.Minimum = 1;
             this.trb_Urgency.Name = "trb_Urgency";
             this.trb_Urgency.Size = new System.Drawing.Size(201, 45);
             this.trb_Urgency.TabIndex = 27;
-            this.trb_Urgency.Value = 1;
             this.trb_Urgency.ValueChanged += new System.EventHandler(this.trb_Urgency_ValueChanged);
             // 
             // lbl_FaultError

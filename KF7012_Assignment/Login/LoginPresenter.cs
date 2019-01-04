@@ -53,7 +53,7 @@ namespace KF7012_Assignment
             {
                 Company company = repository.getCompanyByID(job.companyID);
                 Machine machine = repository.getMachine(job.machineID);
-                Console.WriteLine("Job: " + job.description + " at " + company.name + " for " + machine.assetTag + " which has a complexity of " + machine.sizeComplexity);
+                Console.WriteLine("Job: " + job.fault + " at " + company.name + " for " + machine.assetTag + " which has a complexity of " + machine.sizeComplexity);
             }
 
             if (!string.IsNullOrEmpty(screen.getAttemptUsername()) && !string.IsNullOrEmpty(screen.getAttemptPassword()))

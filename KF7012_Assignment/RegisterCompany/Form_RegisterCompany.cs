@@ -70,8 +70,8 @@ namespace KF7012_Assignment
         public void showJobsForm(int companyID)
         {
             this.Hide();
-            Form_Jobs f1 = new Form_Jobs();
-            JobsPresenter FM = new JobsPresenter(f1);
+            Form_RegisterJob f1 = new Form_RegisterJob();
+            RegisterJobPresenter FM = new RegisterJobPresenter(f1);
             FM.setCompanyID(companyID);
             FM.updateView();
             f1.ShowDialog();

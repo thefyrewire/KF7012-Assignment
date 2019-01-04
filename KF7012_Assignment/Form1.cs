@@ -27,12 +27,19 @@ namespace KF7012_Assignment
         {
             presenter.showRegisterCompanyForm();
         }
+
+        private void btn_RegisterJob_Click(Object sender, EventArgs e)
+        {
+            presenter.showRegisterJobForm();
+        }
+
         private void btn_Jobs_Click(Object sender, EventArgs e)
         {
             presenter.showJobsForm();
         }
 
-        public void showRegisterCompanyForm() {
+        public void showRegisterCompanyForm()
+        {
             this.Hide();
             Form_RegisterCompany f1 = new Form_RegisterCompany();
             RegisterCompanyPresenter FM = new RegisterCompanyPresenter(f1);
@@ -40,7 +47,17 @@ namespace KF7012_Assignment
             this.Show();
         }
 
-        public void showJobsForm() {
+        public void showRegisterJobForm()
+        {
+            this.Hide();
+            Form_RegisterJob f1 = new Form_RegisterJob();
+            RegisterJobPresenter FM = new RegisterJobPresenter(f1);
+            f1.ShowDialog();
+            this.Show();
+        }
+
+        public void showJobsForm()
+        {
             this.Hide();
             Form_Jobs f1 = new Form_Jobs();
             JobsPresenter FM = new JobsPresenter(f1);

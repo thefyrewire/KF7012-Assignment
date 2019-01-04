@@ -11,7 +11,10 @@ namespace KF7012_Assignment
 {
     public class Job
     {
-        [Key, Required, DatabaseGenerated(DatabaseGeneratedOption.None)]
+        /*[Key, Required, DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int jobID { get; set; }*/
+
+        [Key, Required]
         public int jobID { get; set; }
 
         [Required]

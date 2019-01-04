@@ -65,8 +65,16 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Job.cs" />
+    <Compile Include="Jobs\Form_Jobs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jobs\Form_Jobs.Designer.cs">
+      <DependentUpon>Form_Jobs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Jobs\IJobsGUI.cs" />
     <Compile Include="Jobs\JobsPresenter.cs" />
+    <Compile Include="RegisterJob\IRegisterJobGUI.cs" />
+    <Compile Include="RegisterJob\RegisterJobPresenter.cs" />
     <Compile Include="Model\Machine.cs" />
     <Compile Include="Model\Model.cs" />
     <Compile Include="Model\ModelRepository.cs" />
@@ -83,11 +91,11 @@
     <Compile Include="Login\Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Jobs\Form_Jobs.cs">
+    <Compile Include="RegisterJob\Form_RegisterJob.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Jobs\Form_Jobs.Designer.cs">
-      <DependentUpon>Form_Jobs.cs</DependentUpon>
+    <Compile Include="RegisterJob\Form_RegisterJob.Designer.cs">
+      <DependentUpon>Form_RegisterJob.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPresenter.cs" />
     <Compile Include="Login\PasswordHelper.cs" />
@@ -115,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Jobs\Form_Jobs.resx">
       <DependentUpon>Form_Jobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterJob\Form_RegisterJob.resx">
+      <DependentUpon>Form_RegisterJob.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>

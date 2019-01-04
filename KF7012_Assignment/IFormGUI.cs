@@ -11,6 +11,7 @@ namespace KF7012_Assignment
         void register(FormPresenter FM);
 
         void showRegisterCompanyForm();
+        void showRegisterJobForm();
         void showJobsForm();
     }
 }

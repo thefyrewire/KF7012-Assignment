@@ -48,11 +48,12 @@ namespace KF7012_Assignment
             addMachine("mch504", 1001, "BLUE_Bart", 1);
 
             // ADD JOBS
-            addJob(1, 1000, "mch500", "Leaking pipe", new DateTime(2018, 12, 29), 2, new DateTime(2019, 1, 12), "ESTIMATE NEEDED");
-            addJob(2, 1000, "mch501", "Broken screen", new DateTime(2018, 11, 20), 5, new DateTime(2018, 11, 21), "ESTIMATE NEEDED");
-            addJob(3, 1000, "mch501", "Malfunctioning robot arm", new DateTime(2018, 12, 26), 1, new DateTime(2019, 2, 4), "ESTIMATE NEEDED");
-            addJob(4, 1001, "mch503", "Faulty chassis", new DateTime(2018, 12, 20), 0, new DateTime(2019, 3, 20), "ESTIMATE NEEDED");
-            addJob(5, 1001, "mch504", "Electrical fault", new DateTime(2019, 1, 2), 5, new DateTime(2019, 1, 3), "ESTIMATE NEEDED");
+            addJob(1000, "mch500", "Leaking pipe", new DateTime(2018, 12, 29), 2, new DateTime(2019, 1, 12), "ESTIMATE NEEDED");
+            addJob(1000, "mch501", "Broken screen", new DateTime(2018, 11, 20), 5, new DateTime(2018, 11, 21), "ESTIMATE NEEDED");
+            addJob(1000, "mch501", "Malfunctioning robot arm", new DateTime(2018, 12, 26), 1, new DateTime(2019, 2, 4), "ESTIMATE NEEDED");
+            addJob(1001, "mch503", "Faulty chassis", new DateTime(2018, 12, 20), 0, new DateTime(2019, 3, 20), "ESTIMATE NEEDED");
+            addJob(1001, "mch504", "Electrical fault", new DateTime(2019, 1, 2), 5, new DateTime(2019, 1, 3), "ESTIMATE NEEDED");
+            addJob(1001, "mch503", "Strange sounds", new DateTime(2018, 12, 29), 1, new DateTime(2019, 1, 8), "ESTIMATE NEEDED");
         }
 
 
@@ -159,13 +160,12 @@ namespace KF7012_Assignment
         /* --- JOBS --- */
         /* ------------ */
 
-        public void addJob(int jobID, int companyID, string machineID, string fault, DateTime dateReported, int urgency, DateTime lastStartDate, string state)
+        public void addJob(int companyID, string machineID, string fault, DateTime dateReported, int urgency, DateTime lastStartDate, string state)
         {
             using (Model context = new Model())
             {
                 context.Jobs.Add(new Job()
                 {
-                    jobID = jobID,
                     companyID = companyID,
                     machineID = machineID,
                     fault = fault,
@@ -186,6 +186,33 @@ namespace KF7012_Assignment
                 List<Job> jobsForCompany = context.Jobs.Where(job => job.companyID == companyID).ToList<Job>();
                 return jobsForCompany;
             }
+        }
+
+        public List<Job> getCriticalJobs()
+        {
+            using (Model context = new Model())
+            {
+                List<Job> criticalJobs = context.Jobs.ToList<Job>().FindAll(job => job.lastStartDate.Subtract(DateTime.Now).Days <= 7).OrderBy(job => job.lastStartDate.Subtract(DateTime.Now).Days).ToList<Job>();
+                return criticalJobs;
+            }
+        }
+
+        public List<Job> getNonCriticalJobs()
+        {
+            using (Model context = new Model())
+            {
+                List<Job> jobs = context.Jobs.ToList<Job>().FindAll(job => job.lastStartDate.Subtract(DateTime.Now).Days > 7).OrderByDescending(job => job.urgency).ToList<Job>();
+                return jobs;
+            }
+        }
+
+        public List<Job> getSortedJobs()
+        {
+            List<Job> sortedJobs = getCriticalJobs();
+            List<Job> jobs = getNonCriticalJobs();
+            sortedJobs.AddRange(jobs);
+
+            return sortedJobs;
         }
 
         public int generateJobID()

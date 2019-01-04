@@ -31,6 +31,11 @@ namespace KF7012_Assignment
             screen.showRegisterCompanyForm();
         }
 
+        public void showRegisterJobForm()
+        {
+            screen.showRegisterJobForm();
+        }
+
         public void showJobsForm()
         {
             screen.showJobsForm();

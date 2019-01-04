@@ -56,8 +56,9 @@ C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF701
 C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.csprojResolveAssemblyReference.cache
 C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form1.resources
 C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_RegisterCompany.resources
-C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_Jobs.resources
 C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_Login.resources
 C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_RegisterMachine.resources
 C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Properties.Resources.resources
 C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.csproj.GenerateResource.Cache
+C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_RegisterJob.resources
+C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_Jobs.resources

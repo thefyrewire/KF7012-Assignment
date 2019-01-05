@@ -24,5 +24,8 @@ namespace KF7012_Assignment
         void showError(string error);
         void hideError();
         void showJobDetailsForm(Job job);
+        void showRegisterCompanyForm();
+        void showRegisterJobForm();
+        void showJobsForm();
     }
 }

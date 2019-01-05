@@ -14,6 +14,7 @@ namespace KF7012_Assignment
         int getSizeComplexity();
         string getDescription();
         void setSizeComplexityLabel(int value);
+        void showError(bool boolean);
         void closeForm();
     }
 }

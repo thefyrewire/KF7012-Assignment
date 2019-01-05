@@ -9,7 +9,6 @@ namespace KF7012_Assignment
     public interface IFormGUI
     {
         void register(FormPresenter FM);
-
         void showRegisterCompanyForm();
         void showRegisterJobForm();
         void showJobsForm();

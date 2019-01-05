@@ -64,6 +64,11 @@ namespace KF7012_Assignment
             presenter.btn_Register_Click();
         }
 
+        public void showError(bool boolean)
+        {
+            lbl_Error.Visible = boolean;
+        }
+
         public void closeForm()
         {
             this.Close();

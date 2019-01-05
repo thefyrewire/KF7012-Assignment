@@ -132,5 +132,20 @@ namespace KF7012_Assignment
             }
             else screen.showError("Select a job to schedule!");
         }
+
+        public void showRegisterCompanyForm()
+        {
+            screen.showRegisterCompanyForm();
+        }
+
+        public void showRegisterJobForm()
+        {
+            screen.showRegisterJobForm();
+        }
+
+        public void showJobsForm()
+        {
+            screen.showJobsForm();
+        }
     }
 }

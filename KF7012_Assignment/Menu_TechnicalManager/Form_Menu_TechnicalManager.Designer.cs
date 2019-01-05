@@ -54,6 +54,9 @@
             this.prob_Urgency = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prob_LastStartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbl_Error = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_RegisterJob = new System.Windows.Forms.Button();
+            this.btn_RegisterCompany = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_RequestJobs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ProblemJobs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_EstimatedDays)).BeginInit();
@@ -299,11 +302,44 @@
             this.lbl_Error.TabIndex = 61;
             this.lbl_Error.Text = "Select an engineer to assign!";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(710, 400);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(132, 23);
+            this.button1.TabIndex = 64;
+            this.button1.Text = "View All Jobs";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btn_Jobs_Click);
+            // 
+            // btn_RegisterJob
+            // 
+            this.btn_RegisterJob.Location = new System.Drawing.Point(710, 371);
+            this.btn_RegisterJob.Name = "btn_RegisterJob";
+            this.btn_RegisterJob.Size = new System.Drawing.Size(132, 23);
+            this.btn_RegisterJob.TabIndex = 63;
+            this.btn_RegisterJob.Text = "Register Job";
+            this.btn_RegisterJob.UseVisualStyleBackColor = true;
+            this.btn_RegisterJob.Click += new System.EventHandler(this.btn_RegisterJob_Click);
+            // 
+            // btn_RegisterCompany
+            // 
+            this.btn_RegisterCompany.Location = new System.Drawing.Point(710, 342);
+            this.btn_RegisterCompany.Name = "btn_RegisterCompany";
+            this.btn_RegisterCompany.Size = new System.Drawing.Size(132, 23);
+            this.btn_RegisterCompany.TabIndex = 62;
+            this.btn_RegisterCompany.Text = "Register Company";
+            this.btn_RegisterCompany.UseVisualStyleBackColor = true;
+            this.btn_RegisterCompany.Click += new System.EventHandler(this.btn_RegisterCompany_Click);
+            // 
             // Form_Menu_TechnicalManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(968, 492);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_RegisterJob);
+            this.Controls.Add(this.btn_RegisterCompany);
             this.Controls.Add(this.lbl_Error);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_Skills);
@@ -356,5 +392,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn prob_Urgency;
         private System.Windows.Forms.DataGridViewTextBoxColumn prob_LastStartDate;
         private System.Windows.Forms.Label lbl_Error;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_RegisterJob;
+        private System.Windows.Forms.Button btn_RegisterCompany;
     }
 }

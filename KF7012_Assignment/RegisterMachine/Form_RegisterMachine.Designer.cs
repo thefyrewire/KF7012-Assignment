@@ -39,12 +39,13 @@
             this.lbl_SizeComplexityValue = new System.Windows.Forms.Label();
             this.txt_Description = new System.Windows.Forms.TextBox();
             this.lbl_Description = new System.Windows.Forms.Label();
+            this.lbl_Error = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trb_SizeComplexity)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Register
             // 
-            this.btn_Register.Location = new System.Drawing.Point(30, 297);
+            this.btn_Register.Location = new System.Drawing.Point(30, 295);
             this.btn_Register.Name = "btn_Register";
             this.btn_Register.Size = new System.Drawing.Size(75, 23);
             this.btn_Register.TabIndex = 3;
@@ -139,12 +140,23 @@
             this.lbl_Description.TabIndex = 14;
             this.lbl_Description.Text = "Description";
             // 
+            // lbl_Error
+            // 
+            this.lbl_Error.AutoSize = true;
+            this.lbl_Error.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Error.Location = new System.Drawing.Point(124, 300);
+            this.lbl_Error.Name = "lbl_Error";
+            this.lbl_Error.Size = new System.Drawing.Size(112, 13);
+            this.lbl_Error.TabIndex = 15;
+            this.lbl_Error.Text = "All fields must be filled.";
+            // 
             // Form_RegisterMachine
             // 
             this.AcceptButton = this.btn_Register;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 341);
+            this.ClientSize = new System.Drawing.Size(437, 340);
+            this.Controls.Add(this.lbl_Error);
             this.Controls.Add(this.txt_Description);
             this.Controls.Add(this.lbl_Description);
             this.Controls.Add(this.lbl_SizeComplexityValue);
@@ -177,5 +189,6 @@
         private System.Windows.Forms.Label lbl_SizeComplexityValue;
         private System.Windows.Forms.TextBox txt_Description;
         private System.Windows.Forms.Label lbl_Description;
+        private System.Windows.Forms.Label lbl_Error;
     }
 }

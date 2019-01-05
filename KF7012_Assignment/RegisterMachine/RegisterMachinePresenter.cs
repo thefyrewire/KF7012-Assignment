@@ -20,12 +20,8 @@ namespace KF7012_Assignment
 
         private void initialiseForm()
         {
-            // updateView();
+            screen.showError(false);
         }
-
-        /*public void updateView()
-        {
-        }*/
 
         public void setCompanyID(int companyID)
         {
@@ -39,8 +35,14 @@ namespace KF7012_Assignment
 
         public void btn_Register_Click()
         {
-            repository.addMachine(repository.generateMachineID(), screen.companyID, screen.getAssetTag(), screen.getSizeComplexity(), screen.getDescription());
-            screen.closeForm();
+            if (!string.IsNullOrEmpty(screen.getAssetTag()) && !string.IsNullOrEmpty(screen.getDescription()))
+            {
+                screen.showError(false);
+                repository.addMachine(repository.generateMachineID(), screen.companyID, screen.getAssetTag(), screen.getSizeComplexity(), screen.getDescription());
+                screen.closeForm();
+            }
+            else screen.showError(true);
+            
         }
     }
 }

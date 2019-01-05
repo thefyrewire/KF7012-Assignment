@@ -32,20 +32,15 @@ namespace KF7012_Assignment
 
         private void dgv_Jobs_CellDoubleClick(Object sender, DataGridViewCellEventArgs e)
         {
-            presenter.showJobDetailsForm(e.RowIndex);
+            presenter.dgv_Jobs_CellDoubleClick(Convert.ToInt32(dgv_Jobs.Rows[e.RowIndex].Cells["JobID"].Value));
         }
 
-        public void showJobDetailsForm(int index)
+        public void showJobDetailsForm(Job job)
         {
-            int jobID = Convert.ToInt32(dgv_Jobs.Rows[index].Cells["JobID"].Value);
-            Job job = repository.getJobByID(jobID);
-            if (job != null)
-            {
-                Form_JobDetails f1 = new Form_JobDetails();
-                JobDetailsPresenter FM = new JobDetailsPresenter(f1);
-                FM.populateDetails(job);
-                f1.ShowDialog();
-            }
+            Form_JobDetails f1 = new Form_JobDetails();
+            JobDetailsPresenter FM = new JobDetailsPresenter(f1);
+            FM.populateDetails(job);
+            f1.ShowDialog();
         }
     }
 }

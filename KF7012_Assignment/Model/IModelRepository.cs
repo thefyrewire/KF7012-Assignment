@@ -35,13 +35,18 @@ namespace KF7012_Assignment
         int generateJobID();
 
 
-        void addEngineer(string engineerID, string name, string profile, string skills);
-
+        void addEngineer(string name, string profile, string skills);
+        List<Engineer> getEngineers();
+        Engineer getEngineerByID(int engineerID);
 
         void addMachine(string machineID, int companyID, string assetTag, int sizeComplexity, string description);
         Machine getMachineByID(string machineID);
         List<Machine> getMachinesForCompany(int companyID);
         string generateMachineID();
+
+
+        void addScheduledJob(int jobID, int assignedEngineer, int estimatedDays);
+        ScheduledJob getScheduledJobByID(int jobID);
 
     }
 }

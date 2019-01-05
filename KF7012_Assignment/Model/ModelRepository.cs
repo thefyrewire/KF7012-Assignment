@@ -55,6 +55,22 @@ namespace KF7012_Assignment
             addJob(1001, "mch503", "Faulty chassis", new DateTime(2018, 12, 20), 0, new DateTime(2019, 3, 20), "ESTIMATE NEEDED");
             addJob(1001, "mch504", "Electrical fault", new DateTime(2019, 1, 2), 5, new DateTime(2019, 1, 3), "ACTIVE");
             addJob(1001, "mch503", "Strange sounds", new DateTime(2018, 12, 29), 1, new DateTime(2019, 1, 8), "ESTIMATE NEEDED");
+
+            // ADD SCHEDULED JOBS
+            addScheduledJob(1, 1, 10);
+            addScheduledJob(2, 1, 15);
+
+            // ADD ENGINEERS
+            addEngineer("Nelda Kleiber", "engineer", "Electronics, heavy machinery");
+            addEngineer("Iola Shellhammer", "engineer", "Robotics, soldering");
+            addEngineer("Rossana Sherrard", "engineer", "Glassware, soldering");
+            addEngineer("Nyla Wilczynski", "engineer", "Heavy machinery");
+            addEngineer("Lloyd Fackler", "engineer", "Robotics");
+            addEngineer("John Cornett", "engineer", "Soldering");
+            addEngineer("Kenneth Sanderlin", "engineer", "Metalworks, soldering");
+            addEngineer("Jamie Kangas", "engineer", "Electronics");
+            addEngineer("Desmond Lamb", "engineer", "Robotics, electronics");
+            addEngineer("Brandon Nowakowski", "engineer", "Metalworks");
         }
 
 
@@ -257,17 +273,36 @@ namespace KF7012_Assignment
         /* --- ENGINEERS --- */
         /* ----------------- */
 
-        public void addEngineer(string engineerID, string name, string profile, string skills)
+        public void addEngineer(string name, string profile, string skills)
         {
             using (Model context = new Model())
             {
                 context.Engineers.Add(new Engineer()
                 {
-                    engineerID = engineerID,
                     name = name,
                     profile = profile,
                     skills = skills
                 });
+
+                context.SaveChanges();
+            }
+        }
+
+        public List<Engineer> getEngineers()
+        {
+            using (Model context = new Model())
+            {
+                List<Engineer> engineers = context.Engineers.ToList<Engineer>();
+                return engineers;
+            }
+        }
+
+        public Engineer getEngineerByID(int engineerID)
+        {
+            using (Model context = new Model())
+            {
+                Engineer engineerToGet = context.Engineers.Where(engineer => engineer.engineerID == engineerID).FirstOrDefault<Engineer>();
+                return engineerToGet;
             }
         }
 
@@ -326,6 +361,30 @@ namespace KF7012_Assignment
         /* ---------------------- */
         /* --- SCHEDULED JOBS --- */
         /* ---------------------- */
+
+        public void addScheduledJob(int jobID, int assignedEngineer, int estimatedDays)
+        {
+            using (Model context = new Model())
+            {
+                context.ScheduledJobs.Add(new ScheduledJob()
+                {
+                    jobID = jobID,
+                    assignedEngineer = assignedEngineer,
+                    estimatedDays = estimatedDays
+                });
+
+                context.SaveChanges();
+            }
+        }
+
+        public ScheduledJob getScheduledJobByID(int jobID)
+        {
+            using (Model context = new Model())
+            {
+                ScheduledJob jobToGet = context.ScheduledJobs.Where(scheduledJob => scheduledJob.jobID == jobID).FirstOrDefault<ScheduledJob>();
+                return jobToGet;
+            }
+        }
 
 
         /* ------------------- */

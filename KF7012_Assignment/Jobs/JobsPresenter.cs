@@ -32,9 +32,11 @@ namespace KF7012_Assignment
             }
         }
 
-        public void showJobDetailsForm(int index)
+        public void dgv_Jobs_CellDoubleClick(int jobID)
         {
-            screen.showJobDetailsForm(index);
+            Job job = repository.getJobByID(jobID);
+            if (job != null)
+                screen.showJobDetailsForm(job);
         }
     }
 }

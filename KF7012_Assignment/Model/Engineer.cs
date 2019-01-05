@@ -10,8 +10,8 @@ namespace KF7012_Assignment
 {
     public class Engineer
     {
-        [Key, Required, MaxLength(25)]
-        public string engineerID { get; set; }
+        [Key, Required]
+        public int engineerID { get; set; }
 
         [MaxLength(255)]
         public string name { get; set; }

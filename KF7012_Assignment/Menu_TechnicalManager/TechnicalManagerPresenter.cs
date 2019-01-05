@@ -22,6 +22,18 @@ namespace KF7012_Assignment
         {
             populateRequestJobs();
             populateProblemJobs();
+            screen.setReadOnlyFields();
+            updateView();
+        }
+
+        private void updateView()
+        {
+            if (screen.jobID.ToString() != null)
+            {
+                populateEngineers();
+                screen.estimatedDays = 0;
+                screen.clearSkills();
+            }
         }
 
         private void populateRequestJobs()
@@ -42,6 +54,51 @@ namespace KF7012_Assignment
                 Machine machine = repository.getMachineByID(job.machineID);
                 screen.populateProblemJob(job, machine);
             }
+        }
+
+        private void populateEngineers()
+        {
+            screen.clearEngineers();
+
+            List<Engineer> engineers = repository.getEngineers();
+            if (engineers.Count > 0)
+            {
+                foreach (Engineer engineer in engineers)
+                {
+                    screen.populateEngineer(engineer.engineerID.ToString() + " - " + engineer.name);
+                }
+            }
+        }
+
+        public void dgv_RequestJobs_CellClick(int jobID)
+        {
+            Job job = repository.getJobByID(jobID);
+            if (job != null)
+            {
+                screen.jobID = job.jobID;
+                updateView();
+            } 
+        }
+
+        public void txt_Skills_Leave()
+        {
+            string[] split = screen.getSelectedEngineer().Split(new Char[] { ' ', '-', ' '});
+            int engineerID;
+            int.TryParse(split[0], out engineerID);
+            Engineer engineer = repository.getEngineerByID(engineerID);
+            screen.skills = engineer.skills;
+        }
+
+        public void dgv_CellDoubleClick(int jobID)
+        {
+            Job job = repository.getJobByID(jobID);
+            if (job != null)
+                screen.showJobDetailsForm(job);
+        }
+
+        public void btn_ScheduleJob_Click()
+        {
+
         }
     }
 }

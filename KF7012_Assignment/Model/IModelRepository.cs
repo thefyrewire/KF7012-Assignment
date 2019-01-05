@@ -32,6 +32,7 @@ namespace KF7012_Assignment
         List<Job> getSortedJobs();
         List<Job> getRequestJobs();
         List<Job> getProblemJobs();
+        void updateJobStateByID(int jobID, string state);
         int generateJobID();
 
 

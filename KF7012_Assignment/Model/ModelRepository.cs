@@ -259,6 +259,17 @@ namespace KF7012_Assignment
             }
         }
 
+        public void updateJobStateByID(int jobID, string state)
+        {
+            using (Model context = new Model())
+            {
+                Job jobToUpdate = context.Jobs.ToList<Job>().Where(job => job.jobID == jobID).FirstOrDefault<Job>();
+                jobToUpdate.state = state;
+
+                context.SaveChanges();
+            }
+        }
+
         public int generateJobID()
         {
             using (Model context = new Model())

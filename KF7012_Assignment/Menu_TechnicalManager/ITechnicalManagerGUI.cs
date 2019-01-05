@@ -11,6 +11,8 @@ namespace KF7012_Assignment
         void register(TechnicalManagerPresenter FM);
         void populateRequestJob(Job job, Machine machine);
         void populateProblemJob(Job job, Machine machine);
+        void clearRequestJobs();
+        void clearProblemJobs();
         void setReadOnlyFields();
         int jobID { get; set; }
         void populateEngineer(string name);
@@ -19,6 +21,8 @@ namespace KF7012_Assignment
         string skills { get; set; }
         void clearSkills();
         int estimatedDays { get; set; }
+        void showError(string error);
+        void hideError();
         void showJobDetailsForm(Job job);
     }
 }

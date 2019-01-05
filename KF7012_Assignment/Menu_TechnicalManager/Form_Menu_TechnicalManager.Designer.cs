@@ -53,6 +53,7 @@
             this.prob_Fault = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prob_Urgency = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prob_LastStartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbl_Error = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_RequestJobs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ProblemJobs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_EstimatedDays)).BeginInit();
@@ -175,6 +176,7 @@
             this.btn_ScheduleJob.TabIndex = 57;
             this.btn_ScheduleJob.Text = "Schedule Job";
             this.btn_ScheduleJob.UseVisualStyleBackColor = true;
+            this.btn_ScheduleJob.Click += new System.EventHandler(this.btn_ScheduleJob_Click);
             // 
             // cmb_AssignedEngineer
             // 
@@ -287,11 +289,22 @@
             this.prob_LastStartDate.ReadOnly = true;
             this.prob_LastStartDate.Width = 95;
             // 
+            // lbl_Error
+            // 
+            this.lbl_Error.AutoSize = true;
+            this.lbl_Error.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Error.Location = new System.Drawing.Point(617, 200);
+            this.lbl_Error.Name = "lbl_Error";
+            this.lbl_Error.Size = new System.Drawing.Size(144, 13);
+            this.lbl_Error.TabIndex = 61;
+            this.lbl_Error.Text = "Select an engineer to assign!";
+            // 
             // Form_Menu_TechnicalManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(968, 492);
+            this.Controls.Add(this.lbl_Error);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_Skills);
             this.Controls.Add(this.cmb_AssignedEngineer);
@@ -342,5 +355,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn prob_Fault;
         private System.Windows.Forms.DataGridViewTextBoxColumn prob_Urgency;
         private System.Windows.Forms.DataGridViewTextBoxColumn prob_LastStartDate;
+        private System.Windows.Forms.Label lbl_Error;
     }
 }

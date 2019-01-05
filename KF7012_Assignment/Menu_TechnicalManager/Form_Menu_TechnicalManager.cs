@@ -35,6 +35,16 @@ namespace KF7012_Assignment
             dgv_ProblemJobs.Rows[index].DefaultCellStyle.BackColor = Color.Red;
         }
 
+        public void clearRequestJobs()
+        {
+            dgv_RequestJobs.Rows.Clear();
+        }
+
+        public void clearProblemJobs()
+        {
+            dgv_ProblemJobs.Rows.Clear();
+        }
+
         public void setReadOnlyFields()
         {
             txt_JobID.ReadOnly = true;
@@ -102,6 +112,17 @@ namespace KF7012_Assignment
         private void dgv_ProblemJobs_CellDoubleClick(Object sender, DataGridViewCellEventArgs e)
         {
             presenter.dgv_CellDoubleClick(Convert.ToInt32(dgv_ProblemJobs.Rows[e.RowIndex].Cells["prob_JobID"].Value));
+        }
+
+        public void showError(string error)
+        {
+            lbl_Error.Text = error;
+            lbl_Error.Visible = true;
+        }
+
+        public void hideError()
+        {
+            lbl_Error.Visible = false;
         }
 
         private void btn_ScheduleJob_Click(Object sender, EventArgs e)

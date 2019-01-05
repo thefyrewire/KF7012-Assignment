@@ -20,10 +20,17 @@ namespace KF7012_Assignment
 
         private void initialiseForm()
         {
+            screen.setReadOnlyFields();
+            refreshJobs();
+            updateView();
+        }
+
+        private void refreshJobs()
+        {
+            screen.clearProblemJobs();
+            screen.clearRequestJobs();
             populateRequestJobs();
             populateProblemJobs();
-            screen.setReadOnlyFields();
-            updateView();
         }
 
         private void updateView()
@@ -33,6 +40,7 @@ namespace KF7012_Assignment
                 populateEngineers();
                 screen.estimatedDays = 0;
                 screen.clearSkills();
+                screen.hideError();
             }
         }
 
@@ -80,13 +88,23 @@ namespace KF7012_Assignment
             } 
         }
 
-        public void txt_Skills_Leave()
+        private int getSelectedEngineerID()
         {
-            string[] split = screen.getSelectedEngineer().Split(new Char[] { ' ', '-', ' '});
+            string[] split = screen.getSelectedEngineer().Split(new Char[] { ' ', '-', ' ' });
             int engineerID;
             int.TryParse(split[0], out engineerID);
+            return engineerID;
+        }
+
+        public void txt_Skills_Leave()
+        {
+            int engineerID = getSelectedEngineerID();
             Engineer engineer = repository.getEngineerByID(engineerID);
-            screen.skills = engineer.skills;
+            if (engineer != null)
+            {
+                screen.skills = engineer.skills;
+            }
+            
         }
 
         public void dgv_CellDoubleClick(int jobID)
@@ -98,7 +116,21 @@ namespace KF7012_Assignment
 
         public void btn_ScheduleJob_Click()
         {
+            if (screen.jobID != 0)
+            {
+                if (!string.IsNullOrEmpty(screen.getSelectedEngineer()))
+                {
+                    screen.hideError();
 
+                    repository.addScheduledJob(screen.jobID, getSelectedEngineerID(), screen.estimatedDays);
+                    repository.updateJobStateByID(screen.jobID, "PENDING");
+
+                    refreshJobs();
+                    updateView();
+                }
+                else screen.showError("Select an engineer to assign!");
+            }
+            else screen.showError("Select a job to schedule!");
         }
     }
 }

@@ -11,7 +11,8 @@ namespace KF7012_Assignment
         void register(LoginPresenter FM);
         string getAttemptUsername();
         string getAttemptPassword();
-        void showMainForm();
+        void showUserMenu();
+        void showTechMngrMenu();
         void hideError();
         void showError(string error);
     }

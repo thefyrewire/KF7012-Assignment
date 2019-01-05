@@ -30,7 +30,7 @@ namespace KF7012_Assignment
             deleteDatabase();
 
             // ADD USERS
-            addUser(0000, "admin", "hGTdTaRRFO8KkxXlaDMhO+G2Q0ZG++z58SnIeC27otrEPqNr", "admin"); // admin
+            addUser(0000, "admin", "hGTdTaRRFO8KkxXlaDMhO+G2Q0ZG++z58SnIeC27otrEPqNr", "techmngr"); // admin
             addUser(1701, "w1701", "w9vAcmhb2aKIIvChFld1g+pqeSxXTbFvJfZT8Z32fRXHumRK", "user"); // password123
             addUser(1702, "w1702", "YY7QFxa3L6YBeAOlym7LrjFfXdkqzSnZ71udnj8k3UpPvLMo", "user"); // th1s1sMYpa5sw0rD
             addUser(1703, "w1703", "u5Z1ko9IFcMaHmDUzR6eCYdf0IjOfuTROmnj3FsPhbxx0bR2", "user"); // secure111
@@ -49,10 +49,11 @@ namespace KF7012_Assignment
 
             // ADD JOBS
             addJob(1000, "mch500", "Leaking pipe", new DateTime(2018, 12, 29), 2, new DateTime(2019, 1, 12), "ESTIMATE NEEDED");
-            addJob(1000, "mch501", "Broken screen", new DateTime(2018, 11, 20), 5, new DateTime(2018, 11, 21), "ESTIMATE NEEDED");
-            addJob(1000, "mch501", "Malfunctioning robot arm", new DateTime(2018, 12, 26), 1, new DateTime(2019, 2, 4), "ESTIMATE NEEDED");
+            addJob(1000, "mch501", "Broken screen", new DateTime(2018, 11, 20), 4, new DateTime(2018, 11, 21), "ESTIMATE NEEDED");
+            addJob(1000, "mch500", "Damaged components", new DateTime(2018, 11, 25), 2, new DateTime(2018, 11, 26), "PENDING");
+            addJob(1000, "mch501", "Malfunctioning robot arm", new DateTime(2018, 12, 26), 5, new DateTime(2019, 2, 4), "PENDING");
             addJob(1001, "mch503", "Faulty chassis", new DateTime(2018, 12, 20), 0, new DateTime(2019, 3, 20), "ESTIMATE NEEDED");
-            addJob(1001, "mch504", "Electrical fault", new DateTime(2019, 1, 2), 5, new DateTime(2019, 1, 3), "ESTIMATE NEEDED");
+            addJob(1001, "mch504", "Electrical fault", new DateTime(2019, 1, 2), 5, new DateTime(2019, 1, 3), "ACTIVE");
             addJob(1001, "mch503", "Strange sounds", new DateTime(2018, 12, 29), 1, new DateTime(2019, 1, 8), "ESTIMATE NEEDED");
         }
 
@@ -86,16 +87,16 @@ namespace KF7012_Assignment
             }
         }
 
-        public bool verifyUser(string username, string password)
+        public string verifyUser(string username, string password)
         {
             using (Model context = new Model())
             {
                 PasswordHelper passwordHelper = new PasswordHelper();
                 User userToVerify = context.Users.Where(user => user.username == username).FirstOrDefault<User>();
                 if (userToVerify != null && passwordHelper.verifyPassword(password, userToVerify.password))
-                    return true;
+                    return userToVerify.profile;
 
-                return false;
+                return null;
             }
         }
 
@@ -222,6 +223,24 @@ namespace KF7012_Assignment
             sortedJobs.AddRange(jobs);
 
             return sortedJobs;
+        }
+
+        public List<Job> getRequestJobs()
+        {
+            using (Model context = new Model())
+            {
+                List<Job> jobs = context.Jobs.ToList<Job>().FindAll(job => job.state == "ESTIMATE NEEDED").OrderByDescending(job => job.urgency).ToList<Job>();
+                return jobs;
+            }
+        }
+
+        public List<Job> getProblemJobs()
+        {
+            using (Model context = new Model())
+            {
+                List<Job> jobs = context.Jobs.ToList<Job>().FindAll(job => job.state == "ESTIMATE NEEDED" || job.state == "PENDING").FindAll(job => job.lastStartDate.Subtract(DateTime.Now).Days <= 0).OrderBy(job => job.lastStartDate.Subtract(DateTime.Now).Days).ToList<Job>();
+                return jobs;
+            }
         }
 
         public int generateJobID()

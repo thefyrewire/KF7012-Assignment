@@ -1,6 +1,6 @@
 ﻿namespace KF7012_Assignment
 {
-    partial class Form1
+    partial class Form_Menu_User
     {
         /// <summary>
         /// Required designer variable.

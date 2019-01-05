@@ -38,11 +38,20 @@ namespace KF7012_Assignment
             return txt_Password.Text;
         }
 
-        public void showMainForm()
+        public void showUserMenu()
         {
             this.Hide();
-            Form1 f1 = new Form1();
+            Form_Menu_User f1 = new Form_Menu_User();
             FormPresenter FM = new FormPresenter(f1);
+            f1.ShowDialog();
+            this.Close();
+        }
+
+        public void showTechMngrMenu()
+        {
+            this.Hide();
+            Form_Menu_TechnicalManager f1 = new Form_Menu_TechnicalManager();
+            TechnicalManagerPresenter FM = new TechnicalManagerPresenter(f1);
             f1.ShowDialog();
             this.Close();
         }

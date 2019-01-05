@@ -59,7 +59,7 @@
             this.txt_CompanyID.Location = new System.Drawing.Point(154, 116);
             this.txt_CompanyID.Name = "txt_CompanyID";
             this.txt_CompanyID.Size = new System.Drawing.Size(144, 20);
-            this.txt_CompanyID.TabIndex = 24;
+            this.txt_CompanyID.TabIndex = 3;
             // 
             // lbl_CompanyID
             // 
@@ -93,7 +93,7 @@
             this.txt_AssetTag.Location = new System.Drawing.Point(154, 246);
             this.txt_AssetTag.Name = "txt_AssetTag";
             this.txt_AssetTag.Size = new System.Drawing.Size(144, 20);
-            this.txt_AssetTag.TabIndex = 32;
+            this.txt_AssetTag.TabIndex = 7;
             // 
             // txt_Description
             // 
@@ -101,7 +101,7 @@
             this.txt_Description.Multiline = true;
             this.txt_Description.Name = "txt_Description";
             this.txt_Description.Size = new System.Drawing.Size(225, 56);
-            this.txt_Description.TabIndex = 29;
+            this.txt_Description.TabIndex = 9;
             // 
             // lbl_Location
             // 
@@ -154,28 +154,28 @@
             this.txt_Fault.Multiline = true;
             this.txt_Fault.Name = "txt_Fault";
             this.txt_Fault.Size = new System.Drawing.Size(225, 56);
-            this.txt_Fault.TabIndex = 28;
+            this.txt_Fault.TabIndex = 10;
             // 
             // txt_SizeComplexity
             // 
             this.txt_SizeComplexity.Location = new System.Drawing.Point(154, 272);
             this.txt_SizeComplexity.Name = "txt_SizeComplexity";
             this.txt_SizeComplexity.Size = new System.Drawing.Size(144, 20);
-            this.txt_SizeComplexity.TabIndex = 33;
+            this.txt_SizeComplexity.TabIndex = 8;
             // 
             // txt_Location
             // 
             this.txt_Location.Location = new System.Drawing.Point(154, 168);
             this.txt_Location.Name = "txt_Location";
             this.txt_Location.Size = new System.Drawing.Size(144, 20);
-            this.txt_Location.TabIndex = 31;
+            this.txt_Location.TabIndex = 5;
             // 
             // txt_CompanyName
             // 
             this.txt_CompanyName.Location = new System.Drawing.Point(154, 142);
             this.txt_CompanyName.Name = "txt_CompanyName";
             this.txt_CompanyName.Size = new System.Drawing.Size(144, 20);
-            this.txt_CompanyName.TabIndex = 30;
+            this.txt_CompanyName.TabIndex = 4;
             // 
             // lbl_CompanyName
             // 
@@ -191,21 +191,21 @@
             this.txt_MachineID.Location = new System.Drawing.Point(154, 220);
             this.txt_MachineID.Name = "txt_MachineID";
             this.txt_MachineID.Size = new System.Drawing.Size(144, 20);
-            this.txt_MachineID.TabIndex = 41;
+            this.txt_MachineID.TabIndex = 6;
             // 
             // txt_Urgency
             // 
             this.txt_Urgency.Location = new System.Drawing.Point(154, 448);
             this.txt_Urgency.Name = "txt_Urgency";
             this.txt_Urgency.Size = new System.Drawing.Size(144, 20);
-            this.txt_Urgency.TabIndex = 42;
+            this.txt_Urgency.TabIndex = 11;
             // 
             // txt_JobID
             // 
             this.txt_JobID.Location = new System.Drawing.Point(154, 12);
             this.txt_JobID.Name = "txt_JobID";
             this.txt_JobID.Size = new System.Drawing.Size(144, 20);
-            this.txt_JobID.TabIndex = 44;
+            this.txt_JobID.TabIndex = 0;
             // 
             // lbl_JobID
             // 
@@ -221,14 +221,14 @@
             this.txt_DateReported.Location = new System.Drawing.Point(154, 38);
             this.txt_DateReported.Name = "txt_DateReported";
             this.txt_DateReported.Size = new System.Drawing.Size(144, 20);
-            this.txt_DateReported.TabIndex = 46;
+            this.txt_DateReported.TabIndex = 1;
             // 
             // txt_LastStartDate
             // 
             this.txt_LastStartDate.Location = new System.Drawing.Point(154, 64);
             this.txt_LastStartDate.Name = "txt_LastStartDate";
             this.txt_LastStartDate.Size = new System.Drawing.Size(144, 20);
-            this.txt_LastStartDate.TabIndex = 47;
+            this.txt_LastStartDate.TabIndex = 2;
             // 
             // lbl_DateReported
             // 

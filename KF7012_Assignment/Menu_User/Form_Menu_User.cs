@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace KF7012_Assignment
 {
-    public partial class Form1 : Form, IFormGUI
+    public partial class Form_Menu_User : Form, IFormGUI
     {
         private FormPresenter presenter;
-        public Form1()
+        public Form_Menu_User()
         {
             this.InitializeComponent();
         }

@@ -54,7 +54,6 @@ C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF701
 C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\bin\Debug\EntityFramework.xml
 C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.csprojResolveAssemblyReference.cache
-C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form1.resources
 C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_RegisterCompany.resources
 C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_Login.resources
 C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_RegisterMachine.resources
@@ -63,3 +62,5 @@ C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF701
 C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_RegisterJob.resources
 C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_Jobs.resources
 C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_JobDetails.resources
+C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_Menu_User.resources
+C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_Menu_TechnicalManager.resources

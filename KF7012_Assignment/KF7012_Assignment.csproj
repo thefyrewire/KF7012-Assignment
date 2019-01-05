@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Menu_TechnicalManager\Form_Menu_TechnicalManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_TechnicalManager\Form_Menu_TechnicalManager.Designer.cs">
+      <DependentUpon>Form_Menu_TechnicalManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="JobDetails\Form_JobDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,16 +67,18 @@
     </Compile>
     <Compile Include="JobDetails\IJobDetailsGUI.cs" />
     <Compile Include="JobDetails\JobDetailsPresenter.cs" />
+    <Compile Include="Menu_TechnicalManager\ITechnicalManagerGUI.cs" />
+    <Compile Include="Menu_TechnicalManager\TechnicalManagerPresenter.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\IModelRepository.cs" />
     <Compile Include="Model\ClosedJob.cs" />
     <Compile Include="Model\Company.cs" />
     <Compile Include="Model\Engineer.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Menu_User\Form_Menu_User.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Menu_User\Form_Menu_User.Designer.cs">
+      <DependentUpon>Form_Menu_User.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Job.cs" />
     <Compile Include="Jobs\Form_Jobs.cs">
@@ -105,7 +113,7 @@
     <Compile Include="RegisterJob\Form_RegisterJob.Designer.cs">
       <DependentUpon>Form_RegisterJob.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPresenter.cs" />
+    <Compile Include="Menu_User\FormPresenter.cs" />
     <Compile Include="Login\PasswordHelper.cs" />
     <Compile Include="RegisterMachine\Form_RegisterMachine.cs">
       <SubType>Form</SubType>
@@ -113,7 +121,7 @@
     <Compile Include="RegisterMachine\Form_RegisterMachine.Designer.cs">
       <DependentUpon>Form_RegisterMachine.cs</DependentUpon>
     </Compile>
-    <Compile Include="IFormGUI.cs" />
+    <Compile Include="Menu_User\IFormGUI.cs" />
     <Compile Include="Login\ILoginGUI.cs" />
     <Compile Include="Login\LoginPresenter.cs" />
     <Compile Include="Program.cs" />
@@ -123,8 +131,11 @@
     <Compile Include="RegisterMachine\RegisterMachinePresenter.cs" />
     <Compile Include="Model\ScheduledJob.cs" />
     <Compile Include="Model\User.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Menu_TechnicalManager\Form_Menu_TechnicalManager.resx">
+      <DependentUpon>Form_Menu_TechnicalManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_User\Form_Menu_User.resx">
+      <DependentUpon>Form_Menu_User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JobDetails\Form_JobDetails.resx">
       <DependentUpon>Form_JobDetails.cs</DependentUpon>

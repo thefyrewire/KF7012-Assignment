@@ -14,7 +14,7 @@ namespace KF7012_Assignment
 
         void addUser(int userID, string username, string password, string profile);
         List<User> getUsers();
-        bool verifyUser(string username, string password);
+        string verifyUser(string username, string password);
 
 
         void addCompany(int companyID, string name, string location);
@@ -30,6 +30,8 @@ namespace KF7012_Assignment
         List<Job> getCriticalJobs();
         List<Job> getNonCriticalJobs();
         List<Job> getSortedJobs();
+        List<Job> getRequestJobs();
+        List<Job> getProblemJobs();
         int generateJobID();
 
 

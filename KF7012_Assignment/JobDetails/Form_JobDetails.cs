@@ -35,6 +35,12 @@ namespace KF7012_Assignment
             }
         }
 
+        public string state
+        {
+            set { txt_State.Text = value; }
+            get { return txt_State.Text; }
+        }
+
         public void setDateReported(DateTime date)
         {
             txt_DateReported.Text = date.ToString();
@@ -117,6 +123,7 @@ namespace KF7012_Assignment
         public void setReadOnlyFields()
         {
             txt_JobID.ReadOnly = true;
+            txt_State.ReadOnly = true;
             txt_DateReported.ReadOnly = true;
             txt_LastStartDate.ReadOnly = true;
             txt_CompanyID.ReadOnly = true;

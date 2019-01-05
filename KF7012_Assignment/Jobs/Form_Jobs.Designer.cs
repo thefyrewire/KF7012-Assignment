@@ -37,6 +37,7 @@
             this.Urgency = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastStartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbl_Info = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Jobs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,16 +112,27 @@
             this.State.Name = "State";
             this.State.ReadOnly = true;
             // 
+            // lbl_Info
+            // 
+            this.lbl_Info.AutoSize = true;
+            this.lbl_Info.Location = new System.Drawing.Point(12, 463);
+            this.lbl_Info.Name = "lbl_Info";
+            this.lbl_Info.Size = new System.Drawing.Size(193, 13);
+            this.lbl_Info.TabIndex = 1;
+            this.lbl_Info.Text = "Double-click a row for more information.";
+            // 
             // Form_Jobs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 464);
+            this.ClientSize = new System.Drawing.Size(869, 485);
+            this.Controls.Add(this.lbl_Info);
             this.Controls.Add(this.dgv_Jobs);
             this.Name = "Form_Jobs";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Jobs)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -135,6 +147,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Urgency;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastStartDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn State;
+        private System.Windows.Forms.Label lbl_Info;
 
 
     }

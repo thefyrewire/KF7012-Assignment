@@ -11,6 +11,7 @@ namespace KF7012_Assignment
         void register(JobDetailsPresenter FM);
         void setReadOnlyFields();
         int jobID { get; set; }
+        string state { get; set; }
         int companyID { get; set; }
         string companyName { get; set; }
         string location { get; set; }

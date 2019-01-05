@@ -28,6 +28,7 @@ namespace KF7012_Assignment
             Company company = repository.getCompanyByID(job.companyID);
             Machine machine = repository.getMachineByID(job.machineID);
             screen.jobID = job.jobID;
+            screen.state = job.state;
             screen.companyID = job.companyID;
             screen.companyName = company.name;
             screen.location = company.location;

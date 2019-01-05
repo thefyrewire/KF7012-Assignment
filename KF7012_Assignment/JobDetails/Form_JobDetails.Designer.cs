@@ -52,19 +52,21 @@
             this.txt_LastStartDate = new System.Windows.Forms.TextBox();
             this.lbl_DateReported = new System.Windows.Forms.Label();
             this.lbl_LastStartDate = new System.Windows.Forms.Label();
+            this.txt_State = new System.Windows.Forms.TextBox();
+            this.lbl_State = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txt_CompanyID
             // 
-            this.txt_CompanyID.Location = new System.Drawing.Point(154, 116);
+            this.txt_CompanyID.Location = new System.Drawing.Point(154, 142);
             this.txt_CompanyID.Name = "txt_CompanyID";
             this.txt_CompanyID.Size = new System.Drawing.Size(144, 20);
-            this.txt_CompanyID.TabIndex = 3;
+            this.txt_CompanyID.TabIndex = 4;
             // 
             // lbl_CompanyID
             // 
             this.lbl_CompanyID.AutoSize = true;
-            this.lbl_CompanyID.Location = new System.Drawing.Point(14, 119);
+            this.lbl_CompanyID.Location = new System.Drawing.Point(14, 145);
             this.lbl_CompanyID.Name = "lbl_CompanyID";
             this.lbl_CompanyID.Size = new System.Drawing.Size(65, 13);
             this.lbl_CompanyID.TabIndex = 25;
@@ -73,7 +75,7 @@
             // lbl_Urgency
             // 
             this.lbl_Urgency.AutoSize = true;
-            this.lbl_Urgency.Location = new System.Drawing.Point(14, 451);
+            this.lbl_Urgency.Location = new System.Drawing.Point(14, 477);
             this.lbl_Urgency.Name = "lbl_Urgency";
             this.lbl_Urgency.Size = new System.Drawing.Size(47, 13);
             this.lbl_Urgency.TabIndex = 40;
@@ -82,7 +84,7 @@
             // lbl_AssetTag
             // 
             this.lbl_AssetTag.AutoSize = true;
-            this.lbl_AssetTag.Location = new System.Drawing.Point(14, 249);
+            this.lbl_AssetTag.Location = new System.Drawing.Point(14, 275);
             this.lbl_AssetTag.Name = "lbl_AssetTag";
             this.lbl_AssetTag.Size = new System.Drawing.Size(55, 13);
             this.lbl_AssetTag.TabIndex = 39;
@@ -90,23 +92,23 @@
             // 
             // txt_AssetTag
             // 
-            this.txt_AssetTag.Location = new System.Drawing.Point(154, 246);
+            this.txt_AssetTag.Location = new System.Drawing.Point(154, 272);
             this.txt_AssetTag.Name = "txt_AssetTag";
             this.txt_AssetTag.Size = new System.Drawing.Size(144, 20);
-            this.txt_AssetTag.TabIndex = 7;
+            this.txt_AssetTag.TabIndex = 8;
             // 
             // txt_Description
             // 
-            this.txt_Description.Location = new System.Drawing.Point(154, 298);
+            this.txt_Description.Location = new System.Drawing.Point(154, 324);
             this.txt_Description.Multiline = true;
             this.txt_Description.Name = "txt_Description";
             this.txt_Description.Size = new System.Drawing.Size(225, 56);
-            this.txt_Description.TabIndex = 9;
+            this.txt_Description.TabIndex = 10;
             // 
             // lbl_Location
             // 
             this.lbl_Location.AutoSize = true;
-            this.lbl_Location.Location = new System.Drawing.Point(14, 171);
+            this.lbl_Location.Location = new System.Drawing.Point(14, 197);
             this.lbl_Location.Name = "lbl_Location";
             this.lbl_Location.Size = new System.Drawing.Size(48, 13);
             this.lbl_Location.TabIndex = 38;
@@ -115,7 +117,7 @@
             // lbl_SizeComplexity
             // 
             this.lbl_SizeComplexity.AutoSize = true;
-            this.lbl_SizeComplexity.Location = new System.Drawing.Point(14, 275);
+            this.lbl_SizeComplexity.Location = new System.Drawing.Point(14, 301);
             this.lbl_SizeComplexity.Name = "lbl_SizeComplexity";
             this.lbl_SizeComplexity.Size = new System.Drawing.Size(101, 13);
             this.lbl_SizeComplexity.TabIndex = 37;
@@ -124,7 +126,7 @@
             // lbl_Description
             // 
             this.lbl_Description.AutoSize = true;
-            this.lbl_Description.Location = new System.Drawing.Point(14, 301);
+            this.lbl_Description.Location = new System.Drawing.Point(14, 327);
             this.lbl_Description.Name = "lbl_Description";
             this.lbl_Description.Size = new System.Drawing.Size(60, 13);
             this.lbl_Description.TabIndex = 36;
@@ -133,7 +135,7 @@
             // lbl_Fault
             // 
             this.lbl_Fault.AutoSize = true;
-            this.lbl_Fault.Location = new System.Drawing.Point(14, 389);
+            this.lbl_Fault.Location = new System.Drawing.Point(14, 415);
             this.lbl_Fault.Name = "lbl_Fault";
             this.lbl_Fault.Size = new System.Drawing.Size(30, 13);
             this.lbl_Fault.TabIndex = 35;
@@ -142,7 +144,7 @@
             // lbl_MachineID
             // 
             this.lbl_MachineID.AutoSize = true;
-            this.lbl_MachineID.Location = new System.Drawing.Point(14, 222);
+            this.lbl_MachineID.Location = new System.Drawing.Point(14, 248);
             this.lbl_MachineID.Name = "lbl_MachineID";
             this.lbl_MachineID.Size = new System.Drawing.Size(62, 13);
             this.lbl_MachineID.TabIndex = 34;
@@ -150,37 +152,37 @@
             // 
             // txt_Fault
             // 
-            this.txt_Fault.Location = new System.Drawing.Point(154, 386);
+            this.txt_Fault.Location = new System.Drawing.Point(154, 412);
             this.txt_Fault.Multiline = true;
             this.txt_Fault.Name = "txt_Fault";
             this.txt_Fault.Size = new System.Drawing.Size(225, 56);
-            this.txt_Fault.TabIndex = 10;
+            this.txt_Fault.TabIndex = 11;
             // 
             // txt_SizeComplexity
             // 
-            this.txt_SizeComplexity.Location = new System.Drawing.Point(154, 272);
+            this.txt_SizeComplexity.Location = new System.Drawing.Point(154, 298);
             this.txt_SizeComplexity.Name = "txt_SizeComplexity";
             this.txt_SizeComplexity.Size = new System.Drawing.Size(144, 20);
-            this.txt_SizeComplexity.TabIndex = 8;
+            this.txt_SizeComplexity.TabIndex = 9;
             // 
             // txt_Location
             // 
-            this.txt_Location.Location = new System.Drawing.Point(154, 168);
+            this.txt_Location.Location = new System.Drawing.Point(154, 194);
             this.txt_Location.Name = "txt_Location";
             this.txt_Location.Size = new System.Drawing.Size(144, 20);
-            this.txt_Location.TabIndex = 5;
+            this.txt_Location.TabIndex = 6;
             // 
             // txt_CompanyName
             // 
-            this.txt_CompanyName.Location = new System.Drawing.Point(154, 142);
+            this.txt_CompanyName.Location = new System.Drawing.Point(154, 168);
             this.txt_CompanyName.Name = "txt_CompanyName";
             this.txt_CompanyName.Size = new System.Drawing.Size(144, 20);
-            this.txt_CompanyName.TabIndex = 4;
+            this.txt_CompanyName.TabIndex = 5;
             // 
             // lbl_CompanyName
             // 
             this.lbl_CompanyName.AutoSize = true;
-            this.lbl_CompanyName.Location = new System.Drawing.Point(14, 145);
+            this.lbl_CompanyName.Location = new System.Drawing.Point(14, 171);
             this.lbl_CompanyName.Name = "lbl_CompanyName";
             this.lbl_CompanyName.Size = new System.Drawing.Size(94, 13);
             this.lbl_CompanyName.TabIndex = 27;
@@ -188,17 +190,17 @@
             // 
             // txt_MachineID
             // 
-            this.txt_MachineID.Location = new System.Drawing.Point(154, 220);
+            this.txt_MachineID.Location = new System.Drawing.Point(154, 246);
             this.txt_MachineID.Name = "txt_MachineID";
             this.txt_MachineID.Size = new System.Drawing.Size(144, 20);
-            this.txt_MachineID.TabIndex = 6;
+            this.txt_MachineID.TabIndex = 7;
             // 
             // txt_Urgency
             // 
-            this.txt_Urgency.Location = new System.Drawing.Point(154, 448);
+            this.txt_Urgency.Location = new System.Drawing.Point(154, 474);
             this.txt_Urgency.Name = "txt_Urgency";
             this.txt_Urgency.Size = new System.Drawing.Size(144, 20);
-            this.txt_Urgency.TabIndex = 11;
+            this.txt_Urgency.TabIndex = 12;
             // 
             // txt_JobID
             // 
@@ -218,22 +220,22 @@
             // 
             // txt_DateReported
             // 
-            this.txt_DateReported.Location = new System.Drawing.Point(154, 38);
+            this.txt_DateReported.Location = new System.Drawing.Point(154, 64);
             this.txt_DateReported.Name = "txt_DateReported";
             this.txt_DateReported.Size = new System.Drawing.Size(144, 20);
-            this.txt_DateReported.TabIndex = 1;
+            this.txt_DateReported.TabIndex = 2;
             // 
             // txt_LastStartDate
             // 
-            this.txt_LastStartDate.Location = new System.Drawing.Point(154, 64);
+            this.txt_LastStartDate.Location = new System.Drawing.Point(154, 90);
             this.txt_LastStartDate.Name = "txt_LastStartDate";
             this.txt_LastStartDate.Size = new System.Drawing.Size(144, 20);
-            this.txt_LastStartDate.TabIndex = 2;
+            this.txt_LastStartDate.TabIndex = 3;
             // 
             // lbl_DateReported
             // 
             this.lbl_DateReported.AutoSize = true;
-            this.lbl_DateReported.Location = new System.Drawing.Point(14, 41);
+            this.lbl_DateReported.Location = new System.Drawing.Point(14, 67);
             this.lbl_DateReported.Name = "lbl_DateReported";
             this.lbl_DateReported.Size = new System.Drawing.Size(77, 13);
             this.lbl_DateReported.TabIndex = 48;
@@ -242,17 +244,35 @@
             // lbl_LastStartDate
             // 
             this.lbl_LastStartDate.AutoSize = true;
-            this.lbl_LastStartDate.Location = new System.Drawing.Point(14, 67);
+            this.lbl_LastStartDate.Location = new System.Drawing.Point(14, 93);
             this.lbl_LastStartDate.Name = "lbl_LastStartDate";
             this.lbl_LastStartDate.Size = new System.Drawing.Size(118, 13);
             this.lbl_LastStartDate.TabIndex = 49;
             this.lbl_LastStartDate.Text = "Last Allowed Start Date";
             // 
+            // txt_State
+            // 
+            this.txt_State.Location = new System.Drawing.Point(154, 38);
+            this.txt_State.Name = "txt_State";
+            this.txt_State.Size = new System.Drawing.Size(144, 20);
+            this.txt_State.TabIndex = 1;
+            // 
+            // lbl_State
+            // 
+            this.lbl_State.AutoSize = true;
+            this.lbl_State.Location = new System.Drawing.Point(14, 41);
+            this.lbl_State.Name = "lbl_State";
+            this.lbl_State.Size = new System.Drawing.Size(32, 13);
+            this.lbl_State.TabIndex = 51;
+            this.lbl_State.Text = "State";
+            // 
             // Form_JobDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 486);
+            this.ClientSize = new System.Drawing.Size(395, 507);
+            this.Controls.Add(this.lbl_State);
+            this.Controls.Add(this.txt_State);
             this.Controls.Add(this.lbl_LastStartDate);
             this.Controls.Add(this.lbl_DateReported);
             this.Controls.Add(this.txt_LastStartDate);
@@ -310,5 +330,7 @@
         private System.Windows.Forms.TextBox txt_LastStartDate;
         private System.Windows.Forms.Label lbl_DateReported;
         private System.Windows.Forms.Label lbl_LastStartDate;
+        private System.Windows.Forms.TextBox txt_State;
+        private System.Windows.Forms.Label lbl_State;
     }
 }

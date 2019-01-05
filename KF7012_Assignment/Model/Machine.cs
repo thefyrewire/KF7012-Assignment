@@ -22,5 +22,8 @@ namespace KF7012_Assignment
 
         [Required]
         public int sizeComplexity { get; set; }
+
+        [MaxLength]
+        public string description { get; set; }
     }
 }

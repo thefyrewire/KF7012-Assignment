@@ -34,12 +34,12 @@ namespace KF7012_Assignment
 
         public void trb_SizeComplexity_ValueChanged()
         {
-            screen.setSizeComplexityLabel(screen.sizeComplexity);
+            screen.setSizeComplexityLabel(screen.getSizeComplexity());
         }
 
         public void btn_Register_Click()
         {
-            repository.addMachine(repository.generateMachineID(), screen.companyID, screen.assetTag, screen.sizeComplexity);
+            repository.addMachine(repository.generateMachineID(), screen.companyID, screen.getAssetTag(), screen.getSizeComplexity(), screen.getDescription());
             screen.closeForm();
         }
     }

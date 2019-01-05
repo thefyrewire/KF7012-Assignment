@@ -29,16 +29,12 @@ namespace KF7012_Assignment
             txt_Location.ReadOnly = true;
             txt_AssetTag.ReadOnly = true;
             txt_SizeComplexity.ReadOnly = true;
+            txt_Description.ReadOnly = true;
         }
 
         private void btn_RegisterMachine_Click(Object sender, EventArgs e) {
             presenter.btn_RegisterMachine_Click();
         }
-
-        /*private void cmb_MachineID_SelectedIndexChanged(Object sender, EventArgs e)
-        {
-            presenter.cmb_MachineID_SelectedIndexChanged();
-        }*/
 
         private void cmb_MachineID_Leave(Object sender, EventArgs e)
         {
@@ -107,7 +103,6 @@ namespace KF7012_Assignment
         public void jobDetailsEnabled(bool allowed)
         {
             txt_Fault.Enabled = allowed;
-            txt_Description.Enabled = allowed;
             trb_Urgency.Enabled = allowed;
             lbl_UrgencyValue.Enabled = allowed;
         }
@@ -156,6 +151,12 @@ namespace KF7012_Assignment
             }
         }
 
+        public string description
+        {
+            set { txt_Description.Text = value; }
+            get { return txt_Description.Text; }
+        }
+
         public string fault
         {
             set { txt_Fault.Text = value; }
@@ -168,21 +169,11 @@ namespace KF7012_Assignment
             get { return trb_Urgency.Value; }
         }
 
-        public string description
-        {
-            set { txt_Description.Text = value; }
-            get { return txt_Description.Text; }
-        }
-
-        /*public void setSizeComplexity(int sizeComplexity)
-        {
-            txt_SizeComplexity.Text = sizeComplexity.ToString();
-        }*/
-
         public void clearMachineDetails()
         {
             txt_AssetTag.Clear();
             txt_SizeComplexity.Clear();
+            txt_Description.Clear();
         }
 
         public void clearForm()

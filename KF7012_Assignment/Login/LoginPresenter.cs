@@ -52,7 +52,7 @@ namespace KF7012_Assignment
             foreach (Job job in jobs)
             {
                 Company company = repository.getCompanyByID(job.companyID);
-                Machine machine = repository.getMachine(job.machineID);
+                Machine machine = repository.getMachineByID(job.machineID);
                 Console.WriteLine("Job: " + job.fault + " at " + company.name + " for " + machine.assetTag + " which has a complexity of " + machine.sizeComplexity);
             }
 

@@ -10,7 +10,6 @@ namespace KF7012_Assignment
     public class RegisterJobPresenter
     {
         private IRegisterJobGUI screen;
-        // private IModelRepository repository;
         ModelRepository repository = new ModelRepository();
 
         public RegisterJobPresenter(IRegisterJobGUI screen)
@@ -106,11 +105,12 @@ namespace KF7012_Assignment
         {
             if (!string.IsNullOrEmpty(screen.machineID))
             {
-                Machine machine = repository.getMachine(screen.machineID);
+                Machine machine = repository.getMachineByID(screen.machineID);
                 if (machine != null)
                 {
                     screen.assetTag = machine.assetTag;
                     screen.sizeComplexity = machine.sizeComplexity;
+                    screen.description = machine.description;
                     screen.btn_RegisterJobEnabled(true);
                 } else
                     screen.btn_RegisterJobEnabled(false);

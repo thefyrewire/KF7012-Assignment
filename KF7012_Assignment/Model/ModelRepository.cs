@@ -41,11 +41,11 @@ namespace KF7012_Assignment
             addCompany(1001, "Blue Arm Robotics", "London");
 
             // ADD MACHINES
-            addMachine("mch500", 1000, "CT001", 4);
-            addMachine("mch501", 1000, "CT002", 3);
-            addMachine("mch502", 1001, "BLUE_Homer", 5);
-            addMachine("mch503", 1001, "BLUE_Marge", 2);
-            addMachine("mch504", 1001, "BLUE_Bart", 1);
+            addMachine("mch500", 1000, "CT001", 4, "Large and fairly old tank, not many moving parts.");
+            addMachine("mch501", 1000, "CT002", 3, "Medium-sized cutting machine.");
+            addMachine("mch502", 1001, "BLUE_Homer", 5, "Large and complex manufacturing machine.");
+            addMachine("mch503", 1001, "BLUE_Marge", 2, "Semi-large artboard cutting machine.");
+            addMachine("mch504", 1001, "BLUE_Bart", 0, "Table-top parts stand.");
 
             // ADD JOBS
             addJob(1000, "mch500", "Leaking pipe", new DateTime(2018, 12, 29), 2, new DateTime(2019, 1, 12), "ESTIMATE NEEDED");
@@ -257,7 +257,7 @@ namespace KF7012_Assignment
         /* --- MACHINES --- */
         /* ---------------- */
 
-        public void addMachine(string machineID, int companyID, string assetTag, int sizeComplexity)
+        public void addMachine(string machineID, int companyID, string assetTag, int sizeComplexity, string description)
         {
             using (Model context = new Model())
             {
@@ -266,14 +266,15 @@ namespace KF7012_Assignment
                     machineID = machineID,
                     companyID = companyID,
                     assetTag = assetTag,
-                    sizeComplexity = sizeComplexity
+                    sizeComplexity = sizeComplexity,
+                    description = description
                 });
 
                 context.SaveChanges();
             }
         }
 
-        public Machine getMachine(string machineID)
+        public Machine getMachineByID(string machineID)
         {
             using (Model context = new Model())
             {

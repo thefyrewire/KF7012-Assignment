@@ -34,16 +34,19 @@ namespace KF7012_Assignment
             }
         }
 
-        public string assetTag
+        public string getAssetTag()
         {
-            set { txt_AssetTag.Text = value; }
-            get { return txt_AssetTag.Text; }
+            return txt_AssetTag.Text;
         }
 
-        public int sizeComplexity
+        public int getSizeComplexity()
         {
-            set { trb_SizeComplexity.Value = value; }
-            get { return trb_SizeComplexity.Value;  }
+            return trb_SizeComplexity.Value;
+        }
+
+        public string getDescription()
+        {
+            return txt_Description.Text;
         }
 
         private void trb_SizeComplexity_ValueChanged(Object sender, EventArgs e)

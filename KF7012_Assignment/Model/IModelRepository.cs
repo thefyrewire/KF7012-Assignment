@@ -36,8 +36,8 @@ namespace KF7012_Assignment
         void addEngineer(string engineerID, string name, string profile, string skills);
 
 
-        void addMachine(string machineID, int companyID, string assetTag, int sizeComplexity);
-        Machine getMachine(string machineID);
+        void addMachine(string machineID, int companyID, string assetTag, int sizeComplexity, string description);
+        Machine getMachineByID(string machineID);
         List<Machine> getMachinesForCompany(int companyID);
         string generateMachineID();
 

@@ -140,7 +140,7 @@
             // 
             this.lbl_FaultError.AutoSize = true;
             this.lbl_FaultError.ForeColor = System.Drawing.Color.Red;
-            this.lbl_FaultError.Location = new System.Drawing.Point(386, 227);
+            this.lbl_FaultError.Location = new System.Drawing.Point(386, 285);
             this.lbl_FaultError.Name = "lbl_FaultError";
             this.lbl_FaultError.Size = new System.Drawing.Size(103, 13);
             this.lbl_FaultError.TabIndex = 29;
@@ -242,7 +242,7 @@
             // 
             // txt_Description
             // 
-            this.txt_Description.Location = new System.Drawing.Point(155, 286);
+            this.txt_Description.Location = new System.Drawing.Point(155, 200);
             this.txt_Description.Multiline = true;
             this.txt_Description.Name = "txt_Description";
             this.txt_Description.Size = new System.Drawing.Size(225, 56);
@@ -289,7 +289,7 @@
             // lbl_Description
             // 
             this.lbl_Description.AutoSize = true;
-            this.lbl_Description.Location = new System.Drawing.Point(15, 286);
+            this.lbl_Description.Location = new System.Drawing.Point(15, 203);
             this.lbl_Description.Name = "lbl_Description";
             this.lbl_Description.Size = new System.Drawing.Size(60, 13);
             this.lbl_Description.TabIndex = 13;
@@ -298,7 +298,7 @@
             // lbl_Fault
             // 
             this.lbl_Fault.AutoSize = true;
-            this.lbl_Fault.Location = new System.Drawing.Point(15, 224);
+            this.lbl_Fault.Location = new System.Drawing.Point(15, 285);
             this.lbl_Fault.Name = "lbl_Fault";
             this.lbl_Fault.Size = new System.Drawing.Size(37, 13);
             this.lbl_Fault.TabIndex = 12;
@@ -315,7 +315,7 @@
             // 
             // txt_Fault
             // 
-            this.txt_Fault.Location = new System.Drawing.Point(155, 224);
+            this.txt_Fault.Location = new System.Drawing.Point(155, 282);
             this.txt_Fault.Multiline = true;
             this.txt_Fault.Name = "txt_Fault";
             this.txt_Fault.Size = new System.Drawing.Size(225, 56);

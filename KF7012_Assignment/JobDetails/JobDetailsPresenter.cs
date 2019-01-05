@@ -20,16 +20,25 @@ namespace KF7012_Assignment
 
         private void initialiseForm()
         {
-            // updateView();
+            screen.setReadOnlyFields();
         }
-
-        /*public void updateView()
-        {
-        }*/
 
         public void populateDetails(Job job)
         {
+            Company company = repository.getCompanyByID(job.companyID);
+            Machine machine = repository.getMachineByID(job.machineID);
+            screen.jobID = job.jobID;
             screen.companyID = job.companyID;
+            screen.companyName = company.name;
+            screen.location = company.location;
+            screen.machineID = job.machineID;
+            screen.assetTag = machine.assetTag;
+            screen.sizeComplexity = machine.sizeComplexity;
+            screen.description = machine.description;
+            screen.fault = job.fault;
+            screen.urgency = job.urgency;
+            screen.setDateReported(job.dateReported);
+            screen.setLastStartDate(job.lastStartDate);
         }
     }
 }

@@ -37,15 +37,17 @@
             this.txt_CompanyID = new System.Windows.Forms.TextBox();
             this.trb_SizeComplexity = new System.Windows.Forms.TrackBar();
             this.lbl_SizeComplexityValue = new System.Windows.Forms.Label();
+            this.txt_Description = new System.Windows.Forms.TextBox();
+            this.lbl_Description = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trb_SizeComplexity)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Register
             // 
-            this.btn_Register.Location = new System.Drawing.Point(30, 260);
+            this.btn_Register.Location = new System.Drawing.Point(30, 297);
             this.btn_Register.Name = "btn_Register";
             this.btn_Register.Size = new System.Drawing.Size(75, 23);
-            this.btn_Register.TabIndex = 2;
+            this.btn_Register.TabIndex = 3;
             this.btn_Register.Text = "Register";
             this.btn_Register.UseVisualStyleBackColor = true;
             this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
@@ -53,7 +55,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(318, 25);
+            this.label1.Location = new System.Drawing.Point(163, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 13);
             this.label1.TabIndex = 2;
@@ -98,18 +100,16 @@
             this.txt_CompanyID.Name = "txt_CompanyID";
             this.txt_CompanyID.ReadOnly = true;
             this.txt_CompanyID.Size = new System.Drawing.Size(229, 20);
-            this.txt_CompanyID.TabIndex = 3;
+            this.txt_CompanyID.TabIndex = 4;
             // 
             // trb_SizeComplexity
             // 
             this.trb_SizeComplexity.LargeChange = 1;
             this.trb_SizeComplexity.Location = new System.Drawing.Point(148, 153);
             this.trb_SizeComplexity.Maximum = 5;
-            this.trb_SizeComplexity.Minimum = 1;
             this.trb_SizeComplexity.Name = "trb_SizeComplexity";
             this.trb_SizeComplexity.Size = new System.Drawing.Size(201, 45);
             this.trb_SizeComplexity.TabIndex = 1;
-            this.trb_SizeComplexity.Value = 1;
             this.trb_SizeComplexity.ValueChanged += new System.EventHandler(this.trb_SizeComplexity_ValueChanged);
             // 
             // lbl_SizeComplexityValue
@@ -120,14 +120,33 @@
             this.lbl_SizeComplexityValue.Name = "lbl_SizeComplexityValue";
             this.lbl_SizeComplexityValue.Size = new System.Drawing.Size(16, 16);
             this.lbl_SizeComplexityValue.TabIndex = 12;
-            this.lbl_SizeComplexityValue.Text = "1";
+            this.lbl_SizeComplexityValue.Text = "0";
+            // 
+            // txt_Description
+            // 
+            this.txt_Description.Location = new System.Drawing.Point(120, 204);
+            this.txt_Description.Multiline = true;
+            this.txt_Description.Name = "txt_Description";
+            this.txt_Description.Size = new System.Drawing.Size(229, 61);
+            this.txt_Description.TabIndex = 2;
+            // 
+            // lbl_Description
+            // 
+            this.lbl_Description.AutoSize = true;
+            this.lbl_Description.Location = new System.Drawing.Point(27, 204);
+            this.lbl_Description.Name = "lbl_Description";
+            this.lbl_Description.Size = new System.Drawing.Size(60, 13);
+            this.lbl_Description.TabIndex = 14;
+            this.lbl_Description.Text = "Description";
             // 
             // Form_RegisterMachine
             // 
             this.AcceptButton = this.btn_Register;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(756, 418);
+            this.ClientSize = new System.Drawing.Size(437, 341);
+            this.Controls.Add(this.txt_Description);
+            this.Controls.Add(this.lbl_Description);
             this.Controls.Add(this.lbl_SizeComplexityValue);
             this.Controls.Add(this.trb_SizeComplexity);
             this.Controls.Add(this.txt_CompanyID);
@@ -138,7 +157,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Register);
             this.Name = "Form_RegisterMachine";
-            this.Text = "Form_RegisterMachine";
+            this.Text = "Register Machine";
             ((System.ComponentModel.ISupportInitialize)(this.trb_SizeComplexity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -156,5 +175,7 @@
         private System.Windows.Forms.TextBox txt_CompanyID;
         private System.Windows.Forms.TrackBar trb_SizeComplexity;
         private System.Windows.Forms.Label lbl_SizeComplexityValue;
+        private System.Windows.Forms.TextBox txt_Description;
+        private System.Windows.Forms.Label lbl_Description;
     }
 }

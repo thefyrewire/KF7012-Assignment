@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace KF7012_Assignment
 {
-    public interface IJobsGUI
+    public interface IJobDetailsGUI
     {
-        void register(JobsPresenter FM);
-        void populateJob(Job job);
-        void showJobDetailsForm(int index);
+        void register(JobDetailsPresenter FM);
+        int companyID { get; set; }
     }
 }

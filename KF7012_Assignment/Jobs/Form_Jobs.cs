@@ -13,6 +13,7 @@ namespace KF7012_Assignment
     public partial class Form_Jobs : Form, IJobsGUI
     {
         private JobsPresenter presenter;
+        private ModelRepository repository = new ModelRepository();
 
         public Form_Jobs()
         {
@@ -27,6 +28,24 @@ namespace KF7012_Assignment
         public void populateJob(Job job)
         {
             dgv_Jobs.Rows.Add(job.jobID, job.companyID, job.machineID, job.fault, job.dateReported, job.urgency, job.lastStartDate, job.state);
+        }
+
+        private void dgv_Jobs_CellDoubleClick(Object sender, DataGridViewCellEventArgs e)
+        {
+            presenter.showJobDetailsForm(e.RowIndex);
+        }
+
+        public void showJobDetailsForm(int index)
+        {
+            int jobID = Convert.ToInt32(dgv_Jobs.Rows[index].Cells["JobID"].Value);
+            Job job = repository.getJobByID(jobID);
+            if (job != null)
+            {
+                Form_JobDetails f1 = new Form_JobDetails();
+                JobDetailsPresenter FM = new JobDetailsPresenter(f1);
+                FM.populateDetails(job);
+                f1.ShowDialog();
+            }
         }
     }
 }

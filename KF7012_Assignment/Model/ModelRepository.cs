@@ -188,6 +188,15 @@ namespace KF7012_Assignment
             }
         }
 
+        public Job getJobByID(int jobID)
+        {
+            using (Model context = new Model())
+            {
+                Job jobToGet = context.Jobs.Where(job => job.jobID == jobID).FirstOrDefault<Job>();
+                return jobToGet;
+            }
+        }
+
         public List<Job> getCriticalJobs()
         {
             using (Model context = new Model())

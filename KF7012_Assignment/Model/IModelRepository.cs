@@ -26,6 +26,7 @@ namespace KF7012_Assignment
 
         void addJob(int companyID, string machineID, string description, DateTime dateReported, int priority, DateTime lastStartDate, string state);
         List<Job> getJobsForCompany(int companyID);
+        Job getJobByID(int jobID);
         List<Job> getCriticalJobs();
         List<Job> getNonCriticalJobs();
         List<Job> getSortedJobs();

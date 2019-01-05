@@ -53,6 +53,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JobDetails\Form_JobDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobDetails\Form_JobDetails.Designer.cs">
+      <DependentUpon>Form_JobDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobDetails\IJobDetailsGUI.cs" />
+    <Compile Include="JobDetails\JobDetailsPresenter.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\IModelRepository.cs" />
     <Compile Include="Model\ClosedJob.cs" />
@@ -117,6 +125,9 @@
     <Compile Include="Model\User.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobDetails\Form_JobDetails.resx">
+      <DependentUpon>Form_JobDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterCompany\Form_RegisterCompany.resx">
       <DependentUpon>Form_RegisterCompany.cs</DependentUpon>

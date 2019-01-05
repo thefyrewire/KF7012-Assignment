@@ -31,5 +31,10 @@ namespace KF7012_Assignment
                 screen.populateJob(job);
             }
         }
+
+        public void showJobDetailsForm(int index)
+        {
+            screen.showJobDetailsForm(index);
+        }
     }
 }

@@ -62,3 +62,4 @@ C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF701
 C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.csproj.GenerateResource.Cache
 C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_RegisterJob.resources
 C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_Jobs.resources
+C:\Users\Michael\Documents\Northumbria University\KF7012\kf7012-assignment\KF7012_Assignment\obj\Debug\KF7012_Assignment.Form_JobDetails.resources

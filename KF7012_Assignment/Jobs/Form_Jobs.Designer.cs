@@ -59,8 +59,9 @@
             this.dgv_Jobs.Name = "dgv_Jobs";
             this.dgv_Jobs.ReadOnly = true;
             this.dgv_Jobs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Jobs.Size = new System.Drawing.Size(942, 440);
+            this.dgv_Jobs.Size = new System.Drawing.Size(844, 440);
             this.dgv_Jobs.TabIndex = 0;
+            this.dgv_Jobs.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Jobs_CellDoubleClick);
             // 
             // JobID
             // 
@@ -114,7 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(966, 464);
+            this.ClientSize = new System.Drawing.Size(1211, 464);
             this.Controls.Add(this.dgv_Jobs);
             this.Name = "Form_Jobs";
             this.Text = "Form2";

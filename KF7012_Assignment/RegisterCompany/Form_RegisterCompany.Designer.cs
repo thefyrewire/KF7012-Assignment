@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,19 +38,10 @@
             this.lbl_ErrorMsg = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(100, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Company Registration Form";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 38);
+            this.label2.Location = new System.Drawing.Point(59, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 13);
             this.label2.TabIndex = 1;
@@ -60,7 +50,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 83);
+            this.label3.Location = new System.Drawing.Point(59, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 2;
@@ -70,7 +60,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Enabled = false;
-            this.label4.Location = new System.Drawing.Point(12, 124);
+            this.label4.Location = new System.Drawing.Point(59, 137);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 13);
             this.label4.TabIndex = 3;
@@ -78,14 +68,14 @@
             // 
             // txt_CompanyName
             // 
-            this.txt_CompanyName.Location = new System.Drawing.Point(156, 35);
+            this.txt_CompanyName.Location = new System.Drawing.Point(203, 48);
             this.txt_CompanyName.Name = "txt_CompanyName";
             this.txt_CompanyName.Size = new System.Drawing.Size(100, 20);
             this.txt_CompanyName.TabIndex = 0;
             // 
             // txt_Location
             // 
-            this.txt_Location.Location = new System.Drawing.Point(156, 76);
+            this.txt_Location.Location = new System.Drawing.Point(203, 89);
             this.txt_Location.Name = "txt_Location";
             this.txt_Location.Size = new System.Drawing.Size(100, 20);
             this.txt_Location.TabIndex = 1;
@@ -93,14 +83,14 @@
             // textBox3
             // 
             this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(156, 117);
+            this.textBox3.Location = new System.Drawing.Point(203, 130);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 2;
             // 
             // btn_RegisterCompany
             // 
-            this.btn_RegisterCompany.Location = new System.Drawing.Point(91, 184);
+            this.btn_RegisterCompany.Location = new System.Drawing.Point(138, 197);
             this.btn_RegisterCompany.Name = "btn_RegisterCompany";
             this.btn_RegisterCompany.Size = new System.Drawing.Size(75, 23);
             this.btn_RegisterCompany.TabIndex = 7;
@@ -113,7 +103,7 @@
             this.lbl_ErrorMsg.AutoSize = true;
             this.lbl_ErrorMsg.BackColor = System.Drawing.SystemColors.Control;
             this.lbl_ErrorMsg.ForeColor = System.Drawing.Color.Red;
-            this.lbl_ErrorMsg.Location = new System.Drawing.Point(12, 155);
+            this.lbl_ErrorMsg.Location = new System.Drawing.Point(59, 168);
             this.lbl_ErrorMsg.Name = "lbl_ErrorMsg";
             this.lbl_ErrorMsg.Size = new System.Drawing.Size(171, 13);
             this.lbl_ErrorMsg.TabIndex = 27;
@@ -133,9 +123,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "Form_RegisterCompany";
-            this.Text = "Form1";
+            this.Text = "Register Company";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,7 +132,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

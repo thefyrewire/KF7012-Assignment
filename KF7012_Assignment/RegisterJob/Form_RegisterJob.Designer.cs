@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.lbl_FaultError = new System.Windows.Forms.Label();
             this.lbl_UrgencyValue = new System.Windows.Forms.Label();
             this.trb_Urgency = new System.Windows.Forms.TrackBar();
@@ -54,20 +53,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.trb_Urgency)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Jobs";
-            // 
             // lbl_FaultError
             // 
             this.lbl_FaultError.AutoSize = true;
             this.lbl_FaultError.ForeColor = System.Drawing.Color.Red;
-            this.lbl_FaultError.Location = new System.Drawing.Point(401, 330);
+            this.lbl_FaultError.Location = new System.Drawing.Point(402, 293);
             this.lbl_FaultError.Name = "lbl_FaultError";
             this.lbl_FaultError.Size = new System.Drawing.Size(103, 13);
             this.lbl_FaultError.TabIndex = 53;
@@ -77,7 +67,7 @@
             // 
             this.lbl_UrgencyValue.AutoSize = true;
             this.lbl_UrgencyValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_UrgencyValue.Location = new System.Drawing.Point(170, 408);
+            this.lbl_UrgencyValue.Location = new System.Drawing.Point(171, 371);
             this.lbl_UrgencyValue.Name = "lbl_UrgencyValue";
             this.lbl_UrgencyValue.Size = new System.Drawing.Size(16, 16);
             this.lbl_UrgencyValue.TabIndex = 52;
@@ -87,7 +77,7 @@
             // 
             this.trb_Urgency.BackColor = System.Drawing.SystemColors.Control;
             this.trb_Urgency.LargeChange = 1;
-            this.trb_Urgency.Location = new System.Drawing.Point(194, 403);
+            this.trb_Urgency.Location = new System.Drawing.Point(195, 366);
             this.trb_Urgency.Maximum = 5;
             this.trb_Urgency.Name = "trb_Urgency";
             this.trb_Urgency.Size = new System.Drawing.Size(201, 45);
@@ -97,7 +87,7 @@
             // lbl_Urgency
             // 
             this.lbl_Urgency.AutoSize = true;
-            this.lbl_Urgency.Location = new System.Drawing.Point(30, 403);
+            this.lbl_Urgency.Location = new System.Drawing.Point(31, 366);
             this.lbl_Urgency.Name = "lbl_Urgency";
             this.lbl_Urgency.Size = new System.Drawing.Size(54, 13);
             this.lbl_Urgency.TabIndex = 50;
@@ -106,7 +96,7 @@
             // lbl_AssetTag
             // 
             this.lbl_AssetTag.AutoSize = true;
-            this.lbl_AssetTag.Location = new System.Drawing.Point(30, 196);
+            this.lbl_AssetTag.Location = new System.Drawing.Point(31, 159);
             this.lbl_AssetTag.Name = "lbl_AssetTag";
             this.lbl_AssetTag.Size = new System.Drawing.Size(55, 13);
             this.lbl_AssetTag.TabIndex = 49;
@@ -114,7 +104,7 @@
             // 
             // txt_AssetTag
             // 
-            this.txt_AssetTag.Location = new System.Drawing.Point(170, 193);
+            this.txt_AssetTag.Location = new System.Drawing.Point(171, 156);
             this.txt_AssetTag.Name = "txt_AssetTag";
             this.txt_AssetTag.Size = new System.Drawing.Size(144, 20);
             this.txt_AssetTag.TabIndex = 8;
@@ -123,7 +113,7 @@
             // 
             this.cmb_MachineID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_MachineID.FormattingEnabled = true;
-            this.cmb_MachineID.Location = new System.Drawing.Point(170, 166);
+            this.cmb_MachineID.Location = new System.Drawing.Point(171, 129);
             this.cmb_MachineID.Name = "cmb_MachineID";
             this.cmb_MachineID.Size = new System.Drawing.Size(144, 21);
             this.cmb_MachineID.TabIndex = 1;
@@ -132,7 +122,7 @@
             // 
             // txt_CompanyID
             // 
-            this.txt_CompanyID.Location = new System.Drawing.Point(170, 62);
+            this.txt_CompanyID.Location = new System.Drawing.Point(171, 25);
             this.txt_CompanyID.Name = "txt_CompanyID";
             this.txt_CompanyID.Size = new System.Drawing.Size(144, 20);
             this.txt_CompanyID.TabIndex = 0;
@@ -141,7 +131,7 @@
             // lbl_CompanyID
             // 
             this.lbl_CompanyID.AutoSize = true;
-            this.lbl_CompanyID.Location = new System.Drawing.Point(30, 65);
+            this.lbl_CompanyID.Location = new System.Drawing.Point(31, 28);
             this.lbl_CompanyID.Name = "lbl_CompanyID";
             this.lbl_CompanyID.Size = new System.Drawing.Size(72, 13);
             this.lbl_CompanyID.TabIndex = 48;
@@ -149,7 +139,7 @@
             // 
             // btn_RegisterJob
             // 
-            this.btn_RegisterJob.Location = new System.Drawing.Point(33, 473);
+            this.btn_RegisterJob.Location = new System.Drawing.Point(34, 436);
             this.btn_RegisterJob.Name = "btn_RegisterJob";
             this.btn_RegisterJob.Size = new System.Drawing.Size(94, 28);
             this.btn_RegisterJob.TabIndex = 5;
@@ -159,7 +149,7 @@
             // 
             // txt_Description
             // 
-            this.txt_Description.Location = new System.Drawing.Point(170, 245);
+            this.txt_Description.Location = new System.Drawing.Point(171, 208);
             this.txt_Description.Multiline = true;
             this.txt_Description.Name = "txt_Description";
             this.txt_Description.Size = new System.Drawing.Size(225, 56);
@@ -168,7 +158,7 @@
             // lbl_Location
             // 
             this.lbl_Location.AutoSize = true;
-            this.lbl_Location.Location = new System.Drawing.Point(30, 117);
+            this.lbl_Location.Location = new System.Drawing.Point(31, 80);
             this.lbl_Location.Name = "lbl_Location";
             this.lbl_Location.Size = new System.Drawing.Size(48, 13);
             this.lbl_Location.TabIndex = 47;
@@ -176,7 +166,7 @@
             // 
             // btn_RegisterMachine
             // 
-            this.btn_RegisterMachine.Location = new System.Drawing.Point(337, 161);
+            this.btn_RegisterMachine.Location = new System.Drawing.Point(338, 124);
             this.btn_RegisterMachine.Name = "btn_RegisterMachine";
             this.btn_RegisterMachine.Size = new System.Drawing.Size(94, 28);
             this.btn_RegisterMachine.TabIndex = 2;
@@ -187,7 +177,7 @@
             // lbl_SizeComplexity
             // 
             this.lbl_SizeComplexity.AutoSize = true;
-            this.lbl_SizeComplexity.Location = new System.Drawing.Point(30, 222);
+            this.lbl_SizeComplexity.Location = new System.Drawing.Point(31, 185);
             this.lbl_SizeComplexity.Name = "lbl_SizeComplexity";
             this.lbl_SizeComplexity.Size = new System.Drawing.Size(101, 13);
             this.lbl_SizeComplexity.TabIndex = 46;
@@ -196,7 +186,7 @@
             // lbl_Description
             // 
             this.lbl_Description.AutoSize = true;
-            this.lbl_Description.Location = new System.Drawing.Point(30, 248);
+            this.lbl_Description.Location = new System.Drawing.Point(31, 211);
             this.lbl_Description.Name = "lbl_Description";
             this.lbl_Description.Size = new System.Drawing.Size(60, 13);
             this.lbl_Description.TabIndex = 44;
@@ -205,7 +195,7 @@
             // lbl_Fault
             // 
             this.lbl_Fault.AutoSize = true;
-            this.lbl_Fault.Location = new System.Drawing.Point(30, 330);
+            this.lbl_Fault.Location = new System.Drawing.Point(31, 293);
             this.lbl_Fault.Name = "lbl_Fault";
             this.lbl_Fault.Size = new System.Drawing.Size(37, 13);
             this.lbl_Fault.TabIndex = 43;
@@ -214,7 +204,7 @@
             // lbl_MachineID
             // 
             this.lbl_MachineID.AutoSize = true;
-            this.lbl_MachineID.Location = new System.Drawing.Point(30, 169);
+            this.lbl_MachineID.Location = new System.Drawing.Point(31, 132);
             this.lbl_MachineID.Name = "lbl_MachineID";
             this.lbl_MachineID.Size = new System.Drawing.Size(69, 13);
             this.lbl_MachineID.TabIndex = 42;
@@ -222,7 +212,7 @@
             // 
             // txt_Fault
             // 
-            this.txt_Fault.Location = new System.Drawing.Point(170, 327);
+            this.txt_Fault.Location = new System.Drawing.Point(171, 290);
             this.txt_Fault.Multiline = true;
             this.txt_Fault.Name = "txt_Fault";
             this.txt_Fault.Size = new System.Drawing.Size(225, 56);
@@ -230,21 +220,21 @@
             // 
             // txt_SizeComplexity
             // 
-            this.txt_SizeComplexity.Location = new System.Drawing.Point(170, 219);
+            this.txt_SizeComplexity.Location = new System.Drawing.Point(171, 182);
             this.txt_SizeComplexity.Name = "txt_SizeComplexity";
             this.txt_SizeComplexity.Size = new System.Drawing.Size(144, 20);
             this.txt_SizeComplexity.TabIndex = 9;
             // 
             // txt_Location
             // 
-            this.txt_Location.Location = new System.Drawing.Point(170, 114);
+            this.txt_Location.Location = new System.Drawing.Point(171, 77);
             this.txt_Location.Name = "txt_Location";
             this.txt_Location.Size = new System.Drawing.Size(144, 20);
             this.txt_Location.TabIndex = 7;
             // 
             // txt_CompanyName
             // 
-            this.txt_CompanyName.Location = new System.Drawing.Point(170, 88);
+            this.txt_CompanyName.Location = new System.Drawing.Point(171, 51);
             this.txt_CompanyName.Name = "txt_CompanyName";
             this.txt_CompanyName.Size = new System.Drawing.Size(144, 20);
             this.txt_CompanyName.TabIndex = 6;
@@ -252,7 +242,7 @@
             // lbl_CompanyName
             // 
             this.lbl_CompanyName.AutoSize = true;
-            this.lbl_CompanyName.Location = new System.Drawing.Point(30, 91);
+            this.lbl_CompanyName.Location = new System.Drawing.Point(31, 54);
             this.lbl_CompanyName.Name = "lbl_CompanyName";
             this.lbl_CompanyName.Size = new System.Drawing.Size(94, 13);
             this.lbl_CompanyName.TabIndex = 30;
@@ -262,7 +252,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 520);
+            this.ClientSize = new System.Drawing.Size(535, 488);
             this.Controls.Add(this.lbl_FaultError);
             this.Controls.Add(this.lbl_UrgencyValue);
             this.Controls.Add(this.trb_Urgency);
@@ -285,9 +275,8 @@
             this.Controls.Add(this.txt_Location);
             this.Controls.Add(this.txt_CompanyName);
             this.Controls.Add(this.lbl_CompanyName);
-            this.Controls.Add(this.label1);
             this.Name = "Form_RegisterJob";
-            this.Text = "Register a Job";
+            this.Text = "Register Job";
             ((System.ComponentModel.ISupportInitialize)(this.trb_Urgency)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -296,7 +285,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_FaultError;
         private System.Windows.Forms.Label lbl_UrgencyValue;
         private System.Windows.Forms.TrackBar trb_Urgency;

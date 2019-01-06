@@ -129,7 +129,7 @@
             this.Controls.Add(this.lbl_Info);
             this.Controls.Add(this.dgv_Jobs);
             this.Name = "Form_Jobs";
-            this.Text = "Form2";
+            this.Text = "Jobs";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Jobs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

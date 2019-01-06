@@ -1,3 +1,11 @@
+/*
+ Patricia Fernandes
+ Bogdana Grigore
+ Michael Hay
+
+ https://gitlab.com/thefyrewire/kf7012-assignment
+*/
+
 namespace KF7012_Assignment
 {
     using System;

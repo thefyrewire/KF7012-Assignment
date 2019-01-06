@@ -36,7 +36,7 @@
             // 
             // btn_RegisterCompany
             // 
-            this.btn_RegisterCompany.Location = new System.Drawing.Point(318, 163);
+            this.btn_RegisterCompany.Location = new System.Drawing.Point(89, 87);
             this.btn_RegisterCompany.Name = "btn_RegisterCompany";
             this.btn_RegisterCompany.Size = new System.Drawing.Size(132, 23);
             this.btn_RegisterCompany.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // btn_RegisterJob
             // 
-            this.btn_RegisterJob.Location = new System.Drawing.Point(318, 192);
+            this.btn_RegisterJob.Location = new System.Drawing.Point(89, 116);
             this.btn_RegisterJob.Name = "btn_RegisterJob";
             this.btn_RegisterJob.Size = new System.Drawing.Size(132, 23);
             this.btn_RegisterJob.TabIndex = 1;
@@ -57,7 +57,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(271, 30);
+            this.label1.Location = new System.Drawing.Point(105, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 13);
             this.label1.TabIndex = 2;
@@ -65,7 +65,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(318, 221);
+            this.button1.Location = new System.Drawing.Point(89, 145);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 23);
             this.button1.TabIndex = 3;
@@ -73,17 +73,17 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.btn_Jobs_Click);
             // 
-            // Form1
+            // Form_Menu_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(798, 416);
+            this.ClientSize = new System.Drawing.Size(321, 217);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_RegisterJob);
             this.Controls.Add(this.btn_RegisterCompany);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Form_Menu_User";
+            this.Text = "Menu - Logged in as User";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ Patricia Fernandes
+ Bogdana Grigore
+ Michael Hay
+
+ https://gitlab.com/thefyrewire/kf7012-assignment
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

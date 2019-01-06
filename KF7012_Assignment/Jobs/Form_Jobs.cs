@@ -43,6 +43,16 @@ namespace KF7012_Assignment
             presenter.dgv_Jobs_CellDoubleClick(Convert.ToInt32(dgv_Jobs.Rows[e.RowIndex].Cells["JobID"].Value));
         }
 
+        private void btn_Info_Click(Object sender, EventArgs e)
+        {
+            presenter.btn_Info_Click();
+        }
+
+        public void message(string message, string title)
+        {
+            MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         public void showJobDetailsForm(Job job)
         {
             Form_JobDetails f1 = new Form_JobDetails();

@@ -46,5 +46,10 @@ namespace KF7012_Assignment
             if (job != null)
                 screen.showJobDetailsForm(job);
         }
+
+        public void btn_Info_Click()
+        {
+            screen.message("Jobs are primarily sorted by urgency, unless the last permissible start date is within a week, in which case, those jobs will be pushed towards the top and sorted by proximity to the starting deadline.", "Scheduling information");
+        }
     }
 }

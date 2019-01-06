@@ -19,5 +19,6 @@ namespace KF7012_Assignment
         void register(JobsPresenter FM);
         void populateJob(Job job);
         void showJobDetailsForm(Job job);
+        void message(string message, string title);
     }
 }

@@ -183,6 +183,8 @@
             this.ClientSize = new System.Drawing.Size(869, 485);
             this.Controls.Add(this.lbl_Info);
             this.Controls.Add(this.dgv_Jobs);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Form_Jobs";
             this.Text = "Jobs";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Jobs)).EndInit();

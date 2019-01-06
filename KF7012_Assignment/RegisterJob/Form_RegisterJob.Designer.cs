@@ -295,6 +295,8 @@
             this.Controls.Add(this.txt_Location);
             this.Controls.Add(this.txt_CompanyName);
             this.Controls.Add(this.lbl_CompanyName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Form_RegisterJob";
             this.Text = "Register Job";
             ((System.ComponentModel.ISupportInitialize)(this.trb_Urgency)).EndInit();

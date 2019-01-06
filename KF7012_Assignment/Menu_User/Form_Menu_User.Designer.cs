@@ -86,6 +86,8 @@
             this.Controls.Add(this.lbl_Title);
             this.Controls.Add(this.btn_RegisterJob);
             this.Controls.Add(this.btn_RegisterCompany);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Form_Menu_User";
             this.Text = "Menu - Logged in as User";
             this.ResumeLayout(false);

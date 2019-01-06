@@ -323,6 +323,8 @@
             this.Controls.Add(this.lbl_CompanyName);
             this.Controls.Add(this.txt_CompanyID);
             this.Controls.Add(this.lbl_CompanyID);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Form_JobDetails";
             this.Text = "Job Details";
             this.ResumeLayout(false);

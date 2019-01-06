@@ -411,6 +411,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_RequestForEstimate);
             this.Controls.Add(this.dgv_RequestJobs);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Form_Menu_TechnicalManager";
             this.Text = "Menu - Logged in as Technical Manager";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_RequestJobs)).EndInit();

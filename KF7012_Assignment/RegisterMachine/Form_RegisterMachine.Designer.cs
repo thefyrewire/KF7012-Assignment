@@ -166,6 +166,8 @@
             this.Controls.Add(this.lbl_SizeComplexity);
             this.Controls.Add(this.lbl_AssetTag);
             this.Controls.Add(this.btn_Register);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Form_RegisterMachine";
             this.Text = "Register Machine";
             ((System.ComponentModel.ISupportInitialize)(this.trb_SizeComplexity)).EndInit();

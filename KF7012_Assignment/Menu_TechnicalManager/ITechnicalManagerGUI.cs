@@ -31,6 +31,7 @@ namespace KF7012_Assignment
         int estimatedDays { get; set; }
         void showError(string error);
         void hideError();
+        void clearJobID();
         void showJobDetailsForm(Job job);
         void showRegisterCompanyForm();
         void showRegisterJobForm();

@@ -133,6 +133,7 @@ namespace KF7012_Assignment
                     repository.addScheduledJob(screen.jobID, getSelectedEngineerID(), screen.estimatedDays);
                     repository.updateJobStateByID(screen.jobID, "PENDING");
 
+                    screen.clearJobID();
                     refreshJobs();
                     updateView();
                 }

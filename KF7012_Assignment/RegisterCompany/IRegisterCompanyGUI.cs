@@ -24,5 +24,6 @@ namespace KF7012_Assignment
         void hideError();
         void showError(string error);
         void showJobsForm(int companyID);
+        bool getTermsConditionsChecked();
     }
 }

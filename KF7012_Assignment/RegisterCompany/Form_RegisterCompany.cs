@@ -39,13 +39,6 @@ namespace KF7012_Assignment
 
         private void btn_RegisterCompany_Click(Object sender, EventArgs e)
         {
-            // check company doesn't exist in database already (otherwise return its ID)
-            // generate unique company ID
-            // add company to database
-            // display company ID
-            
-            // presenter.message("Registered!");
-
             presenter.btn_RegisterCompany_Click();
         }
 
@@ -65,14 +58,21 @@ namespace KF7012_Assignment
         {
             return txt_Location.Text;
         }
+
         public void hideError()
         {
             lbl_ErrorMsg.Visible = false;
         }
+
         public void showError(string error)
         {
             lbl_ErrorMsg.Text = error;
             lbl_ErrorMsg.Visible = true;
+        }
+
+        public bool getTermsConditionsChecked()
+        {
+            return chk_TermConditions.Checked;
         }
 
         public void showJobsForm(int companyID)

@@ -133,6 +133,11 @@ namespace KF7012_Assignment
             lbl_Error.Visible = false;
         }
 
+        public void clearJobID()
+        {
+            txt_JobID.Clear();
+        }
+
         private void btn_ScheduleJob_Click(Object sender, EventArgs e)
         {
             presenter.btn_ScheduleJob_Click();

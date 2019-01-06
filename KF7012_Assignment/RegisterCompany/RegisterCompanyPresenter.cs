@@ -30,12 +30,7 @@ namespace KF7012_Assignment
         private void initialiseForm()
         {
             screen.hideError();
-            // updateView();
         }
-
-        /*public void updateView()
-        {
-        }*/
 
         public void message(string msg)
         {
@@ -46,21 +41,25 @@ namespace KF7012_Assignment
         {
             screen.hideError();
 
-            if (screen.validateFields())
+            if (screen.getTermsConditionsChecked())
             {
-                Company company = repository.getCompanyByName(screen.getCompanyName());
-                if (company != null)
-                    screen.message(company.name + " already exists.\n\nID: " + company.companyID);
-                else
+                if (screen.validateFields())
                 {
-                    int newCompanyID = repository.generateCompanyID();
-                    repository.addCompany(newCompanyID, screen.getCompanyName(), screen.getLocation());
-                    screen.message("New company registered: " + screen.getCompanyName() + "\n\nID: " + newCompanyID.ToString());
+                    Company company = repository.getCompanyByName(screen.getCompanyName());
+                    if (company != null)
+                        screen.message(company.name + " already exists.\n\nID: " + company.companyID);
+                    else
+                    {
+                        int newCompanyID = repository.generateCompanyID();
+                        repository.addCompany(newCompanyID, screen.getCompanyName(), screen.getLocation());
+                        screen.message("New company registered: " + screen.getCompanyName() + "\n\nID: " + newCompanyID.ToString());
 
-                    screen.showJobsForm(newCompanyID);
+                        screen.showJobsForm(newCompanyID);
+                    }
                 }
+                else screen.showError("All fields must be filled.");
             }
-            else screen.showError("All fields must be filled.");
+            else screen.showError("Client company must accept terms and conditions.");
         }
 
 

@@ -44,6 +44,7 @@
             // 
             // btn_Register
             // 
+            this.btn_Register.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Register.Location = new System.Drawing.Point(27, 260);
             this.btn_Register.Name = "btn_Register";
             this.btn_Register.Size = new System.Drawing.Size(75, 23);
@@ -55,48 +56,53 @@
             // lbl_AssetTag
             // 
             this.lbl_AssetTag.AutoSize = true;
+            this.lbl_AssetTag.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_AssetTag.Location = new System.Drawing.Point(24, 75);
             this.lbl_AssetTag.Name = "lbl_AssetTag";
-            this.lbl_AssetTag.Size = new System.Drawing.Size(55, 13);
+            this.lbl_AssetTag.Size = new System.Drawing.Size(57, 15);
             this.lbl_AssetTag.TabIndex = 3;
             this.lbl_AssetTag.Text = "Asset Tag";
             // 
             // lbl_SizeComplexity
             // 
+            this.lbl_SizeComplexity.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_SizeComplexity.Location = new System.Drawing.Point(24, 118);
             this.lbl_SizeComplexity.Name = "lbl_SizeComplexity";
-            this.lbl_SizeComplexity.Size = new System.Drawing.Size(87, 30);
+            this.lbl_SizeComplexity.Size = new System.Drawing.Size(96, 45);
             this.lbl_SizeComplexity.TabIndex = 4;
             this.lbl_SizeComplexity.Text = "Machine Size and Complexity";
             // 
             // txt_AssetTag
             // 
-            this.txt_AssetTag.Location = new System.Drawing.Point(117, 75);
+            this.txt_AssetTag.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_AssetTag.Location = new System.Drawing.Point(152, 75);
             this.txt_AssetTag.Name = "txt_AssetTag";
-            this.txt_AssetTag.Size = new System.Drawing.Size(229, 20);
+            this.txt_AssetTag.Size = new System.Drawing.Size(229, 23);
             this.txt_AssetTag.TabIndex = 0;
             // 
             // lbl_CompanyID
             // 
             this.lbl_CompanyID.AutoSize = true;
+            this.lbl_CompanyID.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_CompanyID.Location = new System.Drawing.Point(24, 29);
             this.lbl_CompanyID.Name = "lbl_CompanyID";
-            this.lbl_CompanyID.Size = new System.Drawing.Size(65, 13);
+            this.lbl_CompanyID.Size = new System.Drawing.Size(73, 15);
             this.lbl_CompanyID.TabIndex = 9;
             this.lbl_CompanyID.Text = "Company ID";
             // 
             // txt_CompanyID
             // 
-            this.txt_CompanyID.Location = new System.Drawing.Point(117, 26);
+            this.txt_CompanyID.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CompanyID.Location = new System.Drawing.Point(152, 26);
             this.txt_CompanyID.Name = "txt_CompanyID";
             this.txt_CompanyID.ReadOnly = true;
-            this.txt_CompanyID.Size = new System.Drawing.Size(229, 20);
+            this.txt_CompanyID.Size = new System.Drawing.Size(229, 23);
             this.txt_CompanyID.TabIndex = 4;
             // 
             // trb_SizeComplexity
             // 
             this.trb_SizeComplexity.LargeChange = 1;
-            this.trb_SizeComplexity.Location = new System.Drawing.Point(145, 118);
+            this.trb_SizeComplexity.Location = new System.Drawing.Point(180, 118);
             this.trb_SizeComplexity.Maximum = 5;
             this.trb_SizeComplexity.Name = "trb_SizeComplexity";
             this.trb_SizeComplexity.Size = new System.Drawing.Size(201, 45);
@@ -106,16 +112,17 @@
             // lbl_SizeComplexityValue
             // 
             this.lbl_SizeComplexityValue.AutoSize = true;
-            this.lbl_SizeComplexityValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SizeComplexityValue.Location = new System.Drawing.Point(121, 123);
+            this.lbl_SizeComplexityValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SizeComplexityValue.Location = new System.Drawing.Point(155, 118);
             this.lbl_SizeComplexityValue.Name = "lbl_SizeComplexityValue";
-            this.lbl_SizeComplexityValue.Size = new System.Drawing.Size(16, 16);
+            this.lbl_SizeComplexityValue.Size = new System.Drawing.Size(19, 21);
             this.lbl_SizeComplexityValue.TabIndex = 12;
             this.lbl_SizeComplexityValue.Text = "0";
             // 
             // txt_Description
             // 
-            this.txt_Description.Location = new System.Drawing.Point(117, 169);
+            this.txt_Description.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Description.Location = new System.Drawing.Point(152, 169);
             this.txt_Description.Multiline = true;
             this.txt_Description.Name = "txt_Description";
             this.txt_Description.Size = new System.Drawing.Size(229, 61);
@@ -124,19 +131,21 @@
             // lbl_Description
             // 
             this.lbl_Description.AutoSize = true;
+            this.lbl_Description.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Description.Location = new System.Drawing.Point(24, 169);
             this.lbl_Description.Name = "lbl_Description";
-            this.lbl_Description.Size = new System.Drawing.Size(60, 13);
+            this.lbl_Description.Size = new System.Drawing.Size(67, 15);
             this.lbl_Description.TabIndex = 14;
             this.lbl_Description.Text = "Description";
             // 
             // lbl_Error
             // 
             this.lbl_Error.AutoSize = true;
+            this.lbl_Error.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Error.ForeColor = System.Drawing.Color.Red;
-            this.lbl_Error.Location = new System.Drawing.Point(121, 265);
+            this.lbl_Error.Location = new System.Drawing.Point(156, 265);
             this.lbl_Error.Name = "lbl_Error";
-            this.lbl_Error.Size = new System.Drawing.Size(112, 13);
+            this.lbl_Error.Size = new System.Drawing.Size(130, 15);
             this.lbl_Error.TabIndex = 15;
             this.lbl_Error.Text = "All fields must be filled.";
             // 
@@ -145,7 +154,7 @@
             this.AcceptButton = this.btn_Register;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 308);
+            this.ClientSize = new System.Drawing.Size(408, 306);
             this.Controls.Add(this.lbl_Error);
             this.Controls.Add(this.txt_Description);
             this.Controls.Add(this.lbl_Description);
